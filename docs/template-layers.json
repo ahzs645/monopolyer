@@ -1,0 +1,5301 @@
+[
+  {
+    "file": "nested/the community chest and chance.psd",
+    "size": [
+      900,
+      525
+    ],
+    "layers": [
+      {
+        "name": "Background",
+        "kind": "pixel",
+        "text": null
+      },
+      {
+        "name": "Shape 1",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 1 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Chance",
+        "kind": "type",
+        "text": "Chance"
+      },
+      {
+        "name": "community chest copy",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Community Chest",
+        "kind": "type",
+        "text": "Community Chest"
+      },
+      {
+        "name": "32",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Community Chest and  Chance Card Templates  Sorry no graphics ",
+        "kind": "type",
+        "text": "Community Chest and \rChance Card Templates\r\rSorry no graphics "
+      }
+    ]
+  },
+  {
+    "file": "nested/monopoly.psd",
+    "size": [
+      6000,
+      6000
+    ],
+    "layers": [
+      {
+        "name": "Background",
+        "kind": "solidcolorfill",
+        "text": null
+      },
+      {
+        "name": "Base",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Base",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Logo",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Shape 1 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 1",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "MONOPOLY",
+        "kind": "type",
+        "text": "MONOPOLY"
+      },
+      {
+        "name": "Propery Trading Game from Park",
+        "kind": "type",
+        "text": "Propery Trading Game from Parker Brothers"
+      },
+      {
+        "name": "Chance Cards",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Circle",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Bottom",
+        "kind": "type",
+        "text": "?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022 ?  \u2022 ?   "
+      },
+      {
+        "name": "Circle",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Right",
+        "kind": "type",
+        "text": " ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ? "
+      },
+      {
+        "name": "Right copy",
+        "kind": "type",
+        "text": " ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ? "
+      },
+      {
+        "name": "Circle",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Top",
+        "kind": "type",
+        "text": "?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022 ?"
+      },
+      {
+        "name": "Circle",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Chance",
+        "kind": "type",
+        "text": "CHANCE"
+      },
+      {
+        "name": "Guide",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Community Chest Cards",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Circle copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Bottom copy",
+        "kind": "type",
+        "text": "?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022 ?  \u2022 ?   "
+      },
+      {
+        "name": "Circle copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Right copy 2",
+        "kind": "type",
+        "text": " ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ? "
+      },
+      {
+        "name": "Right copy 3",
+        "kind": "type",
+        "text": " ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ? "
+      },
+      {
+        "name": "Circle copy 3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Top copy",
+        "kind": "type",
+        "text": "?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022 ?"
+      },
+      {
+        "name": "Circle copy 4",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Chance copy",
+        "kind": "type",
+        "text": "COMMUNity chest"
+      },
+      {
+        "name": "Guide copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "top",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "property colors top",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "green1 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "green2 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "blue1 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "blue2 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "black borders copy",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "top border",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar1 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar2  copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar3  copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar4  copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar5  copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "lefttbar6  copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "lefttbar7 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar8  copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbot1 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbot2 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbot3 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbot4 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "left",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Jail",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "VISITING",
+        "kind": "type",
+        "text": "VISITING"
+      },
+      {
+        "name": "JUST",
+        "kind": "type",
+        "text": "JUST"
+      },
+      {
+        "name": "Bottom Bar",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Side Bar",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Square",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Bars Window",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Bar 3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Bar 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Bar 1",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "IN",
+        "kind": "type",
+        "text": "IN"
+      },
+      {
+        "name": "JAIL",
+        "kind": "type",
+        "text": "JAIL"
+      },
+      {
+        "name": "Free Parking",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "PARKING",
+        "kind": "type",
+        "text": "PARKING"
+      },
+      {
+        "name": "FREE",
+        "kind": "type",
+        "text": "FREE"
+      },
+      {
+        "name": "Right Wheel",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Left Wheel",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Car",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Window",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Tyre",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Small Tyre",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "property colors left",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "green1 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "green2 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "blue1 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "blue2 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "black borders",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "left border",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar1",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar2 ",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar3 ",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar4 ",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar5 ",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "lefttbar6 ",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "lefttbar7",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar8 ",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbot1",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbot2 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbot3 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbot4",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "bottom",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "bottomborder",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "property colors bottom",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "green1 copy 3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "green2 copy 3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "blue1 copy 3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "blue2 copy 3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "black borders bottom",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "leftbar1 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar2  copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar3  copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar4  copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar5  copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "lefttbar6  copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "lefttbar7 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar8  copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbot1 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbot2 copy 3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbot3 copy 3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbot4 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "right",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "GO",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "GO WORDS",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Shape 3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 4",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 5",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "COLLECT  $200 SALARY  AS YOU P",
+        "kind": "type",
+        "text": "COLLECT \u0003$200 SALARY \rAS YOU PASS"
+      },
+      {
+        "name": "Go To Jail",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "JAIL ",
+        "kind": "type",
+        "text": "JAIL\r"
+      },
+      {
+        "name": "GO TO",
+        "kind": "type",
+        "text": "GO TO"
+      },
+      {
+        "name": "jailman",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "faceoutline",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "hat",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "inner ear",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "outerear",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 45",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "whitle",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 43",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 42",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 39",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 40",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "hand",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 36",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 37",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 38",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "property colors",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "green1",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "green2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "blue1",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "blue2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "black borders",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "left border",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "right border",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "rightbar1",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "rightbar2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "rightbar3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "rightbar4",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "rightbar5",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "rightbar6",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "rightbar7",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "rightbar8",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "rightbot1",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "rightbot2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "rightbot3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "rightbot4",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "property titles",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "mediterranean  avenue",
+        "kind": "type",
+        "text": "mediterranean \ravenue"
+      },
+      {
+        "name": "baltic  avenue",
+        "kind": "type",
+        "text": "baltic \ravenue"
+      },
+      {
+        "name": "oriental  avenue",
+        "kind": "type",
+        "text": "oriental \ravenue"
+      },
+      {
+        "name": "vermont avenue",
+        "kind": "type",
+        "text": "vermont\ravenue"
+      },
+      {
+        "name": "connecticut avenue",
+        "kind": "type",
+        "text": "connecticut\ravenue"
+      },
+      {
+        "name": "st. charles place",
+        "kind": "type",
+        "text": "st. charles\rplace"
+      },
+      {
+        "name": "states avenue",
+        "kind": "type",
+        "text": "states\ravenue"
+      },
+      {
+        "name": "virginia avenue",
+        "kind": "type",
+        "text": "virginia\ravenue"
+      },
+      {
+        "name": "st. james place",
+        "kind": "type",
+        "text": "st. james\rplace"
+      },
+      {
+        "name": "tennessee avenue",
+        "kind": "type",
+        "text": "tennessee\ravenue"
+      },
+      {
+        "name": "new york avenue",
+        "kind": "type",
+        "text": "new york\ravenue"
+      },
+      {
+        "name": "kentucky avenue",
+        "kind": "type",
+        "text": "kentucky\ravenue"
+      },
+      {
+        "name": "indiana avenue",
+        "kind": "type",
+        "text": "indiana\ravenue"
+      },
+      {
+        "name": "illinois avenue",
+        "kind": "type",
+        "text": "illinois\ravenue"
+      },
+      {
+        "name": "atlantic  avenue",
+        "kind": "type",
+        "text": "atlantic \ravenue"
+      },
+      {
+        "name": "ventnor avenue",
+        "kind": "type",
+        "text": "ventnor\ravenue"
+      },
+      {
+        "name": "marvin gardens",
+        "kind": "type",
+        "text": "marvin\rgardens"
+      },
+      {
+        "name": "pacific  avenue",
+        "kind": "type",
+        "text": "pacific \ravenue"
+      },
+      {
+        "name": "north carolina  avenue",
+        "kind": "type",
+        "text": "north\rcarolina \ravenue"
+      },
+      {
+        "name": "pennsylavania avenue",
+        "kind": "type",
+        "text": "pennsylvania\ravenue"
+      },
+      {
+        "name": "park place",
+        "kind": "type",
+        "text": "park place"
+      },
+      {
+        "name": "boardwalk",
+        "kind": "type",
+        "text": "boardwalk"
+      },
+      {
+        "name": "chance/comm chest",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "community chest 1",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "community chest",
+        "kind": "type",
+        "text": "community\rchest"
+      },
+      {
+        "name": "follow instructions  on top ca",
+        "kind": "type",
+        "text": "follow\rinstructions \ron top card"
+      },
+      {
+        "name": "community chest 2",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "community chest copy",
+        "kind": "type",
+        "text": "community\rchest"
+      },
+      {
+        "name": "follow instructions  on top ca copy",
+        "kind": "type",
+        "text": "follow\rinstructions \ron top card"
+      },
+      {
+        "name": "community chest 3",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "community chest copy 2",
+        "kind": "type",
+        "text": "community\rchest"
+      },
+      {
+        "name": "follow instructions  on top ca copy 2",
+        "kind": "type",
+        "text": "follow\rinstructions \ron top card"
+      },
+      {
+        "name": "Shape 8 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 9 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "chance",
+        "kind": "type",
+        "text": "chance"
+      },
+      {
+        "name": "chance2",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "chance2",
+        "kind": "type",
+        "text": "chance"
+      },
+      {
+        "name": "Shape 8",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 9",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "chance3",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Shape 8 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 9 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "chance3",
+        "kind": "type",
+        "text": "chance"
+      },
+      {
+        "name": "utilities",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "waterworks",
+        "kind": "type",
+        "text": "water \rworks"
+      },
+      {
+        "name": "Electric company ",
+        "kind": "type",
+        "text": "Electric\rcompany\r"
+      },
+      {
+        "name": "railroads",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "short line",
+        "kind": "type",
+        "text": "short line"
+      },
+      {
+        "name": "reading railroad",
+        "kind": "type",
+        "text": "reading\rrailroad"
+      },
+      {
+        "name": "pennsylvania railroad  ",
+        "kind": "type",
+        "text": "pennsylvania\rrailroad\r\r"
+      },
+      {
+        "name": "b and o",
+        "kind": "type",
+        "text": "b & o\r Railroad"
+      },
+      {
+        "name": "taxes",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "PAY 10% OR $200",
+        "kind": "type",
+        "text": "PAY 10%\rOR\r$200"
+      },
+      {
+        "name": "income Tax ",
+        "kind": "type",
+        "text": "income\rTax\r"
+      },
+      {
+        "name": "luxury tax",
+        "kind": "type",
+        "text": "luxury\rtax"
+      },
+      {
+        "name": "prices",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "PRICE $60",
+        "kind": "type",
+        "text": "PRICE $60"
+      },
+      {
+        "name": "PRICE $60 copy",
+        "kind": "type",
+        "text": "PRICE $60"
+      },
+      {
+        "name": "PRICE $200",
+        "kind": "type",
+        "text": "PRICE $200"
+      },
+      {
+        "name": "PRICE $100",
+        "kind": "type",
+        "text": "PRICE $100"
+      },
+      {
+        "name": "PRICE $100 copy",
+        "kind": "type",
+        "text": "PRICE $100"
+      },
+      {
+        "name": "PRICE $120",
+        "kind": "type",
+        "text": "PRICE $120"
+      },
+      {
+        "name": "PRICE $140",
+        "kind": "type",
+        "text": "PRICE $140"
+      },
+      {
+        "name": "PRICE $150",
+        "kind": "type",
+        "text": "PRICE $150"
+      },
+      {
+        "name": "PRICE $140 copy",
+        "kind": "type",
+        "text": "PRICE $140"
+      },
+      {
+        "name": "PRICE $160",
+        "kind": "type",
+        "text": "PRICE $160"
+      },
+      {
+        "name": "PRICE $200",
+        "kind": "type",
+        "text": "PRICE $200"
+      },
+      {
+        "name": "PRICE $180",
+        "kind": "type",
+        "text": "PRICE $180"
+      },
+      {
+        "name": "PRICE $180 copy",
+        "kind": "type",
+        "text": "PRICE $180"
+      },
+      {
+        "name": "PRICE $200",
+        "kind": "type",
+        "text": "PRICE $200"
+      },
+      {
+        "name": "PRICE $220",
+        "kind": "type",
+        "text": "PRICE $220"
+      },
+      {
+        "name": "PRICE $220 copy",
+        "kind": "type",
+        "text": "PRICE $220"
+      },
+      {
+        "name": "PRICE $240",
+        "kind": "type",
+        "text": "PRICE $240"
+      },
+      {
+        "name": "PRICE $200",
+        "kind": "type",
+        "text": "PRICE $200"
+      },
+      {
+        "name": "PRICE $260",
+        "kind": "type",
+        "text": "PRICE $260"
+      },
+      {
+        "name": "PRICE $260 copy",
+        "kind": "type",
+        "text": "PRICE $260"
+      },
+      {
+        "name": "PRICE $150",
+        "kind": "type",
+        "text": "PRICE $150"
+      },
+      {
+        "name": "PRICE $280",
+        "kind": "type",
+        "text": "PRICE $280"
+      },
+      {
+        "name": "PRICE $300",
+        "kind": "type",
+        "text": "PRICE $300"
+      },
+      {
+        "name": "PRICE $300 copy",
+        "kind": "type",
+        "text": "PRICE $300"
+      },
+      {
+        "name": "PRICE $320",
+        "kind": "type",
+        "text": "PRICE $320"
+      },
+      {
+        "name": "PRICE $200",
+        "kind": "type",
+        "text": "PRICE $200"
+      },
+      {
+        "name": "PRICE $350",
+        "kind": "type",
+        "text": "PRICE $350"
+      },
+      {
+        "name": "PAY $75.00",
+        "kind": "type",
+        "text": "PAY $75.00"
+      },
+      {
+        "name": "PRICE $400",
+        "kind": "type",
+        "text": "PRICE $400"
+      },
+      {
+        "name": "train1",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Shape 6",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 7",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 7 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "train2",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Shape 6 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 7 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 7 copy 3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "train3",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Shape 6 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 7 copy 4",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 7 copy 5",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "train4",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Shape 6 copy 3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 7 copy 6",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 7 copy 7",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "lightbulb",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Layer 2",
+        "kind": "pixel",
+        "text": null
+      },
+      {
+        "name": "bulb",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Shape 10",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 11",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 12",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 13",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "base",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Shape 14",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 15",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 14 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 15 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 14 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 15 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 16",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "shine",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Shape 17",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 18",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 19",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 20",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 21",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 22",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 23",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 24",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 25",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 26",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "faucet",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Layer 3",
+        "kind": "pixel",
+        "text": null
+      },
+      {
+        "name": "Shape 32",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 27",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 28",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 29",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 31",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 31 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 30",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "community chest",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "boxfront",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "boxright",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "boxmiddle",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "boxtop",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 49",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 56",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 55",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 52",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 53",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 54",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 51",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 57",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 58",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 59",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 60",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "bag",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 61",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 62",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 63",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "bag2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "community chest 2",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "boxfront copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "boxright copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "boxmiddle copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "boxtop copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 49 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 56 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 55 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 52 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 53 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 54 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 51 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 57 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 58 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 59 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 60 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "bag copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 61 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 62 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 63 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "bag2 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "community chest 3",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "boxfront copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "boxright copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "boxmiddle copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "boxtop copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 49 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 56 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 55 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 52 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 53 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 54 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 51 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 57 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 58 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 59 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 60 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "bag copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 61 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 62 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 63 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "bag2 copy 2",
+        "kind": "shape",
+        "text": null
+      }
+    ]
+  },
+  {
+    "file": "nested/the_property_cards.psd",
+    "size": [
+      788,
+      900
+    ],
+    "layers": [
+      {
+        "name": "Background",
+        "kind": "pixel",
+        "text": null
+      },
+      {
+        "name": "Shape 1",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "If a player owns ALL the Lots ",
+        "kind": "type",
+        "text": "If a player owns ALL the Lots of any Color-Group, the\rrent is Doubled on Unimproved Lots in that group."
+      },
+      {
+        "name": "purple",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "purple",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "mediterranean ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "mediterranean ave",
+        "kind": "type",
+        "text": "mediterranean ave"
+      },
+      {
+        "name": "rent $2",
+        "kind": "type",
+        "text": "rent $2"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 20",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $250. Mortgage Value $30. Houses cost $50. each Hote",
+        "kind": "type",
+        "text": "with HOTEL $250.\rMortgage Value $30.\rHouses cost $50. each\rHotels, $50. plus 4 houses\r"
+      },
+      {
+        "name": "$ 10. 30. 90. 160.",
+        "kind": "type",
+        "text": "$ 10.\r30.\r90.\r160."
+      },
+      {
+        "name": "baltic ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "baltic ave",
+        "kind": "type",
+        "text": "baltic ave"
+      },
+      {
+        "name": "rent $4",
+        "kind": "type",
+        "text": "rent $4"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 21",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $450. Mortgage Value $30. Houses cost $50. each Hote",
+        "kind": "type",
+        "text": "with HOTEL $450.\rMortgage Value $30.\rHouses cost $50. each\rHotels, $50. plus 4 houses\r"
+      },
+      {
+        "name": "$ 20. 60. 180. 320.",
+        "kind": "type",
+        "text": "$ 20.\r60.\r180.\r320."
+      },
+      {
+        "name": "light blue",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "light blue",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "oriental ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "oriental ave",
+        "kind": "type",
+        "text": "oriental ave"
+      },
+      {
+        "name": "rent $6",
+        "kind": "type",
+        "text": "rent $6"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 17",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $550. Mortgage Value $50. Houses cost $50. each Hote",
+        "kind": "type",
+        "text": "with HOTEL $550.\rMortgage Value $50.\rHouses cost $50. each\rHotels, $50. plus 4 houses\r"
+      },
+      {
+        "name": "$ 30. 90. 270. 400.",
+        "kind": "type",
+        "text": "$ 30.\r90.\r270.\r400."
+      },
+      {
+        "name": "vermont ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "vermont ave",
+        "kind": "type",
+        "text": "vermont ave"
+      },
+      {
+        "name": "rent $6 copy",
+        "kind": "type",
+        "text": "rent $6"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 18",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $550. Mortgage Value $50. Houses cost $50. each Hote copy",
+        "kind": "type",
+        "text": "with HOTEL $550.\rMortgage Value $50.\rHouses cost $50. each\rHotels, $50. plus 4 houses\r"
+      },
+      {
+        "name": "$ 30. 90. 270. 400. copy",
+        "kind": "type",
+        "text": "$ 30.\r90.\r270.\r400."
+      },
+      {
+        "name": "connecticut ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "connecticut ave",
+        "kind": "type",
+        "text": "connecticut ave"
+      },
+      {
+        "name": "rent $8",
+        "kind": "type",
+        "text": "rent $8"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 19",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $600. Mortgage Value $60. Houses cost $50. each Hote",
+        "kind": "type",
+        "text": "with HOTEL $600.\rMortgage Value $60.\rHouses cost $50. each\rHotels, $50. plus 4 houses\r"
+      },
+      {
+        "name": "$ 40. 100. 300. 450.",
+        "kind": "type",
+        "text": "$ 40.\r100.\r300.\r450."
+      },
+      {
+        "name": "magenta",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "magenta",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "st. charles place",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "st. charles place",
+        "kind": "type",
+        "text": "st. charles place"
+      },
+      {
+        "name": "rent $10",
+        "kind": "type",
+        "text": "rent $10"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 14",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $750. Mortgage Value $70. Houses cost $100. each Hot",
+        "kind": "type",
+        "text": "with HOTEL $750.\rMortgage Value $70.\rHouses cost $100. each\rHotels, $100. plus 4 houses\r"
+      },
+      {
+        "name": "$ 50. 150. 450. 625.",
+        "kind": "type",
+        "text": "$ 50.\r150.\r450.\r625."
+      },
+      {
+        "name": "states ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "states ave",
+        "kind": "type",
+        "text": "states ave"
+      },
+      {
+        "name": "rent $10 copy",
+        "kind": "type",
+        "text": "rent $10"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 15",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $750. Mortgage Value $70. Houses cost $100. each Hot copy",
+        "kind": "type",
+        "text": "with HOTEL $750.\rMortgage Value $70.\rHouses cost $100. each\rHotels, $100. plus 4 houses\r"
+      },
+      {
+        "name": "$ 50. 150. 450. 625. copy",
+        "kind": "type",
+        "text": "$ 50.\r150.\r450.\r625."
+      },
+      {
+        "name": "virginia ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "virginia ave",
+        "kind": "type",
+        "text": "virginia ave"
+      },
+      {
+        "name": "rent $12",
+        "kind": "type",
+        "text": "rent $12"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 16",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $900. Mortgage Value $80. Houses cost $100. each Hot",
+        "kind": "type",
+        "text": "with HOTEL $900.\rMortgage Value $80.\rHouses cost $100. each\rHotels, $100. plus 4 houses\r"
+      },
+      {
+        "name": "$ 60. 180. 500. 700.",
+        "kind": "type",
+        "text": "$ 60.\r180.\r500.\r700."
+      },
+      {
+        "name": "orange",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "orange",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "st. james place",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "st. james place",
+        "kind": "type",
+        "text": "st. james place"
+      },
+      {
+        "name": "rent $14",
+        "kind": "type",
+        "text": "rent $14"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 11",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $950. Mortgage Value $90. Houses cost $100. each Hot",
+        "kind": "type",
+        "text": "with HOTEL $950.\rMortgage Value $90.\rHouses cost $100. each\rHotels, $100. plus 4 houses\r"
+      },
+      {
+        "name": "$ 70. 200. 550. 750.",
+        "kind": "type",
+        "text": "$ 70.\r200.\r550.\r750."
+      },
+      {
+        "name": "tennessee ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "tennessee ave",
+        "kind": "type",
+        "text": "tennessee ave"
+      },
+      {
+        "name": "rent $14 copy",
+        "kind": "type",
+        "text": "rent $14"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 12",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $950. Mortgage Value $90. Houses cost $100. each Hot copy",
+        "kind": "type",
+        "text": "with HOTEL $950.\rMortgage Value $90.\rHouses cost $100. each\rHotels, $100. plus 4 houses\r"
+      },
+      {
+        "name": "$ 70. 200. 550. 750. copy",
+        "kind": "type",
+        "text": "$ 70.\r200.\r550.\r750."
+      },
+      {
+        "name": "new york ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "new york ave",
+        "kind": "type",
+        "text": "new york ave"
+      },
+      {
+        "name": "rent $16",
+        "kind": "type",
+        "text": "rent $16"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 13",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $1000. Mortgage Value $100. Houses cost $100. each H",
+        "kind": "type",
+        "text": "with HOTEL $1000.\rMortgage Value $100.\rHouses cost $100. each\rHotels, $100. plus 4 houses\r"
+      },
+      {
+        "name": "$ 80. 220. 600. 800.",
+        "kind": "type",
+        "text": "$ 80.\r220.\r600.\r800."
+      },
+      {
+        "name": "red",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "red",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "kentucky",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "kentucky ave",
+        "kind": "type",
+        "text": "kentucky ave"
+      },
+      {
+        "name": "rent $18",
+        "kind": "type",
+        "text": "rent $18"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 8",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $1050. Mortgage Value $110. Houses cost $150. each H",
+        "kind": "type",
+        "text": "with HOTEL $1050.\rMortgage Value $110.\rHouses cost $150. each\rHotels, $150. plus 4 houses\r"
+      },
+      {
+        "name": "$ 90. 250. 700. 875.",
+        "kind": "type",
+        "text": "$ 90.\r250.\r700.\r875."
+      },
+      {
+        "name": "indiana ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "indiana ave",
+        "kind": "type",
+        "text": "indiana ave"
+      },
+      {
+        "name": "rent $18 copy",
+        "kind": "type",
+        "text": "rent $18"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 9",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $1050. Mortgage Value $110. Houses cost $150. each H copy",
+        "kind": "type",
+        "text": "with HOTEL $1050.\rMortgage Value $110.\rHouses cost $150. each\rHotels, $150. plus 4 houses\r"
+      },
+      {
+        "name": "$ 90. 250. 700. 875. copy",
+        "kind": "type",
+        "text": "$ 90.\r250.\r700.\r875."
+      },
+      {
+        "name": "illinois ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "illinois ave",
+        "kind": "type",
+        "text": "illinois ave"
+      },
+      {
+        "name": "rent $20",
+        "kind": "type",
+        "text": "rent $20"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 10",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $1100. Mortgage Value $120. Houses cost $150. each H",
+        "kind": "type",
+        "text": "with HOTEL $1100.\rMortgage Value $120.\rHouses cost $150. each\rHotels, $150. plus 4 houses\r"
+      },
+      {
+        "name": "$ 100. 300. 750. 925.",
+        "kind": "type",
+        "text": "$ 100.\r300.\r750.\r925."
+      },
+      {
+        "name": "yellow",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "yellow",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "atlantic",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "atlantic ave",
+        "kind": "type",
+        "text": "atlantic ave"
+      },
+      {
+        "name": "rent $22",
+        "kind": "type",
+        "text": "rent $22"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 5",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $1150. Mortgage Value $130. Houses cost $150. each H",
+        "kind": "type",
+        "text": "with HOTEL $1150.\rMortgage Value $130.\rHouses cost $150. each\rHotels, $150. plus 4 houses\r"
+      },
+      {
+        "name": "$ 110. 330. 800. 975.",
+        "kind": "type",
+        "text": "$ 110.\r330.\r800.\r975."
+      },
+      {
+        "name": "ventnor ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "ventnor ave",
+        "kind": "type",
+        "text": "ventnor ave"
+      },
+      {
+        "name": "rent $22 copy",
+        "kind": "type",
+        "text": "rent $22"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 6",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $1150. Mortgage Value $130. Houses cost $150. each H copy",
+        "kind": "type",
+        "text": "with HOTEL $1150.\rMortgage Value $130.\rHouses cost $150. each\rHotels, $150. plus 4 houses\r"
+      },
+      {
+        "name": "$ 110. 330. 800. 975. copy",
+        "kind": "type",
+        "text": "$ 110.\r330.\r800.\r975."
+      },
+      {
+        "name": "marvin gardens",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "marvin gardens",
+        "kind": "type",
+        "text": "marvin gardens"
+      },
+      {
+        "name": "rent $24",
+        "kind": "type",
+        "text": "rent $24"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 7",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $1200. Mortgage Value $140. Houses cost $150. each H",
+        "kind": "type",
+        "text": "with HOTEL $1200.\rMortgage Value $140.\rHouses cost $150. each\rHotels, $150. plus 4 houses\r"
+      },
+      {
+        "name": "$ 120. 360. 850. 1025.",
+        "kind": "type",
+        "text": "$ 120.\r360.\r850.\r1025."
+      },
+      {
+        "name": "green",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "green",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "nc ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "north carolina ave",
+        "kind": "type",
+        "text": "north carolina ave"
+      },
+      {
+        "name": "rent $26",
+        "kind": "type",
+        "text": "rent $26"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 2",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $1275. Mortgage Value $150. Houses cost $200. each H",
+        "kind": "type",
+        "text": "with HOTEL $1275.\rMortgage Value $150.\rHouses cost $200. each\rHotels, $200. plus 4 houses\r"
+      },
+      {
+        "name": "$ 130. 390. 900. 1100.",
+        "kind": "type",
+        "text": "$ 130.\r390.\r900.\r1100."
+      },
+      {
+        "name": "pacific ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "pacific avenue",
+        "kind": "type",
+        "text": "pacific avenue"
+      },
+      {
+        "name": "rent $26 copy",
+        "kind": "type",
+        "text": "rent $26"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 3",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $1275. Mortgage Value $150. Houses cost $200. each H copy",
+        "kind": "type",
+        "text": "with HOTEL $1275.\rMortgage Value $150.\rHouses cost $200. each\rHotels, $200. plus 4 houses\r"
+      },
+      {
+        "name": "$ 130. 390. 900. 1100. copy",
+        "kind": "type",
+        "text": "$ 130.\r390.\r900.\r1100."
+      },
+      {
+        "name": "pennsylvania ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "pennsylvania ave",
+        "kind": "type",
+        "text": "pennsylvania ave"
+      },
+      {
+        "name": "rent $28",
+        "kind": "type",
+        "text": "rent $28"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 4",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $1400. Mortgage Value $160. Houses cost $200. each H",
+        "kind": "type",
+        "text": "with HOTEL $1400.\rMortgage Value $160.\rHouses cost $200. each\rHotels, $200. plus 4 houses\r"
+      },
+      {
+        "name": "$ 150. 390. 900. 1200.",
+        "kind": "type",
+        "text": "$ 150.\r390.\r900.\r1200."
+      },
+      {
+        "name": "blue",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "blue",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "park place",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "park place",
+        "kind": "type",
+        "text": "park place"
+      },
+      {
+        "name": "rent $35",
+        "kind": "type",
+        "text": "rent $35"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $1500. Mortgage Val",
+        "kind": "type",
+        "text": "with HOTEL $1500.\rMortgage Value $175.\rHouses cost $200. each\rHotels, $200. plus 4 houses\r"
+      },
+      {
+        "name": "$ 175. 500. 1100. 1300. ",
+        "kind": "type",
+        "text": "$ 175.\r500.\r1100.\r1300.\r"
+      },
+      {
+        "name": "boardwalk",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "boardwalk",
+        "kind": "type",
+        "text": "boardwalk"
+      },
+      {
+        "name": "rent $50",
+        "kind": "type",
+        "text": "rent $50"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $2000. Mortgage Value $200. Houses cost $200. each H",
+        "kind": "type",
+        "text": "with HOTEL $2000.\rMortgage Value $200.\rHouses cost $200. each\rHotels, $200. plus 4 houses\r"
+      },
+      {
+        "name": "$ 175. 500. 1100. 1700. ",
+        "kind": "type",
+        "text": "$ 175.\r500.\r1100.\r1700.\r"
+      },
+      {
+        "name": "title deed white",
+        "kind": "type",
+        "text": "title deed"
+      },
+      {
+        "name": "title deed black",
+        "kind": "type",
+        "text": "title deed"
+      },
+      {
+        "name": "railroads",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "train3",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Shape 6 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 7 copy 4",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 7 copy 5",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Rent If 2 R.R.\u2019s are owned If 3      \u201c     \u201c     \u201c If 4      \u201c ",
+        "kind": "type",
+        "text": "Rent\rIf 2 R.R.\u2019s are owned\rIf 3      \u201c     \u201c     \u201c\rIf 4      \u201c     \u201c     \u201c\r\rMortgage Value\r"
+      },
+      {
+        "name": "$25. 50. 100. 200.  100. ",
+        "kind": "type",
+        "text": "$25.\r50.\r100.\r200.\r\r100.\r"
+      },
+      {
+        "name": "Shape 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 2 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "railroad titles",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "short line",
+        "kind": "type",
+        "text": "short line"
+      },
+      {
+        "name": "b & o railroad",
+        "kind": "type",
+        "text": "b & o railroad"
+      },
+      {
+        "name": "pennsylvania railroad",
+        "kind": "type",
+        "text": "pennsylvania railroad"
+      },
+      {
+        "name": "reading railroad",
+        "kind": "type",
+        "text": "reading railroad"
+      },
+      {
+        "name": "utilities",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Shape 2 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 2 copy 3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "If one \u201cUtility\u201d is owned rent is 4 times amount shown  on dice",
+        "kind": "type",
+        "text": "If one \u201cUtility\u201d is owned\rrent is 4 times amount shown \ron dice.\rIf both \u201cUtilities\u201d are owned\rrent is 10 times amount shown\ron dice.\r\rMortgage Value                $75.\r"
+      },
+      {
+        "name": "water works",
+        "kind": "type",
+        "text": "water works"
+      },
+      {
+        "name": "Electric company",
+        "kind": "type",
+        "text": "Electric company"
+      },
+      {
+        "name": "faucet",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Layer 1",
+        "kind": "pixel",
+        "text": null
+      },
+      {
+        "name": "Shape 32",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 27",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 28",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 29",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 31",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 31 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 30",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 33",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 34",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "lightbulb",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Layer 2",
+        "kind": "pixel",
+        "text": null
+      },
+      {
+        "name": "bulb",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Shape 10",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 11",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 12",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 13",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "base",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Shape 14",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 15",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 14 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 15 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 14 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 15 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 16",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "shine",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Shape 17",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 18",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 19",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 20",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 21",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 22",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 23",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 24",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 25",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 26",
+        "kind": "shape",
+        "text": null
+      }
+    ]
+  },
+  {
+    "file": "0/monopoly_photoshop_template/the community chest and chance.psd",
+    "size": [
+      900,
+      525
+    ],
+    "layers": [
+      {
+        "name": "Background",
+        "kind": "pixel",
+        "text": null
+      },
+      {
+        "name": "Shape 1",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 1 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Chance",
+        "kind": "type",
+        "text": "Chance"
+      },
+      {
+        "name": "community chest copy",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Community Chest",
+        "kind": "type",
+        "text": "Community Chest"
+      },
+      {
+        "name": "32",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Community Chest and  Chance Card Templates  Sorry no graphics ",
+        "kind": "type",
+        "text": "Community Chest and \rChance Card Templates\r\rSorry no graphics "
+      }
+    ]
+  },
+  {
+    "file": "0/monopoly_photoshop_template/monopoly.psd",
+    "size": [
+      6000,
+      6000
+    ],
+    "layers": [
+      {
+        "name": "Background",
+        "kind": "solidcolorfill",
+        "text": null
+      },
+      {
+        "name": "Base",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Base",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Logo",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "nugssOPOLY",
+        "kind": "type",
+        "text": "nugssOPOLY"
+      },
+      {
+        "name": "Propery Trading Game from Park",
+        "kind": "type",
+        "text": "Propery Trading Game from Parker Brothers"
+      },
+      {
+        "name": "Chance Cards",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Circle",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Bottom",
+        "kind": "type",
+        "text": "?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022 ?  \u2022 ?   "
+      },
+      {
+        "name": "Circle",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Right",
+        "kind": "type",
+        "text": " ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ? "
+      },
+      {
+        "name": "Right copy",
+        "kind": "type",
+        "text": " ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ? "
+      },
+      {
+        "name": "Circle",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Top",
+        "kind": "type",
+        "text": "?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022 ?"
+      },
+      {
+        "name": "Circle",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Chance",
+        "kind": "type",
+        "text": "CHANCE"
+      },
+      {
+        "name": "Guide",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Community Chest Cards",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Circle copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Bottom copy",
+        "kind": "type",
+        "text": "?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022 ?  \u2022 ?   "
+      },
+      {
+        "name": "Circle copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Right copy 2",
+        "kind": "type",
+        "text": " ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ? "
+      },
+      {
+        "name": "Right copy 3",
+        "kind": "type",
+        "text": " ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ? "
+      },
+      {
+        "name": "Circle copy 3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Top copy",
+        "kind": "type",
+        "text": "?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022  ?  \u2022 ?"
+      },
+      {
+        "name": "Circle copy 4",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Chance copy",
+        "kind": "type",
+        "text": "Campus Mail"
+      },
+      {
+        "name": "Guide copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "top",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "property colors top",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "green1 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "green2 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "blue1 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "blue2 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "black borders copy",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "top border",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar1 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar2  copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar3  copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar4  copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar5  copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "lefttbar6  copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "lefttbar7 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar8  copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbot1 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbot2 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbot3 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbot4 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "left",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Jail",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "VISITING",
+        "kind": "type",
+        "text": "VISITING"
+      },
+      {
+        "name": "JUST",
+        "kind": "type",
+        "text": "JUST"
+      },
+      {
+        "name": "Bottom Bar",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Side Bar",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Square",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Bars Window",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Bar 3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Bar 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Bar 1",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "IN",
+        "kind": "type",
+        "text": "IN"
+      },
+      {
+        "name": "DEAN\u2019S OFFICE",
+        "kind": "type",
+        "text": "DEAN\u2019S\rOFFICE"
+      },
+      {
+        "name": "noun_info symbol_2215066",
+        "kind": "smartobject",
+        "text": null
+      },
+      {
+        "name": "PikPng.com_open-book-png_558322",
+        "kind": "smartobject",
+        "text": null
+      },
+      {
+        "name": "Free Parking",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "PARKING",
+        "kind": "type",
+        "text": "PARKING"
+      },
+      {
+        "name": "FREE",
+        "kind": "type",
+        "text": "FREE"
+      },
+      {
+        "name": "Right Wheel",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Left Wheel",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Car",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Window",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Tyre",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Small Tyre",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "property colors left",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "green1 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "green2 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "blue1 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "blue2 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "black borders",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "left border",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar1",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar2 ",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar3 ",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar4 ",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar5 ",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "lefttbar6 ",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "lefttbar7",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar8 ",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbot1",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbot2 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbot3 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbot4",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "bottom",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "bottomborder",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "property colors bottom",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "green1 copy 3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "green2 copy 3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "blue1 copy 3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "blue2 copy 3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "black borders bottom",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "leftbar1 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar2  copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar3  copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar4  copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar5  copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "lefttbar6  copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "lefttbar7 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbar8  copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbot1 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbot2 copy 3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbot3 copy 3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "leftbot4 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "right",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "GO",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "GO WORDS",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Shape 3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 4",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 5",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "COLLECT  $200 END OF SEMESTER",
+        "kind": "type",
+        "text": "COLLECT \u0003$200\rEND OF SEMESTER"
+      },
+      {
+        "name": "Go To Jail",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "DEAN\u2019S OFFICE",
+        "kind": "type",
+        "text": "DEAN\u2019S\rOFFICE"
+      },
+      {
+        "name": "GO TO",
+        "kind": "type",
+        "text": "GO TO"
+      },
+      {
+        "name": "jailman",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "faceoutline",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "hat",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "inner ear",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "outerear",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 45",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "whitle",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 43",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 42",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 39",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 40",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "hand",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 36",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 37",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 38",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "property colors",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "green1",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "green2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "blue1",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "blue2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "black borders",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "left border",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "right border",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "rightbar1",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "rightbar2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "rightbar3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "rightbar4",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "rightbar5",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "rightbar6",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "rightbar7",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "rightbar8",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "rightbot1",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "rightbot2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "rightbot3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "rightbot4",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "property titles",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Neyoh  Residence",
+        "kind": "type",
+        "text": "Neyoh \rResidence"
+      },
+      {
+        "name": "Keyoh  Residence",
+        "kind": "type",
+        "text": "Keyoh \rResidence"
+      },
+      {
+        "name": "International  Office",
+        "kind": "type",
+        "text": "International\r Office"
+      },
+      {
+        "name": "NBCGSS  Office",
+        "kind": "type",
+        "text": "NBCGSS \rOffice"
+      },
+      {
+        "name": "NUGSS OFFice",
+        "kind": "type",
+        "text": "NUGSS\rOFFice"
+      },
+      {
+        "name": "Bioenergy  plant",
+        "kind": "type",
+        "text": "Bioenergy \rplant"
+      },
+      {
+        "name": "Access Resource Center",
+        "kind": "type",
+        "text": "Access\rResource\rCenter"
+      },
+      {
+        "name": "ACademic  Success Center",
+        "kind": "type",
+        "text": "ACademic \rSuccess\rCenter"
+      },
+      {
+        "name": "Canfor  Theatre",
+        "kind": "type",
+        "text": "Canfor \rTheatre"
+      },
+      {
+        "name": "Winter  Garden",
+        "kind": "type",
+        "text": "Winter \rGarden"
+      },
+      {
+        "name": "Administrative  Building",
+        "kind": "type",
+        "text": "Administrative \rBuilding"
+      },
+      {
+        "name": "Bus  Loop",
+        "kind": "type",
+        "text": "Bus\r Loop"
+      },
+      {
+        "name": "First Nation  Center",
+        "kind": "type",
+        "text": "First Nation \rCenter"
+      },
+      {
+        "name": "Northern  Women's  Center",
+        "kind": "type",
+        "text": "Northern \rWomen's\r Center"
+      },
+      {
+        "name": "Cafeteria",
+        "kind": "type",
+        "text": "Cafeteria"
+      },
+      {
+        "name": "Northern  Sports  Center",
+        "kind": "type",
+        "text": "Northern\r Sports \rCenter"
+      },
+      {
+        "name": "Rotunda  Gallery",
+        "kind": "type",
+        "text": "Rotunda\r Gallery"
+      },
+      {
+        "name": "Botanical Gardens",
+        "kind": "type",
+        "text": "Botanical Gardens"
+      },
+      {
+        "name": "George R. Weller Library",
+        "kind": "type",
+        "text": "George R. Weller Library"
+      },
+      {
+        "name": "pennsylavania avenue",
+        "kind": "type",
+        "text": "Pride Center"
+      },
+      {
+        "name": "park place",
+        "kind": "type",
+        "text": "Degrees Coffee Co."
+      },
+      {
+        "name": "boardwalk",
+        "kind": "type",
+        "text": "Thirsty Moose Pub"
+      },
+      {
+        "name": "chance/comm chest",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "community chest 1",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "CAMPUS MAIL",
+        "kind": "type",
+        "text": "CAMPUS MAIL"
+      },
+      {
+        "name": "follow instructions  on top ca",
+        "kind": "type",
+        "text": "follow\rinstructions \ron top card"
+      },
+      {
+        "name": "community chest 2",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "CAMPUS MAIL",
+        "kind": "type",
+        "text": "CAMPUS MAIL"
+      },
+      {
+        "name": "johnny_automatic_NPS_map_pictographs_part_52",
+        "kind": "smartobject",
+        "text": null
+      },
+      {
+        "name": "johnny_automatic_NPS_map_pictographs_part_52",
+        "kind": "smartobject",
+        "text": null
+      },
+      {
+        "name": "johnny_automatic_NPS_map_pictographs_part_52",
+        "kind": "smartobject",
+        "text": null
+      },
+      {
+        "name": "johnny_automatic_NPS_map_pictographs_part_52",
+        "kind": "smartobject",
+        "text": null
+      },
+      {
+        "name": "follow instructions  on top ca copy",
+        "kind": "type",
+        "text": "follow\rinstructions \ron top card"
+      },
+      {
+        "name": "community chest 3",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "CAMPUS MAIL",
+        "kind": "type",
+        "text": "CAMPUS MAIL"
+      },
+      {
+        "name": "follow instructions  on top ca copy 2",
+        "kind": "type",
+        "text": "follow\rinstructions \ron top card"
+      },
+      {
+        "name": "Shape 8 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 9 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "chance",
+        "kind": "type",
+        "text": "chance"
+      },
+      {
+        "name": "chance2",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "chance2",
+        "kind": "type",
+        "text": "chance"
+      },
+      {
+        "name": "Shape 8",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 9",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "chance3",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Shape 8 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 9 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "chance3",
+        "kind": "type",
+        "text": "chance"
+      },
+      {
+        "name": "utilities",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "waterworks",
+        "kind": "type",
+        "text": "BookStore"
+      },
+      {
+        "name": "Student Services",
+        "kind": "type",
+        "text": "Student\rServices"
+      },
+      {
+        "name": "railroads",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "short line",
+        "kind": "type",
+        "text": "Parking\rLot D"
+      },
+      {
+        "name": "Parking  Lot A",
+        "kind": "type",
+        "text": "Parking \rLot A"
+      },
+      {
+        "name": "Parking lot B",
+        "kind": "type",
+        "text": "Parking\rlot B"
+      },
+      {
+        "name": "b and o",
+        "kind": "type",
+        "text": "Parking\rlot C"
+      },
+      {
+        "name": "taxes",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "PAY 10% OR $200",
+        "kind": "type",
+        "text": "PAY 10%\rOR\r$200"
+      },
+      {
+        "name": "INCREASED TUITION",
+        "kind": "type",
+        "text": "INCREASED\rTUITION"
+      },
+      {
+        "name": "STUDENT DEBT",
+        "kind": "type",
+        "text": "STUDENT\u0003DEBT"
+      },
+      {
+        "name": "prices",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "PRICE $60",
+        "kind": "type",
+        "text": "PRICE $60"
+      },
+      {
+        "name": "PRICE $60 copy",
+        "kind": "type",
+        "text": "PRICE $60"
+      },
+      {
+        "name": "PRICE $200",
+        "kind": "type",
+        "text": "PRICE $200"
+      },
+      {
+        "name": "PRICE $100",
+        "kind": "type",
+        "text": "PRICE $100"
+      },
+      {
+        "name": "PRICE $100 copy",
+        "kind": "type",
+        "text": "PRICE $100"
+      },
+      {
+        "name": "PRICE $120",
+        "kind": "type",
+        "text": "PRICE $120"
+      },
+      {
+        "name": "PRICE $140",
+        "kind": "type",
+        "text": "PRICE $140"
+      },
+      {
+        "name": "PRICE $150",
+        "kind": "type",
+        "text": "PRICE $150"
+      },
+      {
+        "name": "PRICE $140 copy",
+        "kind": "type",
+        "text": "PRICE $140"
+      },
+      {
+        "name": "PRICE $160",
+        "kind": "type",
+        "text": "PRICE $160"
+      },
+      {
+        "name": "PRICE $200",
+        "kind": "type",
+        "text": "PRICE $200"
+      },
+      {
+        "name": "PRICE $180",
+        "kind": "type",
+        "text": "PRICE $180"
+      },
+      {
+        "name": "PRICE $180 copy",
+        "kind": "type",
+        "text": "PRICE $180"
+      },
+      {
+        "name": "PRICE $200",
+        "kind": "type",
+        "text": "PRICE $200"
+      },
+      {
+        "name": "PRICE $220",
+        "kind": "type",
+        "text": "PRICE $220"
+      },
+      {
+        "name": "PRICE $220 copy",
+        "kind": "type",
+        "text": "PRICE $220"
+      },
+      {
+        "name": "PRICE $240",
+        "kind": "type",
+        "text": "PRICE $240"
+      },
+      {
+        "name": "PRICE $200",
+        "kind": "type",
+        "text": "PRICE $200"
+      },
+      {
+        "name": "PRICE $260",
+        "kind": "type",
+        "text": "PRICE $260"
+      },
+      {
+        "name": "PRICE $260 copy",
+        "kind": "type",
+        "text": "PRICE $260"
+      },
+      {
+        "name": "PRICE $150",
+        "kind": "type",
+        "text": "PRICE $150"
+      },
+      {
+        "name": "PRICE $280",
+        "kind": "type",
+        "text": "PRICE $280"
+      },
+      {
+        "name": "PRICE $300",
+        "kind": "type",
+        "text": "PRICE $300"
+      },
+      {
+        "name": "PRICE $300 copy",
+        "kind": "type",
+        "text": "PRICE $300"
+      },
+      {
+        "name": "PRICE $320",
+        "kind": "type",
+        "text": "PRICE $320"
+      },
+      {
+        "name": "PRICE $200",
+        "kind": "type",
+        "text": "PRICE $200"
+      },
+      {
+        "name": "PRICE $350",
+        "kind": "type",
+        "text": "PRICE $350"
+      },
+      {
+        "name": "PAY $75.00",
+        "kind": "type",
+        "text": "PAY $75.00"
+      },
+      {
+        "name": "PRICE $400",
+        "kind": "type",
+        "text": "PRICE $400"
+      },
+      {
+        "name": "train1",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "train2",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "train3",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "train4",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "faucet",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Layer 3",
+        "kind": "pixel",
+        "text": null
+      },
+      {
+        "name": "Layer 6",
+        "kind": "pixel",
+        "text": null
+      },
+      {
+        "name": "Layer 7",
+        "kind": "pixel",
+        "text": null
+      },
+      {
+        "name": "Layer 8",
+        "kind": "pixel",
+        "text": null
+      }
+    ]
+  },
+  {
+    "file": "0/monopoly_photoshop_template/the_property_cards.psd",
+    "size": [
+      788,
+      900
+    ],
+    "layers": [
+      {
+        "name": "Background",
+        "kind": "pixel",
+        "text": null
+      },
+      {
+        "name": "Shape 1",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "If a player owns ALL the Lots ",
+        "kind": "type",
+        "text": "If a player owns ALL the Lots of any Color-Group, the\rrent is Doubled on Unimproved Lots in that group."
+      },
+      {
+        "name": "purple",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "purple",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "mediterranean ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "mediterranean ave",
+        "kind": "type",
+        "text": "mediterranean ave"
+      },
+      {
+        "name": "rent $2",
+        "kind": "type",
+        "text": "rent $2"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 20",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $250. Mortgage Value $30. Houses cost $50. each Hote",
+        "kind": "type",
+        "text": "with HOTEL $250.\rMortgage Value $30.\rHouses cost $50. each\rHotels, $50. plus 4 houses\r"
+      },
+      {
+        "name": "$ 10. 30. 90. 160.",
+        "kind": "type",
+        "text": "$ 10.\r30.\r90.\r160."
+      },
+      {
+        "name": "baltic ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "baltic ave",
+        "kind": "type",
+        "text": "baltic ave"
+      },
+      {
+        "name": "rent $4",
+        "kind": "type",
+        "text": "rent $4"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 21",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $450. Mortgage Value $30. Houses cost $50. each Hote",
+        "kind": "type",
+        "text": "with HOTEL $450.\rMortgage Value $30.\rHouses cost $50. each\rHotels, $50. plus 4 houses\r"
+      },
+      {
+        "name": "$ 20. 60. 180. 320.",
+        "kind": "type",
+        "text": "$ 20.\r60.\r180.\r320."
+      },
+      {
+        "name": "light blue",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "light blue",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "oriental ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "oriental ave",
+        "kind": "type",
+        "text": "oriental ave"
+      },
+      {
+        "name": "rent $6",
+        "kind": "type",
+        "text": "rent $6"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 17",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $550. Mortgage Value $50. Houses cost $50. each Hote",
+        "kind": "type",
+        "text": "with HOTEL $550.\rMortgage Value $50.\rHouses cost $50. each\rHotels, $50. plus 4 houses\r"
+      },
+      {
+        "name": "$ 30. 90. 270. 400.",
+        "kind": "type",
+        "text": "$ 30.\r90.\r270.\r400."
+      },
+      {
+        "name": "vermont ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "vermont ave",
+        "kind": "type",
+        "text": "vermont ave"
+      },
+      {
+        "name": "rent $6 copy",
+        "kind": "type",
+        "text": "rent $6"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 18",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $550. Mortgage Value $50. Houses cost $50. each Hote copy",
+        "kind": "type",
+        "text": "with HOTEL $550.\rMortgage Value $50.\rHouses cost $50. each\rHotels, $50. plus 4 houses\r"
+      },
+      {
+        "name": "$ 30. 90. 270. 400. copy",
+        "kind": "type",
+        "text": "$ 30.\r90.\r270.\r400."
+      },
+      {
+        "name": "connecticut ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "connecticut ave",
+        "kind": "type",
+        "text": "connecticut ave"
+      },
+      {
+        "name": "rent $8",
+        "kind": "type",
+        "text": "rent $8"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 19",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $600. Mortgage Value $60. Houses cost $50. each Hote",
+        "kind": "type",
+        "text": "with HOTEL $600.\rMortgage Value $60.\rHouses cost $50. each\rHotels, $50. plus 4 houses\r"
+      },
+      {
+        "name": "$ 40. 100. 300. 450.",
+        "kind": "type",
+        "text": "$ 40.\r100.\r300.\r450."
+      },
+      {
+        "name": "magenta",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "magenta",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "st. charles place",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "st. charles place",
+        "kind": "type",
+        "text": "st. charles place"
+      },
+      {
+        "name": "rent $10",
+        "kind": "type",
+        "text": "rent $10"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 14",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $750. Mortgage Value $70. Houses cost $100. each Hot",
+        "kind": "type",
+        "text": "with HOTEL $750.\rMortgage Value $70.\rHouses cost $100. each\rHotels, $100. plus 4 houses\r"
+      },
+      {
+        "name": "$ 50. 150. 450. 625.",
+        "kind": "type",
+        "text": "$ 50.\r150.\r450.\r625."
+      },
+      {
+        "name": "states ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "states ave",
+        "kind": "type",
+        "text": "states ave"
+      },
+      {
+        "name": "rent $10 copy",
+        "kind": "type",
+        "text": "rent $10"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 15",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $750. Mortgage Value $70. Houses cost $100. each Hot copy",
+        "kind": "type",
+        "text": "with HOTEL $750.\rMortgage Value $70.\rHouses cost $100. each\rHotels, $100. plus 4 houses\r"
+      },
+      {
+        "name": "$ 50. 150. 450. 625. copy",
+        "kind": "type",
+        "text": "$ 50.\r150.\r450.\r625."
+      },
+      {
+        "name": "virginia ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "virginia ave",
+        "kind": "type",
+        "text": "virginia ave"
+      },
+      {
+        "name": "rent $12",
+        "kind": "type",
+        "text": "rent $12"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 16",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $900. Mortgage Value $80. Houses cost $100. each Hot",
+        "kind": "type",
+        "text": "with HOTEL $900.\rMortgage Value $80.\rHouses cost $100. each\rHotels, $100. plus 4 houses\r"
+      },
+      {
+        "name": "$ 60. 180. 500. 700.",
+        "kind": "type",
+        "text": "$ 60.\r180.\r500.\r700."
+      },
+      {
+        "name": "orange",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "orange",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "st. james place",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "st. james place",
+        "kind": "type",
+        "text": "st. james place"
+      },
+      {
+        "name": "rent $14",
+        "kind": "type",
+        "text": "rent $14"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 11",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $950. Mortgage Value $90. Houses cost $100. each Hot",
+        "kind": "type",
+        "text": "with HOTEL $950.\rMortgage Value $90.\rHouses cost $100. each\rHotels, $100. plus 4 houses\r"
+      },
+      {
+        "name": "$ 70. 200. 550. 750.",
+        "kind": "type",
+        "text": "$ 70.\r200.\r550.\r750."
+      },
+      {
+        "name": "tennessee ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "tennessee ave",
+        "kind": "type",
+        "text": "tennessee ave"
+      },
+      {
+        "name": "rent $14 copy",
+        "kind": "type",
+        "text": "rent $14"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 12",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $950. Mortgage Value $90. Houses cost $100. each Hot copy",
+        "kind": "type",
+        "text": "with HOTEL $950.\rMortgage Value $90.\rHouses cost $100. each\rHotels, $100. plus 4 houses\r"
+      },
+      {
+        "name": "$ 70. 200. 550. 750. copy",
+        "kind": "type",
+        "text": "$ 70.\r200.\r550.\r750."
+      },
+      {
+        "name": "new york ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "new york ave",
+        "kind": "type",
+        "text": "new york ave"
+      },
+      {
+        "name": "rent $16",
+        "kind": "type",
+        "text": "rent $16"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 13",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $1000. Mortgage Value $100. Houses cost $100. each H",
+        "kind": "type",
+        "text": "with HOTEL $1000.\rMortgage Value $100.\rHouses cost $100. each\rHotels, $100. plus 4 houses\r"
+      },
+      {
+        "name": "$ 80. 220. 600. 800.",
+        "kind": "type",
+        "text": "$ 80.\r220.\r600.\r800."
+      },
+      {
+        "name": "red",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "red",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "kentucky",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "kentucky ave",
+        "kind": "type",
+        "text": "kentucky ave"
+      },
+      {
+        "name": "rent $18",
+        "kind": "type",
+        "text": "rent $18"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 8",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $1050. Mortgage Value $110. Houses cost $150. each H",
+        "kind": "type",
+        "text": "with HOTEL $1050.\rMortgage Value $110.\rHouses cost $150. each\rHotels, $150. plus 4 houses\r"
+      },
+      {
+        "name": "$ 90. 250. 700. 875.",
+        "kind": "type",
+        "text": "$ 90.\r250.\r700.\r875."
+      },
+      {
+        "name": "indiana ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "indiana ave",
+        "kind": "type",
+        "text": "indiana ave"
+      },
+      {
+        "name": "rent $18 copy",
+        "kind": "type",
+        "text": "rent $18"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 9",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $1050. Mortgage Value $110. Houses cost $150. each H copy",
+        "kind": "type",
+        "text": "with HOTEL $1050.\rMortgage Value $110.\rHouses cost $150. each\rHotels, $150. plus 4 houses\r"
+      },
+      {
+        "name": "$ 90. 250. 700. 875. copy",
+        "kind": "type",
+        "text": "$ 90.\r250.\r700.\r875."
+      },
+      {
+        "name": "illinois ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "illinois ave",
+        "kind": "type",
+        "text": "illinois ave"
+      },
+      {
+        "name": "rent $20",
+        "kind": "type",
+        "text": "rent $20"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 10",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $1100. Mortgage Value $120. Houses cost $150. each H",
+        "kind": "type",
+        "text": "with HOTEL $1100.\rMortgage Value $120.\rHouses cost $150. each\rHotels, $150. plus 4 houses\r"
+      },
+      {
+        "name": "$ 100. 300. 750. 925.",
+        "kind": "type",
+        "text": "$ 100.\r300.\r750.\r925."
+      },
+      {
+        "name": "yellow",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "yellow",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "atlantic",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "atlantic ave",
+        "kind": "type",
+        "text": "atlantic ave"
+      },
+      {
+        "name": "rent $22",
+        "kind": "type",
+        "text": "rent $22"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 5",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $1150. Mortgage Value $130. Houses cost $150. each H",
+        "kind": "type",
+        "text": "with HOTEL $1150.\rMortgage Value $130.\rHouses cost $150. each\rHotels, $150. plus 4 houses\r"
+      },
+      {
+        "name": "$ 110. 330. 800. 975.",
+        "kind": "type",
+        "text": "$ 110.\r330.\r800.\r975."
+      },
+      {
+        "name": "ventnor ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "ventnor ave",
+        "kind": "type",
+        "text": "ventnor ave"
+      },
+      {
+        "name": "rent $22 copy",
+        "kind": "type",
+        "text": "rent $22"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 6",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $1150. Mortgage Value $130. Houses cost $150. each H copy",
+        "kind": "type",
+        "text": "with HOTEL $1150.\rMortgage Value $130.\rHouses cost $150. each\rHotels, $150. plus 4 houses\r"
+      },
+      {
+        "name": "$ 110. 330. 800. 975. copy",
+        "kind": "type",
+        "text": "$ 110.\r330.\r800.\r975."
+      },
+      {
+        "name": "marvin gardens",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "marvin gardens",
+        "kind": "type",
+        "text": "marvin gardens"
+      },
+      {
+        "name": "rent $24",
+        "kind": "type",
+        "text": "rent $24"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 7",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $1200. Mortgage Value $140. Houses cost $150. each H",
+        "kind": "type",
+        "text": "with HOTEL $1200.\rMortgage Value $140.\rHouses cost $150. each\rHotels, $150. plus 4 houses\r"
+      },
+      {
+        "name": "$ 120. 360. 850. 1025.",
+        "kind": "type",
+        "text": "$ 120.\r360.\r850.\r1025."
+      },
+      {
+        "name": "green",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "green",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "nc ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "north carolina ave",
+        "kind": "type",
+        "text": "north carolina ave"
+      },
+      {
+        "name": "rent $26",
+        "kind": "type",
+        "text": "rent $26"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 2",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $1275. Mortgage Value $150. Houses cost $200. each H",
+        "kind": "type",
+        "text": "with HOTEL $1275.\rMortgage Value $150.\rHouses cost $200. each\rHotels, $200. plus 4 houses\r"
+      },
+      {
+        "name": "$ 130. 390. 900. 1100.",
+        "kind": "type",
+        "text": "$ 130.\r390.\r900.\r1100."
+      },
+      {
+        "name": "pacific ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "pacific avenue",
+        "kind": "type",
+        "text": "pacific avenue"
+      },
+      {
+        "name": "rent $26 copy",
+        "kind": "type",
+        "text": "rent $26"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 3",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $1275. Mortgage Value $150. Houses cost $200. each H copy",
+        "kind": "type",
+        "text": "with HOTEL $1275.\rMortgage Value $150.\rHouses cost $200. each\rHotels, $200. plus 4 houses\r"
+      },
+      {
+        "name": "$ 130. 390. 900. 1100. copy",
+        "kind": "type",
+        "text": "$ 130.\r390.\r900.\r1100."
+      },
+      {
+        "name": "pennsylvania ave",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "pennsylvania ave",
+        "kind": "type",
+        "text": "pennsylvania ave"
+      },
+      {
+        "name": "rent $28",
+        "kind": "type",
+        "text": "rent $28"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy 4",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $1400. Mortgage Value $160. Houses cost $200. each H",
+        "kind": "type",
+        "text": "with HOTEL $1400.\rMortgage Value $160.\rHouses cost $200. each\rHotels, $200. plus 4 houses\r"
+      },
+      {
+        "name": "$ 150. 390. 900. 1200.",
+        "kind": "type",
+        "text": "$ 150.\r390.\r900.\r1200."
+      },
+      {
+        "name": "blue",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "blue",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "park place",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "park place",
+        "kind": "type",
+        "text": "park place"
+      },
+      {
+        "name": "rent $35",
+        "kind": "type",
+        "text": "rent $35"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $1500. Mortgage Val",
+        "kind": "type",
+        "text": "with HOTEL $1500.\rMortgage Value $175.\rHouses cost $200. each\rHotels, $200. plus 4 houses\r"
+      },
+      {
+        "name": "$ 175. 500. 1100. 1300. ",
+        "kind": "type",
+        "text": "$ 175.\r500.\r1100.\r1300.\r"
+      },
+      {
+        "name": "boardwalk",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "boardwalk",
+        "kind": "type",
+        "text": "boardwalk"
+      },
+      {
+        "name": "rent $50",
+        "kind": "type",
+        "text": "rent $50"
+      },
+      {
+        "name": "with 1 House With 2 Houses Wit copy",
+        "kind": "type",
+        "text": "with 1 House\rWith 2 Houses\rWith 3 Houses\rWith 4 Houses\r"
+      },
+      {
+        "name": "with HOTEL $2000. Mortgage Value $200. Houses cost $200. each H",
+        "kind": "type",
+        "text": "with HOTEL $2000.\rMortgage Value $200.\rHouses cost $200. each\rHotels, $200. plus 4 houses\r"
+      },
+      {
+        "name": "$ 175. 500. 1100. 1700. ",
+        "kind": "type",
+        "text": "$ 175.\r500.\r1100.\r1700.\r"
+      },
+      {
+        "name": "title deed white",
+        "kind": "type",
+        "text": "title deed"
+      },
+      {
+        "name": "title deed black",
+        "kind": "type",
+        "text": "title deed"
+      },
+      {
+        "name": "railroads",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "train3",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Shape 6 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 7 copy 4",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 7 copy 5",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Rent If 2 R.R.\u2019s are owned If 3      \u201c     \u201c     \u201c If 4      \u201c ",
+        "kind": "type",
+        "text": "Rent\rIf 2 R.R.\u2019s are owned\rIf 3      \u201c     \u201c     \u201c\rIf 4      \u201c     \u201c     \u201c\r\rMortgage Value\r"
+      },
+      {
+        "name": "$25. 50. 100. 200.  100. ",
+        "kind": "type",
+        "text": "$25.\r50.\r100.\r200.\r\r100.\r"
+      },
+      {
+        "name": "Shape 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 2 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "railroad titles",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "short line",
+        "kind": "type",
+        "text": "short line"
+      },
+      {
+        "name": "b & o railroad",
+        "kind": "type",
+        "text": "b & o railroad"
+      },
+      {
+        "name": "pennsylvania railroad",
+        "kind": "type",
+        "text": "pennsylvania railroad"
+      },
+      {
+        "name": "reading railroad",
+        "kind": "type",
+        "text": "reading railroad"
+      },
+      {
+        "name": "utilities",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Shape 2 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 2 copy 3",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "If one \u201cUtility\u201d is owned rent is 4 times amount shown  on dice",
+        "kind": "type",
+        "text": "If one \u201cUtility\u201d is owned\rrent is 4 times amount shown \ron dice.\rIf both \u201cUtilities\u201d are owned\rrent is 10 times amount shown\ron dice.\r\rMortgage Value                $75.\r"
+      },
+      {
+        "name": "water works",
+        "kind": "type",
+        "text": "water works"
+      },
+      {
+        "name": "Electric company",
+        "kind": "type",
+        "text": "Electric company"
+      },
+      {
+        "name": "faucet",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Layer 1",
+        "kind": "pixel",
+        "text": null
+      },
+      {
+        "name": "Shape 32",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 27",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 28",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 29",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 31",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 31 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 30",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 33",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 34",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "lightbulb",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Layer 2",
+        "kind": "pixel",
+        "text": null
+      },
+      {
+        "name": "bulb",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Shape 10",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 11",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 12",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 13",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "base",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Shape 14",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 15",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 14 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 15 copy",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 14 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 15 copy 2",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 16",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "shine",
+        "kind": "group",
+        "text": null
+      },
+      {
+        "name": "Shape 17",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 18",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 19",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 20",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 21",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 22",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 23",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 24",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 25",
+        "kind": "shape",
+        "text": null
+      },
+      {
+        "name": "Shape 26",
+        "kind": "shape",
+        "text": null
+      }
+    ]
+  }
+]
