@@ -1,0 +1,44 @@
+{
+  "website": {
+    "Kabel": "Included as kabel.woff in the supplied website archive",
+    "Oswald": "Declared by tile styles; no Oswald font file in archive, so browser uses the original sans-serif fallback"
+  },
+  "deeds": {
+    "pixels": [
+      788,
+      900
+    ],
+    "dpi": 300,
+    "mm": [
+      66.71733333333333,
+      76.2
+    ],
+    "fonts": {
+      "Cornerstone": "Property names",
+      "KabobLight": "TITLE DEED, rent, house rows, mortgage and cost text",
+      "KabobExtrabold": "Transport and utility names"
+    }
+  },
+  "events": {
+    "pixels": [
+      900,
+      525
+    ],
+    "dpi": 300,
+    "mm": [
+      76.2,
+      44.45
+    ],
+    "fonts": {
+      "CataneoBT-Regular": "Chance and Community Chest headings",
+      "ArialNarrow-Bold": "Template body text"
+    }
+  },
+  "font_files_in_psd_archive": [],
+  "campus_board": {
+    "KabobLight": "Property labels, prices, and board text",
+    "HongKong-Regular": "First portion of original mixed title",
+    "HelveticaNeue-BoldItalic": "Remaining original mixed title",
+    "TimesNewRomanPSMT": "Deck decorations"
+  }
+}
