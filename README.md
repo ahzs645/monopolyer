@@ -2,7 +2,7 @@
 
 A browser-based studio for making a custom property-trading board game, built from the supplied Printopoly website and Photoshop references.
 
-**Website:** https://ahzs645.github.io/monopolyer/
+**Website after Pages is enabled:** https://ahzs645.github.io/monopolyer/
 
 ## Included
 
@@ -59,7 +59,7 @@ npm run preview
 
 ## GitHub Pages
 
-`.github/workflows/pages.yml` tests and builds the app, then deploys `dist` on pushes to `main`. In the repository's **Settings → Pages**, set the source to **GitHub Actions**. No backend, API keys, or paid hosting is required. Relative asset URLs support a repository subpath such as `/monopolyer/`.
+`.github/workflows/pages.yml` tests and builds the app, then deploys `dist` on pushes to `main`. In the repository's **Settings → Pages**, set the source to **GitHub Actions**. If the initial deploy ran before Pages was enabled, open **Actions → Test and deploy GitHub Pages → Run workflow** to deploy it again. No backend, API keys, or paid hosting is required. Relative asset URLs support a repository subpath such as `/monopolyer/`.
 
 ## Reference review
 
