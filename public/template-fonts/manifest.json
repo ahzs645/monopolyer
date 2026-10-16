@@ -1,0 +1,26 @@
+[
+  {
+    "font": "KabobLight",
+    "archive": "kaboblight.zip",
+    "member": "kabobl.ttf",
+    "sha256": "96e38ce03db15bbffcaaa3bb8589f0be6a2543c56ee1df824d006c62fa996f34"
+  },
+  {
+    "font": "Cornerstone",
+    "archive": "cornerstone-regular.zip",
+    "member": "Cornerstone Regular/Cornerstone Regular.ttf",
+    "sha256": "eff8cbd63fd7ea4efde2f849dc522b89f49faa1add0a23b042c8b605cf1ebd47"
+  },
+  {
+    "font": "CataneoBT-Regular",
+    "archive": "cataneo-bt.zip",
+    "member": "TT0952M_.TTF",
+    "sha256": "052f6f95c8e7a3eecae137b02f644e67c406bcf956430c416f3c893f11038ecd"
+  },
+  {
+    "font": "ArialNarrow-Bold",
+    "archive": "arial.zip",
+    "member": "ARIALNB.TTF",
+    "sha256": "6c4a4b643461def5411e0217b74a625dcf2fb681252ef5da1db0af4eae80aa7e"
+  }
+]

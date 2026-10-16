@@ -1,3 +1,4 @@
+import {curvedBillHeading,missingBillGlyphs} from './billHeadingFont';
 export const MONEY_VALUES=[1,5,10,20,50,100,500];
 export const MONEY_COLORS=['#ffffff','#fbd5e3','#fcf373','#c9decf','#c6e0e8','#f1cf9d','#ffcb20'];
 export const MONEY_WIDTH=257.5,MONEY_HEIGHT=122.50049;
@@ -10,10 +11,12 @@ export function billHeading(board){
  const mode=board.money.headingMode||(board.money.personalize?'bank':'original');
  return {mode,value:mode==='board'?board.title:mode==='custom'?(board.money.headingText||''):mode==='bank'?board.money.bankName:'MONOPOLY',color:board.money.headingColor||'#000000'};
 }
+export function billFontStatus(board){const heading=billHeading(board);return board.money.style==='studio'||heading.mode==='original'?[]:missingBillGlyphs(heading.value);}
 export function moneyArtwork(template,board,index){
- const value=board.money.denominations[index],fill=board.money.tint?board.money.colors[index]:MONEY_COLORS[index];
+ const value=board.money.denominations[index],fill=board.money.monochrome?'#ffffff':board.money.tint?board.money.colors[index]:MONEY_COLORS[index];
  let svg=template;
- if(board.money.tint)svg=svg.replaceAll(`fill="${MONEY_COLORS[index]}"`,`fill="${fill}"`);
+ if(board.money.monochrome)svg=svg.replaceAll(MONEY_COLORS[index],'#ffffff').replaceAll('#231f20','#000000');
+ else if(board.money.tint)svg=svg.replaceAll(`fill="${MONEY_COLORS[index]}"`,`fill="${fill}"`);
  let edits='<defs><clipPath id="money-center-edit"><ellipse cx="128.75" cy="61.25" rx="52.1" ry="46.0"/></clipPath></defs>';
  if(value!==MONEY_VALUES[index]){
   edits+=`<g clip-path="url(#money-center-edit)"><rect x="83" y="38" width="91" height="46" fill="${fill}"/>`+label(value,128.75,81,84,53)+'</g>';
@@ -22,7 +25,8 @@ export function moneyArtwork(template,board,index){
  }
  const heading=billHeading(board);
  if(heading.mode!=='original'){
-  edits+=`<g clip-path="url(#money-center-edit)"><rect x="94" y="15" width="72" height="16" fill="${fill}"/>`+`<g data-money-heading-source="${heading.mode}" fill="${heading.color}">`+label(heading.value,128.75,25,68,6)+'</g>'+'</g>';
+  const curved=curvedBillHeading(heading.value),color=board.money.monochrome?'#000000':heading.color;
+  edits+=`<g clip-path="url(#money-center-edit)"><rect x="94" y="15" width="72" height="16" fill="${fill}"/>`+`<g data-money-heading-source="${heading.mode}" data-heading-layout="source-curve" data-heading-font="${curved.missing.length?'source-with-fallback':'Myriad-Roman'}" fill="${color}" aria-label="${escape(heading.value)}"><title>${escape(heading.value)}</title>`+curved.paths.map(g=>`<path data-heading-letter="${escape(g.char)}" d="${g.d}" transform="${g.transform}"/>`).join('')+'</g></g>';
  }
  if(board.money.personalize)edits+=label(board.title,128.75,99,66,6);
  return svg.replace('</svg>',`<g data-money-customization="true">${edits}</g></svg>`);
@@ -38,7 +42,7 @@ export async function referenceMoneyPdf(board,startPdf){
   const form='bill'+index;doc.beginFormObject(0,0,MONEY_WIDTH,MONEY_HEIGHT,new doc.Matrix(1,0,0,1,0,0));await doc.svg(root,{x:0,y:0,width:w,height:h});doc.endFormObject(form);
   for(let n=0;n<board.money.quantities[index]*board.money.players;n++,count++){
    if(count&&count%10===0)doc.addPage();
-   if(count%10===0){doc.setFont('GameSans','normal');doc.setFontSize(7);doc.setTextColor('#56665e');doc.text(board.title,10,7);doc.text('Money / '+(Math.floor(count/10)+1),200,7,{align:'right'});doc.text('Print at 100% / Actual size. Cut on the bill borders.',105,291,{align:'center'});}
+   if(count%10===0){doc.setFont('GameSans','normal');doc.setFontSize(7);doc.setTextColor(board.money.monochrome?'#555555':'#56665e');doc.text(board.title,10,7);doc.text('Money / '+(Math.floor(count/10)+1),200,7,{align:'right'});doc.text('Print at 100% / Actual size. Cut on the bill borders.',105,291,{align:'center'});}
    const x=(210-2*w-8)/2+(count%2)*(w+8),y=18+Math.floor((count%10)/2)*53;
    doc.doFormObject(form,new doc.Matrix(1,0,0,1,x*doc.internal.scaleFactor,(doc.internal.pageSize.getHeight()-y-h)*doc.internal.scaleFactor));
   }

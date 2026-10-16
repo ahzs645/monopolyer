@@ -9,3 +9,20 @@ describe('bill heading choices',()=>{
 });
 
 it('fits a long board name on one line without splitting or dropping letters',()=>{const title='northernhealthoploy';const layout=fitText(title,{width:400,height:60,fontSize:70,measure:(s,size)=>s.length*size*.6,singleLine:true});expect(layout.lines).toEqual([title.toUpperCase()]);expect(layout.width).toBeLessThanOrEqual(400);expect(layout.height).toBeLessThanOrEqual(60);});
+
+import {curvedBillHeading,missingBillGlyphs} from '../src/billHeadingFont';
+it('lays out complete uppercase headings on the source curve and reports missing source glyphs',()=>{
+ const source=curvedBillHeading('MONOPOLY');expect(source.missing).toEqual([]);expect(source.paths).toHaveLength(8);expect(source.paths.every(p=>p.d&&p.transform.includes('rotate('))).toBe(true);
+ const custom=curvedBillHeading('Northern Healthopoly');expect(custom.paths.map(p=>p.char).join('')).toBe('NORTHERN HEALTHOPOLY');expect(missingBillGlyphs('Northern Healthopoly').sort()).toEqual(['E','T']);expect(custom.paths.every(p=>!p.transform.includes('NaN'))).toBe(true);
+});
+it('prints untinted black-and-white bills even when custom tint and heading colors are saved',()=>{
+ const b=createBoard();Object.assign(b.money,{monochrome:true,tint:true,headingMode:'custom',headingText:'MONOPOLY',headingColor:'#005699'});b.money.colors[1]='#cc2244';
+ const svg=moneyArtwork('<svg><path fill="#fbd5e3" stroke="#fbd5e3"/><path fill="#231f20"/></svg>',b,1);expect(svg).not.toContain('#cc2244');expect(svg).not.toContain('#fbd5e3');expect(svg).not.toContain('#005699');expect(svg).toContain('fill="#ffffff"');expect(svg).toContain('data-heading-layout="source-curve"');expect(svg).toContain('data-heading-font="Myriad-Roman"');
+});
+
+it('loads outline glyphs from a matching OTF and rejects an unrelated font',async()=>{
+ const {default:opentype}=await import('opentype.js');const {uploadBillFont}=await import('../src/billHeadingFont');
+ const makeFont=name=>{const path=new opentype.Path();path.moveTo(0,0);path.lineTo(400,0);path.lineTo(200,700);path.close();const font=new opentype.Font({familyName:name,styleName:'Roman',unitsPerEm:1000,ascender:800,descender:-200,glyphs:[new opentype.Glyph({name:'.notdef',advanceWidth:500}),...['E','T'].map(c=>new opentype.Glyph({name:c,unicode:c.charCodeAt(0),advanceWidth:500,path}))]});font.names.postScriptName={en:name};return font.toArrayBuffer();};
+ const other=makeFont('Other-Font');await expect(uploadBillFont({size:other.byteLength,arrayBuffer:async()=>other})).rejects.toThrow('Choose Myriad');
+ const data=makeFont('Myriad-Roman'),previous=globalThis.localStorage;globalThis.localStorage={setItem(){}};try{await uploadBillFont({size:data.byteLength,arrayBuffer:async()=>data});expect(missingBillGlyphs('NORTHERN HEALTHOPOLY')).toEqual([]);expect(curvedBillHeading('ET').paths.every(p=>p.d)).toBe(true);}finally{globalThis.localStorage=previous;}
+});
