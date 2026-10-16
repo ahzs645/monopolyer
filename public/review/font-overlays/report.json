@@ -1,0 +1,205 @@
+{
+  "threshold": "Pixels over32 differ by more than32 on at least one RGB channel. MAE is on a0..255 scale. Original source comparisons and diagnostic rebuilds are distinct.",
+  "comparisons": [
+    {
+      "key": "campus-exact",
+      "title": "Campus board: original-pixel mode",
+      "note": "Unchanged source artwork. Compared at the original 6000 x 6000 resolution.",
+      "width": 6000,
+      "height": 6000,
+      "meanAbsoluteError": 0.0,
+      "changedPixels": 0,
+      "pixelsOver32Percent": 0.0
+    },
+    {
+      "key": "campus-clean",
+      "title": "Campus board: clean grid",
+      "note": "Intentional geometric grid and color-band replacement. Text, title and illustrations still use source artwork.",
+      "width": 6000,
+      "height": 6000,
+      "meanAbsoluteError": 2.261637,
+      "changedPixels": 431794,
+      "pixelsOver32Percent": 1.168861
+    },
+    {
+      "key": "photoshop-exact",
+      "title": "Photoshop board: original-pixel mode",
+      "note": "Unchanged source artwork. Compared at the original 6000 x 6000 resolution.",
+      "width": 6000,
+      "height": 6000,
+      "meanAbsoluteError": 0.0,
+      "changedPixels": 0,
+      "pixelsOver32Percent": 0.0
+    },
+    {
+      "key": "photoshop-clean",
+      "title": "Photoshop board: clean grid",
+      "note": "Intentional geometric grid and color-band replacement. Text, title and illustrations still use source artwork.",
+      "width": 6000,
+      "height": 6000,
+      "meanAbsoluteError": 2.190491,
+      "changedPixels": 431794,
+      "pixelsOver32Percent": 1.167961
+    },
+    {
+      "key": "board-text",
+      "title": "Board labels and edited prices: forced rebuild",
+      "note": "Diagnostic: original words are forced through the edited-text path. Original labels normally retain their cached pixels. The price adapter retains mixed-size source glyphs.",
+      "width": 390,
+      "height": 505,
+      "meanAbsoluteError": 9.217803,
+      "changedPixels": 15482,
+      "pixelsOver32Percent": 6.350343
+    },
+    {
+      "key": "deed-exact",
+      "title": "Property deed: original source lettering",
+      "note": "Independent Photoshop composite baseline; original source lettering is retained.",
+      "width": 788,
+      "height": 900,
+      "meanAbsoluteError": 0.285353,
+      "changedPixels": 48411,
+      "pixelsOver32Percent": 0.0
+    },
+    {
+      "key": "deed-native",
+      "title": "Property deed: forced font recreation",
+      "note": "Diagnostic: text caches are bypassed. Differences include native font rasterization and text layout; this is not the default unchanged-card renderer.",
+      "width": 788,
+      "height": 900,
+      "meanAbsoluteError": 4.627102,
+      "changedPixels": 33002,
+      "pixelsOver32Percent": 3.69529
+    },
+    {
+      "key": "event-exact",
+      "title": "Event card: original source lettering",
+      "note": "Independent Photoshop composite baseline; original source lettering is retained.",
+      "width": 900,
+      "height": 525,
+      "meanAbsoluteError": 0.634732,
+      "changedPixels": 42428,
+      "pixelsOver32Percent": 0.725714
+    },
+    {
+      "key": "event-native",
+      "title": "Event card: forced font recreation",
+      "note": "Diagnostic: text caches are bypassed. Differences include native font rasterization and text layout; this is not the default unchanged-card renderer.",
+      "width": 900,
+      "height": 525,
+      "meanAbsoluteError": 17.609387,
+      "changedPixels": 41867,
+      "pixelsOver32Percent": 8.444444
+    },
+    {
+      "key": "event-native-reference",
+      "title": "Event card: native font with original whitespace",
+      "note": "Diagnostic using the original text, source anchors and original trailing spaces, rather than the builder's rewrapped text.",
+      "width": 900,
+      "height": 525,
+      "meanAbsoluteError": 6.786022,
+      "changedPixels": 21746,
+      "pixelsOver32Percent": 4.065185
+    },
+    {
+      "key": "northern",
+      "title": "Northern Health preset vs original",
+      "note": "Intentional changes: Northern Health SVG + opoly in #005699 and a clean geometric grid. The mint background and property palette are retained.",
+      "width": 6000,
+      "height": 6000,
+      "meanAbsoluteError": 5.971033,
+      "changedPixels": 1379663,
+      "pixelsOver32Percent": 3.768564
+    },
+    {
+      "key": "northern-vector",
+      "title": "Northern Health: source export vs vector export",
+      "note": "Measures traced source-art edges against the source-matched export. Vector tracing is not pixel-identical to the original raster artwork.",
+      "width": 6000,
+      "height": 6000,
+      "meanAbsoluteError": 0.901368,
+      "changedPixels": 1673211,
+      "pixelsOver32Percent": 0.989222
+    },
+    {
+      "key": "bill-1",
+      "title": "1 bill: supplied PDF vs unchanged SVG",
+      "note": "PDF-crop and browser SVG rasterizers differ at thin lines. Use the PDF overlay report for a PDF-to-PDF comparison.",
+      "width": 1030,
+      "height": 490,
+      "meanAbsoluteError": 5.098292,
+      "changedPixels": 156862,
+      "pixelsOver32Percent": 3.626511
+    },
+    {
+      "key": "bill-5",
+      "title": "5 bill: supplied PDF vs unchanged SVG",
+      "note": "PDF-crop and browser SVG rasterizers differ at thin lines. Use the PDF overlay report for a PDF-to-PDF comparison.",
+      "width": 1030,
+      "height": 490,
+      "meanAbsoluteError": 4.927719,
+      "changedPixels": 419973,
+      "pixelsOver32Percent": 3.585694
+    },
+    {
+      "key": "bill-10",
+      "title": "10 bill: supplied PDF vs unchanged SVG",
+      "note": "PDF-crop and browser SVG rasterizers differ at thin lines. Use the PDF overlay report for a PDF-to-PDF comparison.",
+      "width": 1030,
+      "height": 490,
+      "meanAbsoluteError": 4.83664,
+      "changedPixels": 413435,
+      "pixelsOver32Percent": 3.665544
+    },
+    {
+      "key": "bill-20",
+      "title": "20 bill: supplied PDF vs unchanged SVG",
+      "note": "PDF-crop and browser SVG rasterizers differ at thin lines. Use the PDF overlay report for a PDF-to-PDF comparison.",
+      "width": 1030,
+      "height": 490,
+      "meanAbsoluteError": 4.493805,
+      "changedPixels": 163301,
+      "pixelsOver32Percent": 2.654052
+    },
+    {
+      "key": "bill-50",
+      "title": "50 bill: supplied PDF vs unchanged SVG",
+      "note": "PDF-crop and browser SVG rasterizers differ at thin lines. Use the PDF overlay report for a PDF-to-PDF comparison.",
+      "width": 1030,
+      "height": 490,
+      "meanAbsoluteError": 4.82435,
+      "changedPixels": 411430,
+      "pixelsOver32Percent": 2.958589
+    },
+    {
+      "key": "bill-100",
+      "title": "100 bill: supplied PDF vs unchanged SVG",
+      "note": "PDF-crop and browser SVG rasterizers differ at thin lines. Use the PDF overlay report for a PDF-to-PDF comparison.",
+      "width": 1030,
+      "height": 490,
+      "meanAbsoluteError": 4.551418,
+      "changedPixels": 405025,
+      "pixelsOver32Percent": 3.294829
+    },
+    {
+      "key": "bill-500",
+      "title": "500 bill: supplied PDF vs unchanged SVG",
+      "note": "PDF-crop and browser SVG rasterizers differ at thin lines. Use the PDF overlay report for a PDF-to-PDF comparison.",
+      "width": 1030,
+      "height": 490,
+      "meanAbsoluteError": 4.10294,
+      "changedPixels": 403069,
+      "pixelsOver32Percent": 3.911234
+    },
+    {
+      "key": "bill-northern",
+      "title": "Northern Health bill vs original one-dollar bill",
+      "note": "Intentional renamed curved heading using original Myriad outlines plus the supplied missing-letter outlines. The preset prints all denominations in black and white.",
+      "width": 1030,
+      "height": 490,
+      "meanAbsoluteError": 5.771692,
+      "changedPixels": 157987,
+      "pixelsOver32Percent": 3.979394
+    }
+  ]
+}

@@ -8,14 +8,14 @@ const black='#040707';
 // A shared display list feeds the on-screen SVG and the printable PDF. Cached
 // Photoshop lines retain their pixels; edited text uses the source glyphs.
 export function sourceLine(value,font,x,baseline,options={}){
- const {size=48,scaleY=1,maxWidth=Infinity,align='center',color=black}=options;const fd=source.fonts[font];const cached=fd?.lines[String(value).trim().toLowerCase()];
+ const {size=48,scaleY=1,scaleX=1,tracking,maxWidth=Infinity,align='center',color=black}=options;const fd=source.fonts[font];const cached=fd?.lines[String(value).trim().toLowerCase()];
  if(cached){
   const scale=Math.min(size/cached.size,maxWidth/cached.w);const sy=scale*scaleY/cached.scaleY;const w=cached.w*scale;const h=cached.h*sy;const left=cached.align===align?x+(cached.x-cached.anchorX)*scale:align==='left'?x:align==='right'?x-w:x-w/2;
   return [image(cached,{src:color==='#ffffff'?(cached.white||cached.src):(cached.black||cached.src),x:left,y:baseline+(cached.y-cached.baseline)*sy,w,h})];
  }
  // Real uploaded fonts supply glyphs that were never represented in the PSD.
  const chars=[...String(value)];const unsupported=chars.filter(c=>!c.match(/\s/)&&!fd?.glyphs[c]);
- if(getCardFonts()[font]||unsupported.length||!fd){return [{type:'text',value:String(value),font,x,y:baseline,size,scaleY,maxWidth,align,color,tracking:font==='Cornerstone'||font==='CataneoBT-Regular'||font==='KabobExtrabold'?size*.075:font==='ArialNarrow-Bold'?-size*.03:0,fallback:!getCardFonts()[font],missing:[...new Set(unsupported)].join('')}];}
+ if(getCardFonts()[font]||unsupported.length||!fd){return [{type:'text',value:String(value),font,x,y:baseline,size,scaleY,scaleX,maxWidth,align,color,tracking:tracking??(font==='Cornerstone'||font==='CataneoBT-Regular'||font==='KabobExtrabold'?size*.075:font==='ArialNarrow-Bold'?-size*.03:0),fallback:!getCardFonts()[font],missing:[...new Set(unsupported)].join('')}];}
  const pieces=chars.map(c=>{const g=fd.glyphs[c];if(!g)return {space:fd.space*size/48};const s=size/g.size;return {...g,w:g.w*s,h:g.h*s*scaleY/g.scaleY,dy:g.dy*s*scaleY/g.scaleY};});
  const gap=fd.gap*size/48;let width=pieces.reduce((n,g)=>n+(g.space||g.w),0)+Math.max(0,chars.length-1)*gap;const fit=Math.min(1,maxWidth/width);width*=fit;let cursor=align==='left'?x:align==='right'?x-width:x-width/2;
  return pieces.flatMap(g=>{if(g.space){cursor+=(g.space+gap)*fit;return [];}const op=image(g,{src:color==='#ffffff'?g.white:g.src,x:cursor,y:baseline+g.dy*fit,w:g.w*fit,h:g.h*fit});cursor+=(g.w+gap)*fit;return [op];});
@@ -25,7 +25,7 @@ export function deedArtwork(board,tile){
  if(tile.kind==='property'){
   const color=board.groups[tile.group];const n=parseInt(color.slice(1),16);const light=(((n>>16)&255)*.299+((n>>8)&255)*.587+(n&255)*.114)>150;const ink=light?black:'#ffffff';
   ops.push(rect(38,36,712,163,color),image(source.art.header));
-  line('TITLE DEED','KabobLight',395.7143576162896,78.43131270609696,{size:24,scaleY:1.1915853972263148,color:ink});
+  line('TITLE DEED','KabobLight',395.7143576162896,78.43131270609696,{size:24,scaleY:1.1915853972263148,scaleX:1.6747115992624593,tracking:7.2,color:ink});
   line(tile.name.replace(/\s+/g,' ').trim().toUpperCase(),'Cornerstone',396,159,{size:47,maxWidth:652,color:ink});
   body(`RENT ${money(tile.rents[0])}`,381,257.83410471507085,{scaleY:.8222736476713913});
   ['With 1 House','With 2 Houses','With 3 Houses','With 4 Houses'].forEach((v,i)=>{body(v,113,320+i*60,{align:'left'});body(`${i===0?board.currency+' ':''}${tile.rents[i+1]}.`,633,320+i*60,{align:'right'});});

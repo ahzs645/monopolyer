@@ -13,7 +13,7 @@ it('fits a long board name on one line without splitting or dropping letters',()
 import {curvedBillHeading,missingBillGlyphs} from '../src/billHeadingFont';
 it('lays out complete uppercase headings on the source curve and reports missing source glyphs',()=>{
  const source=curvedBillHeading('MONOPOLY');expect(source.missing).toEqual([]);expect(source.paths).toHaveLength(8);expect(source.paths.every(p=>p.d&&p.transform.includes('rotate('))).toBe(true);
- const custom=curvedBillHeading('Northern Healthopoly');expect(custom.paths.map(p=>p.char).join('')).toBe('NORTHERN HEALTHOPOLY');expect(missingBillGlyphs('Northern Healthopoly').sort()).toEqual(['E','T']);expect(custom.paths.every(p=>!p.transform.includes('NaN'))).toBe(true);
+ const custom=curvedBillHeading('Northern Healthopoly');expect(custom.paths.map(p=>p.char).join('')).toBe('NORTHERN HEALTHOPOLY');expect(missingBillGlyphs('Northern Healthopoly')).toEqual([]);expect(custom.paths.every(p=>!p.transform.includes('NaN'))).toBe(true);
 });
 it('prints untinted black-and-white bills even when custom tint and heading colors are saved',()=>{
  const b=createBoard();Object.assign(b.money,{monochrome:true,tint:true,headingMode:'custom',headingText:'MONOPOLY',headingColor:'#005699'});b.money.colors[1]='#cc2244';
@@ -22,7 +22,7 @@ it('prints untinted black-and-white bills even when custom tint and heading colo
 
 it('loads outline glyphs from a matching OTF and rejects an unrelated font',async()=>{
  const {default:opentype}=await import('opentype.js');const {uploadBillFont}=await import('../src/billHeadingFont');
- const makeFont=name=>{const path=new opentype.Path();path.moveTo(0,0);path.lineTo(400,0);path.lineTo(200,700);path.close();const font=new opentype.Font({familyName:name,styleName:'Roman',unitsPerEm:1000,ascender:800,descender:-200,glyphs:[new opentype.Glyph({name:'.notdef',advanceWidth:500}),...['E','T'].map(c=>new opentype.Glyph({name:c,unicode:c.charCodeAt(0),advanceWidth:500,path}))]});font.names.postScriptName={en:name};return font.toArrayBuffer();};
+ const makeFont=name=>{const path=new opentype.Path();path.moveTo(0,0);path.lineTo(400,0);path.lineTo(200,700);path.close();const font=new opentype.Font({familyName:name,styleName:'Roman',unitsPerEm:1000,ascender:800,descender:-200,glyphs:[new opentype.Glyph({name:'.notdef',advanceWidth:500}),...['個'].map(c=>new opentype.Glyph({name:c,unicode:c.charCodeAt(0),advanceWidth:500,path}))]});font.names.postScriptName={en:name};return font.toArrayBuffer();};
  const other=makeFont('Other-Font');await expect(uploadBillFont({size:other.byteLength,arrayBuffer:async()=>other})).rejects.toThrow('Choose Myriad');
- const data=makeFont('Myriad-Roman'),previous=globalThis.localStorage;globalThis.localStorage={setItem(){}};try{await uploadBillFont({size:data.byteLength,arrayBuffer:async()=>data});expect(missingBillGlyphs('NORTHERN HEALTHOPOLY')).toEqual([]);expect(curvedBillHeading('ET').paths.every(p=>p.d)).toBe(true);}finally{globalThis.localStorage=previous;}
+ expect(missingBillGlyphs('個')).toEqual(['個']);const data=makeFont('Myriad-Roman'),previous=globalThis.localStorage;globalThis.localStorage={setItem(){}};try{await uploadBillFont({size:data.byteLength,arrayBuffer:async()=>data});expect(missingBillGlyphs('NORTHERN HEALTHOPOLY')).toEqual([]);expect(missingBillGlyphs('個')).toEqual([]);expect(curvedBillHeading('個').paths.every(p=>p.d)).toBe(true);}finally{globalThis.localStorage=previous;}
 });

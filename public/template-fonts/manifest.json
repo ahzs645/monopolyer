@@ -22,5 +22,17 @@
     "archive": "arial.zip",
     "member": "ARIALNB.TTF",
     "sha256": "6c4a4b643461def5411e0217b74a625dcf2fb681252ef5da1db0af4eae80aa7e"
+  },
+  {
+    "font": "KabobExtrabold",
+    "archive": "kabob-extrabold-regular.zip",
+    "member": "Kabob Extrabold Regular/Kabob Extrabold Regular.ttf",
+    "sha256": "1d82dceacb044ffb3348684a663faba8720a383d5b09205830d745807ece9687"
+  },
+  {
+    "font": "HelveticaNeue-BoldItalic",
+    "archive": "helvetica-neue-bold-italic_freefontdownload_org.zip",
+    "member": "helvetica-neue-bold-italic/helvetica-neue-bold-italic.ttf",
+    "sha256": "efed5391e2de26bca629f868eb73b439951734deb3ad23372e65f3af47b081d0"
   }
 ]

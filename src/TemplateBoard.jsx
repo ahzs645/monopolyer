@@ -17,17 +17,17 @@ export function templateTileRect(id){
  const i=id-31;return {x:5186,y:ys[i],w:814,h:ys[i+1]-ys[i]};
 }
 const Bitmap=({a,...props})=><image href={a.src} x={a.x} y={a.y} width={a.w} height={a.h} {...props}/>;
-function Label({value,box,rotation=0,color='#000000',fontSize=66,maxWidth=440,maxHeight=230,font='KabobLight',bold=false,field='label',contain=false,singleLine=false}){
+function Label({value,box,rotation=0,color='#000000',fontSize=66,maxWidth=440,maxHeight=230,font='KabobLight',bold=false,field='label',contain=false,singleLine=false,tracking=0,lineSpacing=1.04}){
  const inkId='label'+useId().replace(/[^a-zA-Z0-9]/g,'');const x=(box[0]+box[2])/2,y=(box[1]+box[3])/2;
  const nativeFont=!!getCardFonts()[font],italic=!nativeFont&&font==='HelveticaNeue-BoldItalic';
  const glyphMode=!nativeFont&&font==='KabobLight'&&[...norm(value)].every(c=>c===' '||template.glyphs[c]);
- const measure=(text,size)=>glyphMode?[...text].reduce((n,c)=>n+(c===' '?size*.35:template.glyphs[c].w*size/66),0)+Math.max(0,text.length-1)*size*.015:nativeTextMetrics(text,size,font,!nativeFont&&bold,italic).width;
- const layout=fitText(value,{width:maxWidth,height:maxHeight,fontSize,measure,singleLine});let size=layout.size,lineHeight=layout.lineHeight;
+ const measure=(text,size)=>glyphMode?[...text].reduce((n,c)=>n+(c===' '?size*.35:template.glyphs[c].w*size/66),0)+Math.max(0,text.length-1)*size*.015:nativeTextMetrics(text,size,font,!nativeFont&&bold,italic,tracking?'none':'auto').width+Math.max(0,text.length-1)*size*tracking;
+ const layout=fitText(value,{width:maxWidth,height:maxHeight,fontSize,measure,singleLine,lineHeight:lineSpacing});let size=layout.size,lineHeight=layout.lineHeight;
  if(contain){const angle=rotation*Math.PI/180,c=Math.abs(Math.cos(angle)),s=Math.abs(Math.sin(angle)),w=c*layout.width+s*layout.height,h=s*layout.width+c*layout.height;const factor=Math.min(1,(box[2]-box[0])/Math.max(.001,w),(box[3]-box[1])/Math.max(.001,h));size*=factor;lineHeight*=factor;}
  return <g aria-label={norm(value)} data-text-field={field} data-anchor-x={x} data-anchor-y={y} data-rotation={rotation} data-slot-width={maxWidth} data-slot-height={maxHeight} transform={`translate(${x} ${y}) rotate(${rotation})`} fill={color}><defs><filter id={inkId} colorInterpolationFilters="sRGB"><feFlood floodColor={color}/><feComposite in2="SourceGraphic" operator="in"/></filter></defs>
  {layout.lines.map((text,i)=>{
   const center=(i-(layout.lines.length-1)/2)*lineHeight;
-  if(!glyphMode){const m=nativeTextMetrics(text,size,font,!nativeFont&&bold,italic);return <text key={i} x="0" y={center+(m.ascent-m.descent)/2} textAnchor="middle" fontFamily={`${font}, Arial, sans-serif`} fontWeight={!nativeFont&&bold?'bold':'normal'} fontStyle={italic?'italic':undefined} fontSize={size}>{text}</text>;}
+  if(!glyphMode){const m=nativeTextMetrics(text,size,font,!nativeFont&&bold,italic,tracking?'none':'auto');return <text key={i} x="0" y={center+(m.ascent-m.descent)/2} textAnchor="middle" fontFamily={`${font}, Arial, sans-serif`} fontWeight={!nativeFont&&bold?'bold':'normal'} fontStyle={italic?'italic':undefined} fontSize={size} letterSpacing={size*tracking} style={tracking?{fontKerning:'none'}:undefined}>{text}</text>;}
   const pieces=[...text].map(c=>{const g=template.glyphs[c];return g?{...g,w:g.w*size/66,h:g.h*size/66}:{space:size*.35};});const height=Math.max(0,...pieces.map(g=>g.h||0));let cursor=-measure(text,size)/2;
   return <g key={i} filter={color==='#000000'?undefined:`url(#${inkId})`}>{pieces.map((g,j)=>{if(g.space){cursor+=g.space+size*.015;return null;}const left=cursor;cursor+=g.w+size*.015;return <image key={j} href={g.src} x={left} y={center+height/2-g.h} width={g.w} height={g.h}/>;})}</g>;
  })}</g>;
@@ -35,7 +35,7 @@ function Label({value,box,rotation=0,color='#000000',fontSize=66,maxWidth=440,ma
 function PriceLabel({value,field,color}){
  const inkId='price'+useId().replace(/[^a-zA-Z0-9]/g,'');
  const [prefix,amount]=value.split(' ');const cache=template.pricePrefixes[prefix];const glyphs=[...amount].map(c=>template.priceGlyphs[c]);
- if(getCardFonts().KabobLight||!cache||glyphs.some(g=>!g))return <Label value={value} box={field.box} rotation={field.rotation} fontSize={53} maxWidth={400} maxHeight={65} field="price" color={color}/>;
+ if(!cache||glyphs.some(g=>!g))return <Label value={value} box={field.box} rotation={field.rotation} fontSize={53} maxWidth={400} maxHeight={65} field="price" color={color}/>;
  const width=cache.w+21+glyphs.reduce((n,g)=>n+g.w+5,0)-5;let x=-width/2;const items=[{...cache,x}];x+=cache.w+21;for(const g of glyphs){items.push({...g,x});x+=g.w+5;}
  const cx=(field.box[0]+field.box[2])/2,cy=(field.box[1]+field.box[3])/2;return <g aria-label={value} data-text-field="price" data-anchor-x={cx} data-anchor-y={cy} data-rotation={field.rotation} transform={`translate(${cx} ${cy}) rotate(${field.rotation}) scale(${Math.min(1,400/width)})`}><defs><filter id={inkId} colorInterpolationFilters="sRGB"><feFlood floodColor={color}/><feComposite in2="SourceGraphic" operator="in"/></filter></defs><g filter={color==='#000000'?undefined:`url(#${inkId})`}>{items.map((g,i)=><image key={i} href={g.src} x={g.x} y={-g.h/2} width={g.w} height={g.h}/>)}</g></g>;
 }
@@ -73,7 +73,7 @@ export function TemplateBoard({board,selected,onSelect,svgRef,interactive=true,p
    else if(tile.id===10)label(name,f.name,{fontSize:55,maxWidth:210,maxHeight:150,background:'#f57f23'});
    else if(tile.id===20){const words=name.split(/\s+/);label(words.slice(1).join(' ')||words[0],{...f.corner[0],rotation:135},{fontSize:75,maxWidth:430,maxHeight:115});label(words.length>1?words[0]:'',{...f.corner[1],rotation:135},{fontSize:75,maxWidth:300,maxHeight:115});}
    else if(tile.id===30){label(name.replace(/^go to /i,''),{...f.corner[0],rotation:225},{fontSize:75,maxWidth:430,maxHeight:230});}
-   else if(f.name)label(name,f.name,{fontSize:tile.kind==='tax'?85:66,maxWidth:440,field:'space-name'});
+   else if(f.name)label(name,f.name,{fontSize:tile.kind==='tax'?85:tile.kind==='property'?66.11:66,maxWidth:440,field:'space-name',...(tile.kind==='property'?{tracking:-.05,lineSpacing:1.0083,maxHeight:230}:{})});
   }
   if(f.price&&(tile.price!==original.price||board.currency!==source.currency))price(`${tile.kind==='tax'?'PAY':'PRICE'} ${board.currency}${tile.price}${tile.kind==='tax'?'.00':''}`,f.price);
   if(tile.id===4&&(tile.price!==original.price||board.currency!==source.currency))label(`PAY ${board.currency}${tile.price}`,{...f.tax,rotation:0},{fontSize:66,maxWidth:340,maxHeight:180});
@@ -83,7 +83,7 @@ export function TemplateBoard({board,selected,onSelect,svgRef,interactive=true,p
  const titleUnchanged=norm(board.title)===norm(source.title);const title=template.title;const titleColor=board.titleColor||(board.boardStyle==='classic'?'#ffffff':board.accent);
  return <svg ref={svgRef} className="game-board" data-board-template={board.boardStyle==='photoshop'?'supplied-campus-psd':'supplied-campus-png'} data-print-size-mm="508" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6000 6000" role="img" aria-label={`${board.title} custom 40-space board`} style={{fontFamily:'KabobLight, Arial, sans-serif',...(previewSize?{width:previewSize,height:previewSize,maxWidth:'none',maxHeight:'none'}:{})}}>
  <defs>
- <style>{Object.entries(fonts).map(([name,data])=>`@font-face{font-family:'${name}';src:url(data:font/ttf;base64,${data}) format('truetype');}`).join('\n')}</style>
+ <style>{Object.entries(fonts).filter(([name])=>name==='KabobLight'||name==='HelveticaNeue-BoldItalic').map(([name,data])=>`@font-face{font-family:'${name}';src:url(data:font/ttf;base64,${data}) format('truetype');}`).join('\n')}</style>
  <mask id={uid+'edits'} maskUnits="userSpaceOnUse" x="0" y="0" width="6000" height="6000"><rect width="6000" height="6000" fill="white"/>{edits.map((b,i)=><rect key={i} x={b[0]} y={b[1]} width={b[2]-b[0]} height={b[3]-b[1]} fill="black"/>)}</mask>
  {template.colors.map((a,i)=><mask key={i} id={uid+'color'+i} maskUnits="userSpaceOnUse" x={a.x} y={a.y} width={a.w} height={a.h}><Bitmap a={a}/></mask>)}
  <mask id={uid+'ink'} maskUnits="userSpaceOnUse" x="0" y="0" width="6000" height="6000"><Bitmap a={template.ink}/></mask>

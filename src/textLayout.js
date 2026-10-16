@@ -19,9 +19,9 @@ export function fitText(value,{width,height,fontSize=66,lineHeight=1.04,measure,
  return {lines,size,lineHeight:size*lineHeight,width:Math.max(0,...lines.map(l=>measure(l,size))),height:lines.length*size*lineHeight};
 }
 let canvas;
-export function nativeTextMetrics(value,size,font,bold=false,italic=false){
+export function nativeTextMetrics(value,size,font,bold=false,italic=false,kerning='auto'){
  if(typeof document==='undefined')return {width:value.length*size*.55,ascent:size*.72,descent:size*.12};
- canvas??=document.createElement('canvas');const ctx=canvas.getContext('2d');ctx.font=`${italic?'italic ':''}${bold?'bold ':''}${size}px "${font}", Arial, sans-serif`;const m=ctx.measureText(value);
+ canvas??=document.createElement('canvas');const ctx=canvas.getContext('2d');ctx.font=`${italic?'italic ':''}${bold?'bold ':''}${size}px "${font}", Arial, sans-serif`;ctx.fontKerning=kerning;const m=ctx.measureText(value);
  return {width:m.width,ascent:m.actualBoundingBoxAscent||size*.72,descent:m.actualBoundingBoxDescent||0};
 }
 export function subtractRectangles(region,cuts){

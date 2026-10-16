@@ -58,8 +58,8 @@ async function paintCard(doc,art,x,y,w,h){
   else if(o.type==='rect'){doc.setFillColor(o.fill);doc.rect(x+o.x*sx,y+o.y*sy,o.w*sx,o.h*sy,'F');}
   else{
    doc.setTextColor(o.color);doc.setFont(getCardFonts()[o.font]?o.font:'GameSans','normal');doc.setFontSize(o.size*sy*72/25.4);
-   const max=o.maxWidth*sx;const width=doc.getTextWidth(pdfText(o.value))+Math.max(0,o.value.length-1)*(o.tracking||0)*sx;const fit=Math.min(1,max/Math.max(.01,width));doc.setFontSize(doc.getFontSize()*fit);doc.setCharSpace((o.tracking||0)*sx*fit);
-   doc.saveGraphicsState();const baseline=(doc.internal.pageSize.getHeight()-y-o.y*sy)*doc.internal.scaleFactor;doc.setCurrentTransformationMatrix(new doc.Matrix(1,0,0,o.scaleY,0,baseline*(1-o.scaleY)));doc.text(pdfText(o.value),x+o.x*sx,y+o.y*sy,{align:o.align});doc.restoreGraphicsState();doc.setCharSpace(0);
+   const max=o.maxWidth*sx;const width=doc.getTextWidth(pdfText(o.value))+Math.max(0,o.value.length-1)*(o.tracking||0)*sx;const fit=Math.min(1,max/Math.max(.01,width*(o.scaleX||1)));doc.setFontSize(doc.getFontSize()*fit);doc.setCharSpace((o.tracking||0)*sx*fit);
+   doc.saveGraphicsState();const baseline=(doc.internal.pageSize.getHeight()-y-o.y*sy)*doc.internal.scaleFactor;doc.setCurrentTransformationMatrix(new doc.Matrix(o.scaleX||1,0,0,o.scaleY,(x+o.x*sx)*doc.internal.scaleFactor*(1-(o.scaleX||1)),baseline*(1-o.scaleY)));doc.text(pdfText(o.value),x+o.x*sx,y+o.y*sy,{align:o.align});doc.restoreGraphicsState();doc.setCharSpace(0);
   }
  }
  doc.setFont('GameSans','normal');doc.setTextColor('#203e34');
