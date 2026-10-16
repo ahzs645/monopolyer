@@ -40,6 +40,14 @@ Download the complete kit, then read `rules.pdf` or `READ-ME.txt`.
 - Reference money prints ten notes per A4 sheet at the original 90.84 × 43.22 mm bill size, in the quantities selected for each player. The simple design retains its 99 × 50 mm size.
 - Building strips make 32 houses and 12 hotels. Supply two dice and player tokens.
 
+### Setting up properties and group colors
+
+Open **Spaces** to edit properties in groups. Each group header has a color picker, editable hex value and **Reset** control. Group changes update every property in that group, its deed and all exported artwork. The selected property's detailed settings also show a shared group color control. Board design includes the full eight-group palette; **Edit all property names as a list** keeps the original bulk editor available without a long default setup form.
+
+Names and purchase prices are editable directly below each preview. **Find a space** searches by name, and **Show spaces** filters to one group or the special spaces. Click a space or **Edit details** for group assignment, rents, mortgages, icons and uploads. Moving a property to another group also changes its source-board color band and deed. Group numbers and current hex values identify groups without relying on outdated color names.
+
+Preview crops retain the current board's exact artwork, but normalize each side's rotation so names and prices are upright. SVG viewports clip each crop at its own boundaries and maintain its aspect ratio. Full-board previews and exports keep the original orientation and layout. The original Studio template has its own margin-free preview viewport; its full-board export dimensions are unchanged.
+
 ### Changing icons and text without moving the layout
 
 In **Spaces**, choose a space and use the icon grid or **Search more icons** to reuse the reference site's searchable Font Awesome picker. Its symbol stays centered in the source illustration slot and rotates with its side of the board. The GO arrow has its own replacement slot; the GO title stays separate. Corner captions and the jail frame remain in place. Tax spaces also support vector icons. Icon color switches to the selected vector symbol; choose an original PSD illustration to restore that artwork.
@@ -118,4 +126,4 @@ Independent project; not affiliated with the Monopoly brand or its owners. Uploa
 
 ### The builder interface follows the current design
 
-New designs start with the supplied Photoshop board. Existing projects and share links keep their own board, cards, logo and palette. The former original/advanced editor split is removed: BUILD opens the full builder, initially showing the actual board, and no legacy session flag hides the newer tools. The heading follows the current board name. Property editing keeps the selected preview open. Space previews use cropped SVG instances of the same board renderer, including its illustrations, rotations and typography, rather than separately drawn generic Printopoly tiles. One shared artwork definition supplies all 40 crops, and the full board remains mounted independently for export.
+New designs start with the supplied Photoshop board. Existing projects and share links keep their own board, cards, logo and palette. The former original/advanced editor split is removed: BUILD opens the full builder, initially showing the actual board, and no legacy session flag hides the newer tools. The heading follows the current board name. Property editing keeps the selected preview open. Spaces opens the grouped setup view; Board design starts with the full board. Space previews use cropped SVG instances of the same board renderer, including its illustrations, rotations and typography, rather than separately drawn generic Printopoly tiles. One shared artwork definition supplies all 40 crops, and the full board remains mounted independently for export.

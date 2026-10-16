@@ -22,7 +22,7 @@ function LegacyBoard({board,selected,onSelect,svgRef,interactive=true,previewSiz
  const style=board.boardStyle||'studio';
  const deckPositions=style==='campus'?[['chest',292,292,-45],['chance',708,708,-45]]:[['chance',315,300,-35],['chest',685,700,-35]];
  const deckLabel=(id)=>[7,22,36].includes(id)?board.decks.chance.name:[2,17,33].includes(id)?board.decks.chest.name:null;
- return <svg ref={svgRef} className="game-board" xmlns="http://www.w3.org/2000/svg" viewBox="-3 -3 1006 1006" role="img" aria-label={`${board.title} custom 40-space board`} style={{fontFamily:board.boardStyle==='campus'?'KabobLight, Arial, sans-serif':'Arial, Helvetica, sans-serif',...(previewSize?{width:previewSize,height:previewSize,maxWidth:'none',maxHeight:'none'}:{})}}>
+ return <svg ref={svgRef} className="game-board" xmlns="http://www.w3.org/2000/svg" viewBox={previewSize?'0 0 1000 1000':'-3 -3 1006 1006'} role="img" aria-label={`${board.title} custom 40-space board`} style={{fontFamily:board.boardStyle==='campus'?'KabobLight, Arial, sans-serif':'Arial, Helvetica, sans-serif',...(previewSize?{width:previewSize,height:previewSize,maxWidth:'none',maxHeight:'none'}:{})}}>
  <defs><style>{Object.entries(fonts).map(([name,data])=>`@font-face{font-family:'${name}';src:url(data:font/ttf;base64,${data}) format('truetype');}`).join('\n')}</style></defs>
  <rect x="-2" y="-2" width="1004" height="1004" rx="2" fill={board.background} stroke={board.ink} strokeWidth="4"/>
  <g fill={board.ink}>

@@ -1,7 +1,7 @@
 import React,{useState,useId} from 'react';
 import {Board} from './Board';
-import {templateTileRect} from './TemplateBoard';
-import {tilePosition} from './model';
+import {spacePreviewLayout} from './spacePreviewLayout';
+import {GroupColorControl,originalGroupColors} from './GroupColorControl';
 
 const asset=(name)=>`${import.meta.env.BASE_URL}reference-assets/${name}`;
 export function ReferenceWelcome({onBuild,onTemplates,onSources}){
@@ -21,22 +21,28 @@ export function ReferenceWelcome({onBuild,onTemplates,onSources}){
 export function GroupedPropertyEditors({board,onChange,onFocus}){
  return <section className="reference-property-groups" aria-label="Grouped property editor"><h3 className="heading2">Properties</h3>
   {board.groups.map((color,group)=>{const tiles=board.tiles.filter(t=>t.kind==='property'&&t.group===group);return <section className="neu" key={group}><h4 className="neutext">Property group {group+1}:</h4>
-   <label className="reference-input-row"><span className="desc">Property color:</span><input aria-label={`Property group ${group+1} color`} type="color" className="colorinput" value={color} onChange={e=>onChange(b=>({...b,groups:b.groups.map((c,i)=>i===group?e.target.value:c)}))}/></label>
+   <label className="reference-input-row"><span className="desc">Property color:</span><input aria-label={`Bulk property group ${group+1} color`} type="color" className="colorinput" value={color} onChange={e=>onChange(b=>({...b,groups:b.groups.map((c,i)=>i===group?e.target.value:c)}))}/></label>
    {tiles.map((tile,i)=><label className="reference-input-row" key={tile.id}><span className="desc">Property {group+1}/{i+1}</span><input className="input" aria-label={`Property ${group+1}/${i+1}`} maxLength={60} value={tile.name} onFocus={()=>onFocus(tile.id,group)} onChange={e=>onChange(b=>({...b,tiles:b.tiles.map(t=>t.id===tile.id?{...t,name:e.target.value}:t)}))}/></label>)}
    {!tiles.length&&<p className="muted">Assign a property to this group in Spaces.</p>}
   </section>;})}
  </section>;
 }
-export function SpacePreviews({board,onSelect,groupRefs}){
+export function SpacePreviews({board,onSelect,onDetails,onChange,selected,groupRefs}){
  const uid='current-board-spaces'+useId().replace(/[^a-zA-Z0-9]/g,'');const native=board.boardStyle!=='studio',size=native?6000:1000;
- const groups=board.groups.map((_,group)=>({key:group,title:`Property group ${group+1}`,tiles:board.tiles.filter(t=>t.kind==='property'&&t.group===group)}));
+ const [query,setQuery]=useState(''),[filter,setFilter]=useState('all'),[editing,setEditing]=useState(null);const defaults=originalGroupColors(board);
+ const tileName=tile=>tile.kind==='event'?board.decks[[7,22,36].includes(tile.id)?'chance':'chest'].name:tile.name;
+ const matches=tile=>tile.id===editing||tileName(tile).toLowerCase().includes(query.trim().toLowerCase());
+ const groups=board.groups.map((color,group)=>({key:String(group),title:`Property group ${group+1}`,color,tiles:board.tiles.filter(t=>t.kind==='property'&&t.group===group)}));
  groups.push({key:'special',title:'Special spaces',tiles:board.tiles.filter(t=>t.kind!=='property')});
- return <div className="reference-space-previews"><h2 className="reference-board-title">{board.title}</h2><p>These are the actual spaces from your current board. Select one to edit.</p>
+ const visible=groups.filter(g=>filter==='all'||g.key===filter).map(g=>({...g,matching:g.tiles.filter(matches)})).filter(g=>g.matching.length||(!query&&g.key!=='special'));
+ const update=(id,key,value)=>onChange(b=>({...b,tiles:b.tiles.map(t=>t.id===id?{...t,[key]:value}:t)}));
+ return <div className="reference-space-previews"><div className="space-setup-toolbar"><div className="space-setup-heading"><h2>Properties &amp; groups</h2><small>40 spaces · 8 color groups</small></div><p>Change a group color, name or price here. Open a space for rent, icon and layout options.</p><div className="space-setup-filters"><label>Find a space<input type="search" aria-label="Find a space" placeholder="Search by name…" value={query} onChange={e=>{setQuery(e.target.value);setEditing(null);}}/></label><label>Show spaces<select aria-label="Show spaces" value={filter} onChange={e=>{setFilter(e.target.value);setEditing(null);}}><option value="all">All 40 spaces</option>{groups.map(g=><option key={g.key} value={g.key}>{g.key==='special'?'Special spaces':`Group ${Number(g.key)+1}`} ({g.tiles.length})</option>)}</select></label></div></div>
  <svg className="space-art-library" aria-hidden="true" width="0" height="0"><defs><symbol id={uid} viewBox={`0 0 ${size} ${size}`}><Board board={board} interactive={false} previewSize={size}/></symbol></defs></svg>
- {groups.map(({key,title,tiles})=><section className="reference-preview-group" key={key} ref={el=>{groupRefs.current[key]=el;}}><h3>{title}</h3><div className="current-spaces-grid">{tiles.map(tile=>{
-  const r=native?templateTileRect(tile.id):tilePosition(tile.id),name=tile.kind==='event'?board.decks[[7,22,36].includes(tile.id)?'chance':'chest'].name:tile.name;
-  return <button key={tile.id} className="current-space-preview" aria-label={`Edit ${name}`} onClick={()=>onSelect(tile.id)}><svg data-current-space={tile.id} xmlns="http://www.w3.org/2000/svg" viewBox={`${r.x} ${r.y} ${r.w} ${r.h}`} style={{aspectRatio:`${r.w}/${r.h}`}} role="img" aria-label={`${name} from your board`}><use href={`#${uid}`} width={size} height={size}/></svg><span>{name}</span>{tile.price>0&&<small>{board.currency}{tile.price}</small>}</button>;
- })}</div></section>)}
+ {!visible.length&&<div className="empty-space-search"><p>No spaces match your search.</p><button className="button outline" onClick={()=>{setQuery('');setFilter('all');}}>Clear filters</button></div>}
+ {visible.map(({key,title,color,tiles,matching})=><section className="reference-preview-group" aria-label={title} key={key} ref={el=>{groupRefs.current[key]=el;}}><header className="property-group-header"><div><h3>{title}</h3><small>{tiles.length} {tiles.length===1?'space':'spaces'}</small></div>{key!=='special'&&<GroupColorControl compact label={`Group ${Number(key)+1}`} color={color} resetColor={defaults[Number(key)]} onChange={value=>onChange(b=>({...b,groups:b.groups.map((c,i)=>i===Number(key)?value:c)}))}/>}</header><div className="current-spaces-grid">{matching.map(tile=>{
+  const layout=spacePreviewLayout(board,tile.id),name=tileName(tile);
+  return <article key={tile.id} className={`current-space-preview ${selected===tile.id?'selected':''}`} data-space-editor={tile.id}><button className="current-space-artwork" aria-label={`Edit ${name}`} onClick={()=>onDetails(tile.id)}><svg data-current-space={tile.id} data-preview-rotation={layout.rotation} xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 ${layout.w} ${layout.h}`} style={{aspectRatio:`${layout.w}/${layout.h}`}} overflow="hidden" preserveAspectRatio="none" role="img" aria-label={`${name} from your board`}><g transform={layout.transform}><use href={`#${uid}`} width={size} height={size}/></g></svg></button>{tile.kind==='property'?<div className="inline-space-fields"><label>Name<textarea aria-label={`Name for space ${tile.id}`} rows="2" maxLength={60} value={tile.name} onFocus={()=>{setEditing(tile.id);onSelect(tile.id);}} onBlur={()=>setEditing(null)} onChange={e=>update(tile.id,'name',e.target.value)}/></label><label>Price ({board.currency})<input aria-label={`Price for space ${tile.id}`} type="number" min="0" max="1000000" value={tile.price} onFocus={()=>onSelect(tile.id)} onChange={e=>{const value=e.target.valueAsNumber;if(Number.isFinite(value))update(tile.id,'price',Math.max(0,Math.min(1000000,value)));}}/></label></div>:<><strong className="special-space-name">{name}</strong>{tile.price>0&&<small>{board.currency}{tile.price}</small>}</>}<button className="text-button space-details-link" aria-label={`Edit details for ${name}`} onClick={()=>onDetails(tile.id)}>Edit details →</button></article>;
+ })}</div>{!tiles.length&&<p className="muted">Assign a property to this group using its space settings.</p>}</section>)}
  </div>;
 }
 
