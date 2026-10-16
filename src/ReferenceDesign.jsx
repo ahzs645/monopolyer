@@ -1,6 +1,7 @@
-import React,{useState} from 'react';
-import {SvgIcon,SourceIcon} from './Board';
-import {ORIGINAL_ARTWORK} from './reference-assets/artwork';
+import React,{useState,useId} from 'react';
+import {Board} from './Board';
+import {templateTileRect} from './TemplateBoard';
+import {tilePosition} from './model';
 
 const asset=(name)=>`${import.meta.env.BASE_URL}reference-assets/${name}`;
 export function ReferenceWelcome({onBuild,onTemplates,onSources}){
@@ -12,7 +13,7 @@ export function ReferenceWelcome({onBuild,onTemplates,onSources}){
    <div className="welcome-row"><img src={asset('dice-3.svg')} className="dice" alt="Three on a die"/><p className="para">See your changes in the instant preview. Compare your board with the artwork you uploaded using the original-art overlay.</p></div>
   </div><p className="build">Click BUILD to start creating your own board</p><div className="buttoncontainer"><button className="buildButton" onClick={onBuild}>BUILD</button></div>
   <p className="blurb">Download a high-resolution board and a complete set of matching cards, money, houses, hotels, and print sheets for A4 paper.</p>
-  <div className="adcontainer"><button className="ad" onClick={onTemplates}><strong>Start with your campus board</strong><span>Your original illustrations, campus names, and familiar layout.</span></button><button className="ad" onClick={onSources}><strong>Compare with your originals</strong><span>Overlay the uploaded board and see which source elements are reused.</span></button></div>
+  <div className="adcontainer"><button className="ad" onClick={onTemplates}><strong>Choose a starting template</strong><span>Choose your PNG or Photoshop board, then customize every space and card.</span></button><button className="ad" onClick={onSources}><strong>Compare with your originals</strong><span>Overlay the uploaded board and see which source elements are reused.</span></button></div>
   <section className="upcoming"><h2>Everything in your custom edition</h2><p>SVG company logos · Custom colors · Property deeds · Editable event cards · Custom money · Printable game kit · Save and share with json-url</p></section>
   </section><p className="bottomscript">Reference design by Marcell Sarosi · Customized for your Monopolyer project</p>
  </main>;
@@ -27,12 +28,16 @@ export function GroupedPropertyEditors({board,onChange,onFocus}){
  </section>;
 }
 export function SpacePreviews({board,onSelect,groupRefs}){
+ const uid='current-board-spaces'+useId().replace(/[^a-zA-Z0-9]/g,'');const native=board.boardStyle!=='studio',size=native?6000:1000;
  const groups=board.groups.map((_,group)=>({key:group,title:`Property group ${group+1}`,tiles:board.tiles.filter(t=>t.kind==='property'&&t.group===group)}));
  groups.push({key:'special',title:'Special spaces',tiles:board.tiles.filter(t=>t.kind!=='property')});
- return <div className="reference-space-previews"><h2 className="reference-board-title">{board.title}</h2>{groups.map(({key,title,tiles})=><section className="reference-preview-group" key={key} ref={el=>{groupRefs.current[key]=el;}}><h3>{title}</h3><div className="exprow">{tiles.map(tile=><button key={tile.id} className={`space ${tile.kind==='property'?'property':'railroad'}`} aria-label={`Edit ${tile.name}`} onClick={()=>onSelect(tile.id)}><div className="container">
-  {tile.kind==='property'&&<div className="color-bar" style={{background:board.groups[tile.group]}}/>}<div className="name">{tile.kind==='event'?([7,22,36].includes(tile.id)?board.decks.chance.name:board.decks.chest.name):tile.name}</div>
-  {tile.kind!=='property'&&(ORIGINAL_ARTWORK[tile.artwork]?<img className="drawing original-illustration" src={ORIGINAL_ARTWORK[tile.artwork]} alt="Original PSD illustration"/>:<SourceIcon className="drawing" tile={tile} size={64} style={{color:tile.kind==='event'?(board.decks[[7,22,36].includes(tile.id)?'chance':'chest'].color):tile.color}}/>)}
-  <div className="price">{tile.price?`Price ${board.currency}${tile.price}`:tile.kind==='go'?`Collect ${board.currency}200`:''}</div></div></button>)}</div></section>)}</div>;
+ return <div className="reference-space-previews"><h2 className="reference-board-title">{board.title}</h2><p>These are the actual spaces from your current board. Select one to edit.</p>
+ <svg className="space-art-library" aria-hidden="true" width="0" height="0"><defs><symbol id={uid} viewBox={`0 0 ${size} ${size}`}><Board board={board} interactive={false} previewSize={size}/></symbol></defs></svg>
+ {groups.map(({key,title,tiles})=><section className="reference-preview-group" key={key} ref={el=>{groupRefs.current[key]=el;}}><h3>{title}</h3><div className="current-spaces-grid">{tiles.map(tile=>{
+  const r=native?templateTileRect(tile.id):tilePosition(tile.id),name=tile.kind==='event'?board.decks[[7,22,36].includes(tile.id)?'chance':'chest'].name:tile.name;
+  return <button key={tile.id} className="current-space-preview" aria-label={`Edit ${name}`} onClick={()=>onSelect(tile.id)}><svg data-current-space={tile.id} xmlns="http://www.w3.org/2000/svg" viewBox={`${r.x} ${r.y} ${r.w} ${r.h}`} style={{aspectRatio:`${r.w}/${r.h}`}} role="img" aria-label={`${name} from your board`}><use href={`#${uid}`} width={size} height={size}/></svg><span>{name}</span>{tile.price>0&&<small>{board.currency}{tile.price}</small>}</button>;
+ })}</div></section>)}
+ </div>;
 }
 
 export function WebsiteOverlay(){

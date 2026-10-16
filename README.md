@@ -6,7 +6,7 @@ A browser-based studio for making a custom property-trading board game, built fr
 
 ## Included
 
-- The original supplied Printopoly React components and CSS, including the Kabel font, BUILD page, 60/40 editor split, original form spacing, icon picker, and preview tiles. The added tools are available from **Logo, cards & full board**.
+- One full builder using the supplied Printopoly Kabel font, BUILD page, mint/red styling, 60/40 desktop split and searchable icon picker. Board design, spaces, cards, money and export are available together; the actual board is the initial preview.
 - Live, clickable 40-space board with editable names, prices, rents, group colors, special-space icons, and currency.
 - Company SVG logo upload, logo sizing, board palette, and custom title/subtitle.
 - Printopoly, company, UNBC campus PNG, and original Photoshop board presets. The campus preset reconstructs the supplied 6000-pixel board PNG, including its complete illustrations, typography, deck frames, and exact palette.
@@ -42,7 +42,7 @@ Download the complete kit, then read `rules.pdf` or `READ-ME.txt`.
 
 ### Changing icons and text without moving the layout
 
-In **Logo, cards & full board → Spaces**, choose a space and use the icon grid or **Search more icons** to reuse the reference site's searchable Font Awesome picker. Its symbol stays centered in the source illustration slot and rotates with its side of the board. The GO arrow has its own replacement slot; the GO title stays separate. Corner captions and the jail frame remain in place. Tax spaces also support vector icons. Icon color switches to the selected vector symbol; choose an original PSD illustration to restore that artwork.
+In **Spaces**, choose a space and use the icon grid or **Search more icons** to reuse the reference site's searchable Font Awesome picker. Its symbol stays centered in the source illustration slot and rotates with its side of the board. The GO arrow has its own replacement slot; the GO title stays separate. Corner captions and the jail frame remain in place. Tax spaces also support vector icons. Icon color switches to the selected vector symbol; choose an original PSD illustration to restore that artwork.
 
 Space names update immediately. Text retains the source center and rotation, measures its actual font/glyph widths, wraps, and shrinks to fit the original label area. Use line breaks in the space-name box for explicit line breaks. Complete wording is retained. Prices stay at their separate source anchors. Transport and utility symbol changes also update the matching deed illustration without moving its title, rent table or mortgage text. Saved projects and share links retain the symbol, color and multiline name. The supplied-font limitations below still apply to exact new lettering.
 
@@ -69,7 +69,7 @@ The site’s Kabel font **is included** in the website archive and reused locall
 - **ArialNarrow-Bold**: event-template body text.
 - **HelveticaNeue-BoldItalic**: custom center titles on the source board.
 
-Open **Logo, cards & full board → Cards → Exact Photoshop fonts** to load the matching TTF files. Font names are checked against their internal font metadata. The app stores them on this device and embeds loaded fonts in PDF exports and deed SVG previews. Font files are not inserted in share URLs; the receiving device also needs the fonts for exact editable text. Project data, colors, logos, names and artwork keys still travel in the link.
+Open **Cards → Exact Photoshop fonts** to load the matching TTF files. Font names are checked against their internal font metadata. The app stores them on this device and embeds loaded fonts in PDF exports and deed SVG previews. Font files are not inserted in share URLs; the receiving device also needs the fonts for exact editable text. Project data, colors, logos, names and artwork keys still travel in the link.
 
 Unchanged source lettering uses the original artwork. New wording and prices reuse available source letters and numbers, with reconstructed spacing; missing characters use a fallback until matching fonts are loaded. Downloads and the kit’s READ-ME identify missing fonts. The **Original Photoshop card templates** ZIP preserves the supplied PSD files and their original rendered artwork unchanged, with a font-name report.
 
@@ -102,6 +102,10 @@ npm run preview
 
 See [the source review](docs/SOURCE_REVIEW.md), [archive inventory](docs/archive-inventory.json), and [Photoshop layer inventory](docs/template-layers.json). The app includes a source gallery with a website comparison overlay. **Overlay original artwork** in the preview opens a reference/opacity control for comparing the board. Comparison layers are excluded from exported files. Choose **Original PSD illustration** in Spaces to reuse an extracted illustration, or choose a vector icon to replace it for that space. Illustration choices and title styles are saved in projects and share links.
 
-The original PSD documents and archived third-party runtime are not bundled into the application. The original About, Maker, input, tile-preview, and icon-picker source is in `src/original`; only imports and state/export integration are adapted. Original CSS is scoped in `src/exact-source.css` so it does not change the added tools. The decorative dice, included Kabel font, and nine extracted PSD illustrations are reused. See `public/reference-assets` and `src/reference-assets/artwork.js` for the assets; the embedded image data makes exported SVGs and PDFs self-contained.
+The original PSD documents and archived third-party runtime are not bundled into the application. The original About, Maker, input, tile-preview and icon-picker sources remain in `src/original` for reference. The searchable icon picker is reused in the unified builder. `src/builder.css` preserves the source typography and desktop proportions while making all current tools available; `src/exact-source.css` retains the archived scoped rules and included font. The decorative dice, included Kabel font, and nine extracted PSD illustrations are reused. See `public/reference-assets` and `src/reference-assets/artwork.js` for the assets; the embedded image data makes exported SVGs and PDFs self-contained.
 
 Independent project; not affiliated with the Monopoly brand or its owners. Uploaded reference artwork remains attributed to its original creators. Noto Sans is distributed under the SIL Open Font License; its notice is in `src/fonts/LICENSE.txt`. UI fonts and other libraries retain their package licenses.
+
+### The builder interface follows the current design
+
+New designs start with the supplied Photoshop board. Existing projects and share links keep their own board, cards, logo and palette. The former original/advanced editor split is removed: BUILD opens the full builder, initially showing the actual board, and no legacy session flag hides the newer tools. The heading follows the current board name. Property editing keeps the selected preview open. Space previews use cropped SVG instances of the same board renderer, including its illustrations, rotations and typography, rather than separately drawn generic Printopoly tiles. One shared artwork definition supplies all 40 crops, and the full board remains mounted independently for export.

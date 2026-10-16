@@ -9,7 +9,7 @@ test('edits, autosaves, undoes, and shares a complete design including its logo'
  await page.getByLabel('Upload SVG logo',{exact:true}).setInputFiles({name:'logo.svg',mimeType:'image/svg+xml',buffer:Buffer.from(logo)});
  await expect(page.getByAltText('Company logo')).toBeVisible();
  await page.getByLabel('Background',{exact:true}).fill('#f5e5cb');
- await page.getByRole('button',{name:'Edit Oak Avenue',exact:true}).click();
+ await page.getByRole('button',{name:'Edit Neyoh Residence',exact:true}).click();
  await page.getByLabel('Space name',{exact:true}).fill('ACME Headquarters');await page.getByLabel('Purchase price',{exact:true}).fill('777');
  await page.getByRole('button',{name:'Property deeds',exact:true}).click();
  const deed=page.getByRole('button',{name:'Edit deed for ACME Headquarters',exact:true});await expect(deed).toBeInViewport();await expect(deed).toContainText('$777');
@@ -19,7 +19,7 @@ test('edits, autosaves, undoes, and shares a complete design including its logo'
  const copy=await context.newPage();await copy.goto(url);const tools=copy.getByRole('button',{name:'Logo, cards & full board',exact:true});if(await tools.isVisible())await tools.click();await expect(copy.getByLabel('Board name',{exact:true})).toHaveValue('ACMEOPOLY');await expect(copy.getByAltText('Company logo')).toBeVisible();await copy.getByRole('button',{name:'Edit ACME Headquarters',exact:true}).click();await expect(copy.getByLabel('Purchase price',{exact:true})).toHaveValue('777');expect(errors).toEqual([]);
 });
 test('edits event decks, keeps placeholders in sync, and reimports project backups',async({page})=>{
- await ready(page);await page.getByRole('button',{name:'Cards',exact:true}).click();await page.getByLabel('Deck name',{exact:true}).fill('Company News');await page.getByLabel('Card title',{exact:true}).fill('Bonus day');await page.getByLabel('What happens next?',{exact:true}).fill('Collect {{currency}}500 at {{tile:39}}.');await expect(page.getByRole('button',{name:/Company News Bonus day/i})).toContainText('Collect $500 at Summit Place.');
+ await ready(page);await page.getByRole('button',{name:'Cards',exact:true}).click();await page.getByLabel('Deck name',{exact:true}).fill('Company News');await page.getByLabel('Card title',{exact:true}).fill('Bonus day');await page.getByLabel('What happens next?',{exact:true}).fill('Collect {{currency}}500 at {{tile:39}}.');await expect(page.getByRole('button',{name:/Company News Bonus day/i})).toContainText('Collect $500 at Thirsty Moose Pub.');
  await page.getByRole('button',{name:'Add card',exact:true}).click();await expect(page.getByText('17 cards in this deck · up to 64')).toBeVisible();await page.getByRole('button',{name:'Remove',exact:true}).click();
  await page.getByRole('button',{name:'Get print files',exact:true}).click();const d=page.waitForEvent('download');await page.getByRole('button',{name:/Editable project/}).click();const result=await d;const data=JSON.parse(await readFile(await result.path(),'utf8'));expect(data.decks.chance.name).toBe('Company News');
  data.title='REIMPORTED';await page.getByLabel('Import project file',{exact:true}).setInputFiles({name:'test.monopolyer.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(data))});await page.getByRole('button',{name:'Board design',exact:true}).click();await expect(page.getByLabel('Board name',{exact:true})).toHaveValue('REIMPORTED');
@@ -43,11 +43,11 @@ test('keeps focus while editing the printable guide',async({page})=>{
  await ready(page);await page.getByRole('button',{name:'Get print files',exact:true}).click();await page.getByRole('button',{name:/Edit the game guide/}).click();const guide=page.getByLabel('Game guide & house rules',{exact:true});await guide.fill('CUSTOM RULES: ');await guide.pressSequentially('Everybody gets a bonus.');await expect(guide).toHaveValue('CUSTOM RULES: Everybody gets a bonus.');await expect(guide).toBeFocused();
 });
 
-test('uses the original source components, included font, and exact desktop split',async({page})=>{
- await page.setViewportSize({width:1440,height:1100});await page.goto('./');await expect(page.getByRole('button',{name:'BUILD',exact:true})).toBeVisible();await expect(page.getByAltText('dice1')).toBeVisible();
- await page.getByRole('button',{name:'BUILD',exact:true}).click();const left=await page.locator('.exact-source .left').boundingBox(),right=await page.locator('.exact-source .right').boundingBox();expect(left.width).toBe(864);expect(right.width).toBe(576);expect(right.x).toBe(864);
- await expect(page.locator('.exact-source input[name="title"]')).toHaveCSS('font-family','Kabel, sans-serif');await page.locator('.exact-source input[name="brown1"]').fill('Our original office');await expect(page.locator('.exact-source .right .name').first()).toHaveText('Our original office');
- await page.locator('.exact-source input[name="browncolor"]').fill('#112233');await expect(page.locator('.exact-source .right .color-bar').first()).toHaveCSS('background-color','rgb(17, 34, 51)');
+test('opens the complete reference-styled builder with the current Photoshop board',async({page})=>{
+ await page.setViewportSize({width:1440,height:1100});await page.addInitScript(()=>sessionStorage.setItem('monopolyer.advanced','0'));await page.goto('./');await expect(page.getByRole('button',{name:'BUILD',exact:true})).toBeVisible();await expect(page.getByAltText('One on a die')).toBeVisible();await page.getByRole('button',{name:'BUILD',exact:true}).click();
+ const left=await page.locator('.workspace>.editor').boundingBox(),right=await page.locator('.workspace>.preview').boundingBox();expect(left.width).toBe(864);expect(right.width).toBe(576);expect(right.x).toBe(864);
+ await expect(page.getByLabel('Board name',{exact:true})).toHaveValue('nugssOPOLY');await expect(page.locator('.board-wrap>svg')).toHaveAttribute('data-board-template','supplied-campus-psd');await expect(page.locator('.board-wrap')).toBeVisible();await expect(page.getByRole('button',{name:'Logo, cards & full board',exact:true})).toHaveCount(0);for(const name of ['Spaces','Cards','Money','Print & export'])await expect(page.getByRole('navigation',{name:'Editor sections'}).getByRole('button',{name,exact:true})).toBeVisible();
+ await expect(page.getByLabel('Board name',{exact:true})).toHaveCSS('font-family',/^Kabel,/);await page.evaluate(()=>document.fonts.ready);expect(await page.evaluate(()=>document.fonts.check('16px Kabel'))).toBe(true);await page.getByLabel('Property 1/1',{exact:true}).fill('Our original office');await expect(page.locator('.board-wrap>svg [aria-label="OUR ORIGINAL OFFICE"]')).toHaveCount(1);await expect(page.locator('.board-wrap')).toBeVisible();await page.getByLabel('Property group 1 color',{exact:true}).fill('#112233');await expect(page.locator('.board-wrap>svg rect[fill="#112233"]')).toHaveCount(1);
 });
 
 test('overlays original artwork, reuses PSD illustrations, and keeps guides out of exports',async({page})=>{

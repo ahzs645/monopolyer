@@ -1,0 +1,25 @@
+/* The supplied Printopoly typography and 60/40 desktop arrangement, with all
+   current builder tools and actual artwork visible in the same workspace. */
+.builder-mode{font-family:Kabel,Arial,sans-serif}
+.builder-mode :is(input,textarea,select,button){font-family:Kabel,Arial,sans-serif}
+.builder-mode .intro h1{max-width:min(650px,65vw);overflow-wrap:anywhere;font-family:Kabel,Arial,sans-serif}
+.builder-mode .workspace{margin:0;grid-template-columns:60% minmax(0,40%);border-left:0;border-right:0;height:calc(100vh - 205px);min-height:700px}
+.builder-mode .workspace.expanded{grid-template-columns:35% minmax(0,65%);margin:0;min-height:0}
+.builder-mode .editor-content{padding:22px 7% 35px}
+.builder-mode .editor-tabs button{font-size:14px}
+.builder-mode .preview-hint{max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.builder-mode .preview-tabs button{font-size:12px}
+.builder-mode .preview-stage:not(.cards-stage){padding:14px;align-items:center}
+.builder-mode .board-wrap:not(.offscreen-board){width:100%;height:auto;aspect-ratio:1;max-height:100%;flex-shrink:1;min-width:0}
+.builder-mode .board-wrap:not(.offscreen-board)>.game-board{width:100%;height:auto;max-height:100%;aspect-ratio:1}
+.builder-mode .preview-stage{background:#d4fcda}
+.builder-mode .reference-welcome{font-family:Kabel,Arial,sans-serif}
+.space-art-library{position:absolute;overflow:hidden;pointer-events:none}
+.current-spaces-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start}
+.current-space-preview{min-width:0;display:flex;flex-direction:column;align-items:center;padding:0;color:#000;gap:6px}
+.current-space-preview>svg{width:100%;max-height:235px;background:#fff;border:2px solid #000;box-shadow:4px 4px 0 #000}
+.current-space-preview>span{font-size:13px;overflow-wrap:anywhere}
+.current-space-preview>small{font-size:12px}
+.reference-space-previews>p{font-size:14px}
+@media(max-width:900px){.builder-mode .workspace{display:flex;flex-direction:column;height:auto;min-height:0;margin:0 12px;border:2px solid #000}.builder-mode .preview{order:0;min-height:0}.builder-mode .editor{order:1;border-right:0}.builder-mode .editor-tabs button{font-size:12px}.builder-mode .preview-stage:not(.cards-stage){aspect-ratio:1;height:auto}.builder-mode .board-wrap:not(.offscreen-board){height:auto;width:100%}.builder-mode .workspace.expanded{display:flex;min-height:0}.builder-mode .intro h1{max-width:56vw;font-size:29px}.current-spaces-grid{gap:14px}.builder-mode .preview-hint{display:none}}
+@media(max-width:480px){.builder-mode .editor-tabs button{font-size:10px}.builder-mode .preview-tabs button{font-size:10px}.builder-mode .editor-content{padding:23px 20px}.builder-mode .preview-stage.cards-stage{padding:15px 12px}.current-spaces-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}

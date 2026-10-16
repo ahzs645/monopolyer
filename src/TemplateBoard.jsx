@@ -49,7 +49,7 @@ function ChangedIcon({tile,slot,color}){
  return <g data-space-icon={tile.id} data-icon-name={original?tile.artwork:geometry.name} data-icon-rotation={rotation} data-icon-center-x={x+w/2} data-icon-center-y={y+h/2} transform={`translate(${x+w/2} ${y+h/2}) rotate(${rotation})`} color={color}>
  {original?<image href={original} x={-size/2} y={-size/2} width={size} height={size} preserveAspectRatio="xMidYMid meet"/>:<svg x={-size/2} y={-size/2} width={size} height={size} viewBox={geometry.viewBox.join(' ')} fill="currentColor">{geometry.paths.map((d,i)=><path key={i} d={d}/>)}</svg>}</g>;
 }
-export function TemplateBoard({board,selected,onSelect,svgRef,interactive=true}){
+export function TemplateBoard({board,selected,onSelect,svgRef,interactive=true,previewSize}){
  useCardFonts();const {template,source}=getBoardSource(board);const uid='board'+useId().replace(/[^a-zA-Z0-9]/g,'');const fonts=getCardFonts();const edits=[],patches=[],overlays=[];
  const clear=(box,fill=board.background)=>{edits.push(box);patches.push(<rect key={patches.length} x={box[0]} y={box[1]} width={box[2]-box[0]} height={box[3]-box[1]} fill={fill}/>);};
  const price=(value,field)=>{clear(field.box);overlays.push(<PriceLabel key={overlays.length} value={value} field={field} color={board.ink}/>);};
@@ -76,7 +76,7 @@ export function TemplateBoard({board,selected,onSelect,svgRef,interactive=true})
  }
  for(const key of ['chance','chest'])if(norm(board.decks[key].name)!==norm(source.decks[key].name))label(board.decks[key].name,{...template.decks[key],rotation:-45},{fontSize:80,maxWidth:key==='chest'?660:500,maxHeight:130});
  const titleUnchanged=norm(board.title)===norm(source.title);const title=template.title;
- return <svg ref={svgRef} className="game-board" data-board-template={board.boardStyle==='photoshop'?'supplied-campus-psd':'supplied-campus-png'} data-print-size-mm="508" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6000 6000" role="img" aria-label={`${board.title} custom 40-space board`} style={{fontFamily:'KabobLight, Arial, sans-serif'}}>
+ return <svg ref={svgRef} className="game-board" data-board-template={board.boardStyle==='photoshop'?'supplied-campus-psd':'supplied-campus-png'} data-print-size-mm="508" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6000 6000" role="img" aria-label={`${board.title} custom 40-space board`} style={{fontFamily:'KabobLight, Arial, sans-serif',...(previewSize?{width:previewSize,height:previewSize,maxWidth:'none',maxHeight:'none'}:{})}}>
  <defs>
  <style>{Object.entries(fonts).map(([name,data])=>`@font-face{font-family:'${name}';src:url(data:font/ttf;base64,${data}) format('truetype');}`).join('\n')}</style>
  <mask id={uid+'edits'} maskUnits="userSpaceOnUse" x="0" y="0" width="6000" height="6000"><rect width="6000" height="6000" fill="white"/>{edits.map((b,i)=><rect key={i} x={b[0]} y={b[1]} width={b[2]-b[0]} height={b[3]-b[1]} fill="black"/>)}</mask>
