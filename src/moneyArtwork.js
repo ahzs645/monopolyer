@@ -1,4 +1,4 @@
-import {curvedBillHeading,missingBillGlyphs} from './billHeadingFont';
+import {curvedBillHeading,missingBillGlyphs,straightBillFooter} from './billHeadingFont';
 export const MONEY_VALUES=[1,5,10,20,50,100,500];
 export const MONEY_COLORS=['#ffffff','#fbd5e3','#fcf373','#c9decf','#c6e0e8','#f1cf9d','#ffcb20'];
 export const MONEY_WIDTH=257.5,MONEY_HEIGHT=122.50049;
@@ -11,13 +11,21 @@ export function billHeading(board){
  const mode=board.money.headingMode||(board.money.personalize?'bank':'original');
  return {mode,value:mode==='board'?board.title:mode==='custom'?(board.money.headingText||''):mode==='bank'?board.money.bankName:'MONOPOLY',color:board.money.headingColor||'#000000'};
 }
-export function billFontStatus(board){const heading=billHeading(board);return board.money.style==='studio'||heading.mode==='original'?[]:missingBillGlyphs(heading.value);}
+export function billFontStatus(board){const heading=billHeading(board);return board.money.style==='studio'?[]:[...new Set([...(heading.mode==='original'?[]:missingBillGlyphs(heading.value)),...(board.money.footerMode==='custom'?straightBillFooter(board.money.footerText||'').missing:[])])];}
 export function moneyArtwork(template,board,index){
  const value=board.money.denominations[index],fill=board.money.monochrome?'#ffffff':board.money.tint?board.money.colors[index]:MONEY_COLORS[index];
  let svg=template;
  if(board.money.monochrome)svg=svg.replaceAll(MONEY_COLORS[index],'#ffffff').replaceAll('#231f20','#000000');
  else if(board.money.tint)svg=svg.replaceAll(`fill="${MONEY_COLORS[index]}"`,`fill="${fill}"`);
  let edits='<defs><clipPath id="money-center-edit"><ellipse cx="128.75" cy="61.25" rx="52.1" ry="46.0"/></clipPath></defs>';
+ if(board.money.footerMode&&board.money.footerMode!=='original'){
+  // Remove only the source footer glyph uses, retaining its frame and paper.
+  svg=svg.replace(/<use\b[^>]*\btransform="matrix\(3\.75,0,0,-3,[^,]+,113\.375\d*\)"[^>]*\/>/g,'');
+  if(board.money.footerMode==='custom'){
+   const footer=straightBillFooter(board.money.footerText||'');
+   edits+=`<g data-money-footer="custom" data-footer-font="Myriad-Roman" aria-label="${escape(footer.text)}" fill="#000000"><title>${escape(footer.text)}</title>`+footer.paths.map(g=>`<path data-footer-letter="${escape(g.char)}" d="${g.d}" transform="${g.transform}"/>`).join('')+'</g>';
+  }
+ }
  if(value!==MONEY_VALUES[index]){
   edits+=`<g clip-path="url(#money-center-edit)"><rect x="83" y="38" width="91" height="46" fill="${fill}"/>`+label(value,128.75,81,84,53)+'</g>';
   edits+=`<rect x="28" y="24.25" width="36.5" height="19" fill="${fill}"/>`+label(value,46,42,34,22);

@@ -22,4 +22,12 @@ export function curvedBillHeading(value){
  const paths=glyphs.map((g,i)=>{const advance=g.width*sx,angle=(cursor+advance/2)/r,x=cx+r*Math.sin(angle),y=cy-r*Math.cos(angle);cursor+=advance+tracking*sx;return {char:text[i],d:g.d,transform:`translate(${x} ${y}) rotate(${angle*180/Math.PI}) translate(${-advance/2} 0) scale(${sx} ${g.down?sy:-sy})`};});
  return {text,missing,paths};
 }
+// The original footer uses Myriad at 3.75 × 3 pt with .15 em tracking.
+export function straightBillFooter(value){
+ const text=String(value).replace(/\s+/g,' ').trim();fontFallback??=parse(regular);
+ const missing=[...new Set([...text].filter(c=>!source.glyphs[c]&&!uploaded?.charToGlyphIndex(c)))];
+ const glyphs=[...text].map(c=>source.glyphs[c]||fontGlyph(uploaded?.charToGlyphIndex(c)?uploaded:fontFallback,c));
+ const units=glyphs.reduce((n,g)=>n+g.width,0)+Math.max(0,glyphs.length-1)*.15,sx=Math.min(3.75,54/Math.max(.001,units)),sy=sx/1.25;let cursor=210.75-units*sx/2;
+ return {text,missing,paths:glyphs.map((g,i)=>{const x=cursor;cursor+=(g.width+.15)*sx;return {char:text[i],d:g.d,transform:`translate(${x} 113.37549) scale(${sx} ${g.down?sy:-sy})`};})};
+}
 export function BillFontControls({value,onNotice}){const loaded=useBillFont(),missing=missingBillGlyphs(value);return <details className="card-font-controls"><summary>Curved bill lettering · {missing.length?'matching font needed':'source letters available'}</summary><p>Original PDF letters and missing-letter outlines from your supplied Myriad-Roman font follow the source heading curve. {missing.length?`Missing source letters: ${missing.join(' ')}. These use a fallback until you load the matching font.`:'All letters in this heading are covered.'}</p><label><strong>Myriad-Roman / MyriadPro-Regular</strong><span>{loaded?'Loaded on this device':'Supplied Myriad outlines included'}</span><input aria-label="Load bill heading font" type="file" accept=".otf,.ttf,font/otf,font/ttf" onChange={async e=>{const file=e.target.files?.[0];e.target.value='';if(file)try{await uploadBillFont(file);onNotice?.('Bill font loaded. Heading exports contain vector outlines.');}catch(err){onNotice?.(err.message);}}}/></label><p>Font files stay on this device. Generated PDF headings are outlines and retain their appearance.</p></details>;}

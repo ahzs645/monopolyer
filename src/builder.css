@@ -31,8 +31,6 @@
 .custom-artwork-input details{margin-top:18px}.custom-artwork-input summary{cursor:pointer}.custom-artwork-input textarea{width:100%;margin:12px 0;font-family:monospace}
 .money-options{display:flex;flex-direction:column;gap:12px;margin:18px 0}.money-options input{width:auto;margin-right:10px}
 .reference-banknote{min-width:0}.reference-banknote img{display:block;width:100%;height:auto;aspect-ratio:257.5/122.50049}.reference-banknote footer{text-align:center;font-size:10px;padding:8px}
-.money-comparison-controls{display:flex;flex-direction:column;gap:15px;margin-bottom:18px}.money-comparison-controls label{display:flex;flex-direction:column;gap:8px}.money-comparison-controls p{font-size:12px;line-height:1.5}
-.money-overlay-stage{position:relative;width:100%;aspect-ratio:257.5/122.50049;margin-bottom:22px}.money-overlay-stage img{position:absolute;inset:0;width:100%;height:100%}
 .builder-mode .banknote-grid{grid-template-columns:1fr}
 /* Direct setup controls beside the same source artwork used for printing. */
 .setup-group-palette{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:15px 0 24px}
@@ -74,3 +72,15 @@
 .logo-title-setup>button{margin-bottom:16px}.logo-title-setup>small{display:block;line-height:1.5}
 
 .palette-help{font-size:13px;line-height:1.5;margin:12px 0 18px}
+.property-group-setup{min-width:0;background:#fafffb;border:1px solid #638269;border-radius:8px;padding:8px}
+.property-group-setup.is-open{grid-column:1/-1}.group-setup-toggle{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;padding:9px 4px;border:0;background:transparent;text-align:left;cursor:pointer;font-size:14px}
+.group-setup-toggle small{font-size:11px;white-space:nowrap}.group-setup-toggle:focus-visible{outline:2px solid red}.property-group-setup .group-color-control{margin-top:6px}
+.group-setup-content{padding:15px 4px 5px}.group-setup-content>label{display:flex;flex-direction:column;gap:7px;font-size:13px}.group-setup-content>label input{width:100%;min-width:0}.group-setup-content>small{display:block;font-size:12px;line-height:1.5;margin:8px 0 14px}
+.group-member-deeds{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:14px}.group-member-deeds>button{display:flex;flex-direction:column;align-items:center;gap:7px;padding:10px;min-width:0;border:1px solid #638269;background:#fff;cursor:pointer}.group-member-deeds svg{display:block;width:100%;max-width:150px;height:auto}.group-member-deeds strong{font-size:12px;overflow-wrap:anywhere}.group-member-deeds span{font-size:12px}
+.space-group-browser{border:1px solid #638269;padding:12px;margin-bottom:20px}.space-group-browser>summary{cursor:pointer;font-size:14px}.space-group-browser .setup-group-palette{margin-bottom:0}
+.property-group-header .group-setup-toggle{flex:1;min-width:150px;width:auto}.group-list-actions{display:flex;gap:20px;flex-wrap:wrap;margin-top:15px}
+.deed-preview-controls{display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap;margin:0 0 20px;text-align:left}.deed-preview-controls label{display:flex;flex-direction:column;gap:8px;flex:1;min-width:140px;font-size:13px}.deed-preview-controls select{width:100%;min-width:0;padding:10px;font-size:13px}.deeds-grid.single-deed{display:flex;justify-content:center}.deeds-grid.single-deed .deed-wrapper{width:min(100%,350px)}.empty-deed-preview{font-size:14px;line-height:1.5;padding:20px}
+.bill-paper-setup{min-width:0;border:1px solid #638269;margin:20px 0;padding:16px;background:#fafffb}.bill-paper-setup legend{font-size:16px;padding:0 6px}.bill-paper-setup .money-table{margin-bottom:0}.bill-paper-setup .callout{flex-wrap:wrap}.bill-paper-setup input[type=color]:disabled{opacity:.45;cursor:not-allowed}
+@media(max-width:480px){.group-member-deeds{grid-template-columns:repeat(2,minmax(0,1fr))}.deed-preview-controls .button{width:100%}.space-group-browser{padding:10px}.bill-paper-setup{padding:12px}}
+
+.bill-paper-setup .money-table>div{grid-template-columns:48px minmax(0,1fr) minmax(0,1fr);gap:12px}
