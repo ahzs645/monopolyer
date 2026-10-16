@@ -6,6 +6,10 @@ const templates=new Map();
 export function loadMoneyTemplate(index){if(!templates.has(index))templates.set(index,fetch(moneyReferenceUrl(index)).then(r=>{if(!r.ok)throw new Error('The reference bill could not be loaded.');return r.text();}).catch(e=>{templates.delete(index);throw e;}));return templates.get(index);}
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
 function label(value,x,y,width,size){const fontSize=Math.min(size,width/Math.max(1,String(value).length*.62));return `<text x="${x}" y="${y}" text-anchor="middle" font-family="Georgia, Times New Roman, serif" font-weight="bold" font-size="${fontSize}">${escape(value)}</text>`;}
+export function billHeading(board){
+ const mode=board.money.headingMode||(board.money.personalize?'bank':'original');
+ return {mode,value:mode==='board'?board.title:mode==='custom'?(board.money.headingText||''):mode==='bank'?board.money.bankName:'MONOPOLY',color:board.money.headingColor||'#000000'};
+}
 export function moneyArtwork(template,board,index){
  const value=board.money.denominations[index],fill=board.money.tint?board.money.colors[index]:MONEY_COLORS[index];
  let svg=template;
@@ -16,10 +20,11 @@ export function moneyArtwork(template,board,index){
   edits+=`<rect x="28" y="24.25" width="36.5" height="19" fill="${fill}"/>`+label(value,46,42,34,22);
   edits+=`<rect x="193" y="79.25" width="36.5" height="19" fill="${fill}"/>`+label(value,211,96.5,34,22);
  }
- if(board.money.personalize){
-  edits+=`<g clip-path="url(#money-center-edit)"><rect x="94" y="15" width="72" height="16" fill="${fill}"/>`+label(board.money.bankName,128.75,25,68,6)+'</g>';
-  edits+=label(board.title,128.75,99,66,6);
+ const heading=billHeading(board);
+ if(heading.mode!=='original'){
+  edits+=`<g clip-path="url(#money-center-edit)"><rect x="94" y="15" width="72" height="16" fill="${fill}"/>`+`<g data-money-heading-source="${heading.mode}" fill="${heading.color}">`+label(heading.value,128.75,25,68,6)+'</g>'+'</g>';
  }
+ if(board.money.personalize)edits+=label(board.title,128.75,99,66,6);
  return svg.replace('</svg>',`<g data-money-customization="true">${edits}</g></svg>`);
 }
 export async function referenceMoneyPdf(board,startPdf){

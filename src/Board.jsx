@@ -30,7 +30,7 @@ function LegacyBoard({board,selected,onSelect,svgRef,interactive=true,previewSiz
    {style==='studio'&&<text y="-185" textAnchor="middle" letterSpacing="5" fontSize="12">A WORLD OF YOUR OWN</text>}
    {board.logo?<image href={`data:image/svg+xml;charset=utf-8,${encodeURIComponent(board.logo)}`} x={-board.logoSize/2} y={-board.logoSize-30} width={board.logoSize} height={board.logoSize} preserveAspectRatio="xMidYMid meet"/>:style==='studio'&&<g transform="translate(-32 -142)" color={board.accent}><SvgIcon name="building" size={64}/></g>}
    {style==='classic'&&<rect x="-295" y="-57" width="590" height="100" fill={board.accent} stroke="#ffffff" strokeWidth="6"/>}
-   <WrappedText text={board.title.toUpperCase()} x={0} y={12} width={560} fontSize={Math.min(style==='campus'?78:65,980/Math.max(board.title.length,12))} maxLines={2} fill={style==='classic'?'#ffffff':board.accent} fontWeight="800" letterSpacing="1"/>
+   <WrappedText text={board.title.toUpperCase()} x={0} y={12} width={560} fontSize={Math.min(style==='campus'?78:65,980/Math.max(board.title.length,12))} maxLines={2} fill={board.titleColor||(style==='classic'?'#ffffff':board.accent)} fontWeight="800" letterSpacing="1"/>
    <WrappedText text={board.subtitle} x={0} y={80} width={490} fontSize={15} maxLines={2}/>
    {style==='studio'&&<><path d="M-70 107h140" stroke={board.accent} strokeWidth="2"/><text y="140" textAnchor="middle" fontSize="10" letterSpacing="3">MADE FOR YOUR NEXT GAME NIGHT</text></>}
   </g>

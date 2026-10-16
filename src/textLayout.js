@@ -1,6 +1,7 @@
 // Fit complete wording inside a fixed source slot. Never move its anchor or
 // discard characters: wrap words (including long unbroken names), then shrink.
-export function fitText(value,{width,height,fontSize=66,lineHeight=1.04,measure}){
+export function fitText(value,{width,height,fontSize=66,lineHeight=1.04,measure,singleLine=false}){
+ if(singleLine){const text=String(value).replace(/\s+/g,' ').trim().toUpperCase();const size=Math.min(fontSize,width/Math.max(.001,measure(text,1)),height/lineHeight);return {lines:[text],size,lineHeight:size*lineHeight,width:measure(text,size),height:size*lineHeight};}
  const paragraphs=String(value).replace(/\r\n?/g,'\n').toUpperCase().split('\n');
  const wrap=size=>paragraphs.flatMap(para=>{
   const lines=[];let line='';

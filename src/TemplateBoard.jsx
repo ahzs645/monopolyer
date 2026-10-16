@@ -1,3 +1,4 @@
+import inkPaths from './reference-assets/board-ink-paths.json';
 import {artworkHref} from './customArtwork';
 import React,{useId} from 'react';
 import {template,norm,getBoardSource} from './boardSource';
@@ -14,12 +15,12 @@ export function templateTileRect(id){
  const i=id-31;return {x:5186,y:ys[i],w:814,h:ys[i+1]-ys[i]};
 }
 const Bitmap=({a,...props})=><image href={a.src} x={a.x} y={a.y} width={a.w} height={a.h} {...props}/>;
-function Label({value,box,rotation=0,color='#000000',fontSize=66,maxWidth=440,maxHeight=230,font='KabobLight',bold=false,field='label',contain=false}){
+function Label({value,box,rotation=0,color='#000000',fontSize=66,maxWidth=440,maxHeight=230,font='KabobLight',bold=false,field='label',contain=false,singleLine=false}){
  const inkId='label'+useId().replace(/[^a-zA-Z0-9]/g,'');const x=(box[0]+box[2])/2,y=(box[1]+box[3])/2;
  const nativeFont=!!getCardFonts()[font],italic=!nativeFont&&font==='HelveticaNeue-BoldItalic';
  const glyphMode=!nativeFont&&font==='KabobLight'&&[...norm(value)].every(c=>c===' '||template.glyphs[c]);
  const measure=(text,size)=>glyphMode?[...text].reduce((n,c)=>n+(c===' '?size*.35:template.glyphs[c].w*size/66),0)+Math.max(0,text.length-1)*size*.015:nativeTextMetrics(text,size,font,!nativeFont&&bold,italic).width;
- const layout=fitText(value,{width:maxWidth,height:maxHeight,fontSize,measure});let size=layout.size,lineHeight=layout.lineHeight;
+ const layout=fitText(value,{width:maxWidth,height:maxHeight,fontSize,measure,singleLine});let size=layout.size,lineHeight=layout.lineHeight;
  if(contain){const angle=rotation*Math.PI/180,c=Math.abs(Math.cos(angle)),s=Math.abs(Math.sin(angle)),w=c*layout.width+s*layout.height,h=s*layout.width+c*layout.height;const factor=Math.min(1,(box[2]-box[0])/Math.max(.001,w),(box[3]-box[1])/Math.max(.001,h));size*=factor;lineHeight*=factor;}
  return <g aria-label={norm(value)} data-text-field={field} data-anchor-x={x} data-anchor-y={y} data-rotation={rotation} data-slot-width={maxWidth} data-slot-height={maxHeight} transform={`translate(${x} ${y}) rotate(${rotation})`} fill={color}><defs><filter id={inkId} colorInterpolationFilters="sRGB"><feFlood floodColor={color}/><feComposite in2="SourceGraphic" operator="in"/></filter></defs>
  {layout.lines.map((text,i)=>{
@@ -77,7 +78,7 @@ export function TemplateBoard({board,selected,onSelect,svgRef,interactive=true,p
   if(tile.id===0&&board.currency!==source.currency)label(`COLLECT ${board.currency}200 END OF SEMESTER`,{...f.corner[0],rotation:-45},{fontSize:65,maxWidth:470,maxHeight:160});
  }
  for(const key of ['chance','chest'])if(norm(board.decks[key].name)!==norm(source.decks[key].name))label(board.decks[key].name,{...template.decks[key],rotation:-45},{fontSize:80,maxWidth:key==='chest'?660:500,maxHeight:130});
- const titleUnchanged=norm(board.title)===norm(source.title);const title=template.title;
+ const titleUnchanged=norm(board.title)===norm(source.title);const title=template.title;const titleColor=board.titleColor||(board.boardStyle==='classic'?'#ffffff':board.accent);
  return <svg ref={svgRef} className="game-board" data-board-template={board.boardStyle==='photoshop'?'supplied-campus-psd':'supplied-campus-png'} data-print-size-mm="508" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6000 6000" role="img" aria-label={`${board.title} custom 40-space board`} style={{fontFamily:'KabobLight, Arial, sans-serif',...(previewSize?{width:previewSize,height:previewSize,maxWidth:'none',maxHeight:'none'}:{})}}>
  <defs>
  <style>{Object.entries(fonts).map(([name,data])=>`@font-face{font-family:'${name}';src:url(data:font/ttf;base64,${data}) format('truetype');}`).join('\n')}</style>
@@ -89,10 +90,10 @@ export function TemplateBoard({board,selected,onSelect,svgRef,interactive=true,p
  <rect width="6000" height="6000" fill={board.background}/>
  {template.colors.map((a,i)=><rect key={i} x={a.x} y={a.y} width={a.w} height={a.h} fill={board.groups[i]} mask={`url(#${uid}color${i})`}/>)}
  {patches}
- <g mask={`url(#${uid}edits)`}><Bitmap a={template.base}/>{board.ink!==template.ink.color&&<rect width="6000" height="6000" fill={board.ink} mask={`url(#${uid}ink)`}/>}
+ <g mask={`url(#${uid}edits)`}><Bitmap a={template.base}/>{board.ink!==template.ink.color&&<g data-board-ink={board.ink} fill={board.ink}>{inkPaths.boards[board.boardStyle==='photoshop'?'photoshop':'campus'].map(i=><path key={i} {...inkPaths.paths[i]}/>)}</g>}
  {Object.entries(template.art).map(([id,art])=>art.map((a,i)=><Bitmap key={id+'-'+i} a={a} data-source-artwork={source.tiles[id].artwork} data-tile-id={id}/>))}</g>
  {overlays}
- {titleUnchanged?(board.accent===template.accent?<Bitmap a={title}/>:<rect x={title.x} y={title.y} width={title.w} height={title.h} fill={board.accent} mask={`url(#${uid}title)`}/>):<g transform="translate(3050 3040) rotate(-45)">{board.boardStyle==='classic'&&<rect x="-1770" y="-320" width="3540" height="600" fill={board.accent} stroke="white" strokeWidth="36"/>}<Label value={board.title} box={[-1700,-380,1700,280]} font="HelveticaNeue-BoldItalic" fontSize={430} maxWidth={3400} maxHeight={650} color={board.boardStyle==='classic'?'#ffffff':board.accent} bold/></g>}
+ {titleUnchanged?(board.accent===template.accent&&!board.titleColor?<Bitmap a={title}/>:<rect x={title.x} y={title.y} width={title.w} height={title.h} fill={titleColor} mask={`url(#${uid}title)`}/>):<g transform="translate(3050 3040) rotate(-45)">{board.boardStyle==='classic'&&<rect x="-1770" y="-320" width="3540" height="600" fill={board.accent} stroke="white" strokeWidth="36"/>}<Label value={board.title} box={[-1700,-380,1700,280]} singleLine font="HelveticaNeue-BoldItalic" fontSize={430} maxWidth={3400} maxHeight={650} color={titleColor} bold/></g>}
  {board.subtitle&&<g transform="translate(3300 3420) rotate(-45)"><Label value={board.subtitle} box={[-1400,-80,1400,100]} fontSize={88} maxWidth={2800} maxHeight={160} color={board.ink}/></g>}
  {board.logo&&<g transform="translate(3350 1700) rotate(-45)"><image data-company-logo="true" href={`data:image/svg+xml;charset=utf-8,${encodeURIComponent(board.logo)}`} x={-board.logoSize*2} y={-board.logoSize*2} width={board.logoSize*4} height={board.logoSize*4} preserveAspectRatio="xMidYMid meet"/></g>}
  {interactive&&board.tiles.map(tile=>{const r=templateTileRect(tile.id);return <g key={tile.id} role="button" tabIndex="0" aria-label={`Edit ${deckName(tile.id)}`} onClick={()=>onSelect?.(tile.id)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onSelect?.(tile.id);}}} style={{cursor:'pointer'}}><rect x={r.x} y={r.y} width={r.w} height={r.h} fill="transparent"/>{selected===tile.id&&<rect x={r.x+15} y={r.y+15} width={r.w-30} height={r.h-30} fill={board.accent} fillOpacity=".12" stroke={board.accent} strokeWidth="20" pointerEvents="none"/>}</g>;})}
