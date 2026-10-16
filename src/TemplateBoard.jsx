@@ -55,7 +55,7 @@ export function TemplateBoard({board,selected,onSelect,svgRef,interactive=true})
  const price=(value,field)=>{clear(field.box);overlays.push(<PriceLabel key={overlays.length} value={value} field={field} color={board.ink}/>);};
  const label=(value,field,options={})=>{clear(field.box,options.background||board.background);const sideways=Math.abs(field.rotation||0)%180===90;const originalHeight=sideways?field.box[2]-field.box[0]:field.box[3]-field.box[1];overlays.push(<Label contain={Math.abs(field.rotation||0)%90!==0} maxHeight={Math.max(66,Math.min(230,originalHeight+12))} key={overlays.length} value={value} box={field.box} rotation={field.rotation} color={board.ink} {...options}/>);};
  const deckName=id=>[7,22,36].includes(id)?board.decks.chance.name:[2,17,33].includes(id)?board.decks.chest.name:board.tiles[id].name;
- for(const tile of board.tiles){const original=source.tiles[tile.id],f=template.fields[tile.id]||{},name=deckName(tile.id);const art=template.art[tile.id];const slot=iconSlot(tile.id,art);const iconChanged=!!slot&&(art?tile.artwork!==original.artwork:tile.artwork==='none'||tile.icon!==original.icon||tile.faIcon!==original.faIcon);
+ for(const tile of board.tiles){const original=source.tiles[tile.id],f=template.fields[tile.id]||{},name=deckName(tile.id);const art=template.art[tile.id];const slot=iconSlot(tile.id,art);const iconChanged=!!slot&&(art?tile.artwork!==original.artwork:!!tile.artwork||tile.icon!==original.icon||tile.faIcon!==original.faIcon);
   if(iconChanged){
    const areas=tile.id===0?[art[1]]:tile.id===10?[{x:240,y:5208,w:571,h:558}]:(art||[]);
    const pad=tile.id===20||tile.id===30?12:0;for(const a of areas)clear([a.x-pad,a.y-pad,a.x+a.w+pad,a.y+a.h+pad],tile.id===10?'#f57f23':board.background);
