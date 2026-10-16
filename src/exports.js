@@ -4,7 +4,8 @@ import boldFont from './fonts/bold';
 import { zipSync, strToU8 } from 'fflate';
 import { deedTiles, expandText, moneyTotal, readableInk } from './model';
 import { download, fileName } from './storage';
-import {getCardFonts,missingCardFonts} from './cardFonts';
+import {getCardFonts} from './cardFonts';
+import {deedArtwork,eventArtwork,cardArtworkStatus} from './psdCards';
 
 export function serializeBoard(svg){
  const clone=svg.cloneNode(true);clone.setAttribute('width','6000');clone.setAttribute('height','6000');clone.removeAttribute('class');clone.removeAttribute('style');clone.style.fontFamily=svg.style.fontFamily||'Arial, Helvetica, sans-serif';
@@ -32,6 +33,19 @@ function fitted(doc,s,x,y,width,size=10,maxLines=2,align='center'){
 function startPdf(format='a4'){const d=new jsPDF({unit:'mm',format,compress:true,putOnlyUsedFonts:true});d.addFileToVFS('NotoSans-Regular.ttf',regularFont);d.addFont('NotoSans-Regular.ttf','GameSans','normal');d.addFileToVFS('NotoSans-Bold.ttf',boldFont);d.addFont('NotoSans-Bold.ttf','GameSans','bold');for(const [name,data] of Object.entries(getCardFonts())){d.addFileToVFS(name+'.ttf',data);d.addFont(name+'.ttf',name,'normal');}d.setFont('GameSans','normal');d.setProperties({title:'Monopolyer printable game kit',creator:'Monopolyer'});return d;}
 function pageHeader(d,board,label,page){d.setTextColor('#56665e');text(d,board.title,10,7,7);text(d,`${label} / ${page}`,200,7,7,{align:'right'});text(d,'Print at 100% / Actual size. Cut on solid borders.',105,291,7,{align:'center'});d.setTextColor('#203e34');}
 function cardBorder(d,x,y,w,h,color='#ffffff'){d.setFillColor(color);d.setDrawColor('#526258');d.setLineWidth(.2);d.rect(x,y,w,h,'FD');}
+function paintCard(doc,art,x,y,w,h){
+ const sx=w/art.width,sy=h/art.height;
+ for(const o of art.ops){
+  if(o.type==='image')doc.addImage(o.src,'PNG',x+o.x*sx,y+o.y*sy,o.w*sx,o.h*sy,undefined,'FAST');
+  else if(o.type==='rect'){doc.setFillColor(o.fill);doc.rect(x+o.x*sx,y+o.y*sy,o.w*sx,o.h*sy,'F');}
+  else{
+   doc.setTextColor(o.color);doc.setFont(getCardFonts()[o.font]?o.font:'GameSans','normal');doc.setFontSize(o.size*sy*72/25.4);
+   const max=o.maxWidth*sx;const width=doc.getTextWidth(pdfText(o.value))+Math.max(0,o.value.length-1)*(o.tracking||0)*sx;const fit=Math.min(1,max/Math.max(.01,width));doc.setFontSize(doc.getFontSize()*fit);doc.setCharSpace((o.tracking||0)*sx*fit);
+   doc.saveGraphicsState();const baseline=(doc.internal.pageSize.getHeight()-y-o.y*sy)*doc.internal.scaleFactor;doc.setCurrentTransformationMatrix(new doc.Matrix(1,0,0,o.scaleY,0,baseline*(1-o.scaleY)));doc.text(pdfText(o.value),x+o.x*sx,y+o.y*sy,{align:o.align});doc.restoreGraphicsState();doc.setCharSpace(0);
+  }
+ }
+ doc.setFont('GameSans','normal');doc.setTextColor('#203e34');
+}
 export function propertyPdf(board,backs=false){
  const doc=startPdf();const cards=deedTiles(board);const cols=3,rows=3,w=788/300*25.4,h=900/300*25.4,gap=1,startX=(210-cols*w-(cols-1)*gap)/2,startY=14;
  for(let i=0;i<cards.length;i++){
@@ -40,22 +54,7 @@ export function propertyPdf(board,backs=false){
   const color=t.kind==='property'?board.groups[t.group]:t.color;
   if(backs)cardBorder(doc,x,y,w,h);else{doc.setFillColor('#ffffff');doc.rect(x,y,w,h,'F');}
   if(backs){doc.setFillColor(color);doc.rect(x+2,y+2,w-4,h-4,'F');doc.setTextColor(readableInk(color));fitted(doc,board.title,x+w/2,y+27,w-12,14,3);text(doc,'TITLE DEED',x+w/2,y+58,9,{align:'center'});doc.setTextColor('#203e34');continue;}
-  const scale=w/788;const fy=height=>y+height/900*h;const fx=width=>x+width/788*w;
-  const sourceText=(value,px,py,size=38,font='KabobLight',align='center')=>{doc.setFont(getCardFonts()[font]?font:'GameSans','normal');text(doc,value,fx(px),fy(py),size*scale*72/25.4,{align});};
-  doc.setDrawColor('#000000');doc.setLineWidth(2*scale);doc.rect(fx(20),fy(20),748*scale,860/900*h);
-  doc.setFillColor(color);doc.rect(fx(40),fy(38),708*scale,160/900*h,'FD');doc.setTextColor(readableInk(color));doc.setCharSpace(8*scale);sourceText('TITLE DEED',394,79,27);doc.setCharSpace(0);
-  sourceText(t.name.toUpperCase(),394,158,Math.min(51,1100/Math.max(t.name.length,18)),t.kind==='property'?'Cornerstone':'KabobExtrabold');doc.setTextColor('#000000');
-  const money=n=>`${board.currency}${n}`;
-  if(t.kind==='property'){
-   sourceText(`RENT ${money(t.rents[0])}`,394,286);
-   ['With 1 House','With 2 Houses','With 3 Houses','With 4 Houses'].forEach((label,j)=>{sourceText(label,110,343+j*57,38,'KabobLight','left');sourceText(`${money(t.rents[j+1])}.`,680,343+j*57,38,'KabobLight','right');});
-   sourceText(`With HOTEL ${money(t.rents[5])}.`,394,576);sourceText(`Mortgage Value ${money(t.mortgage)}.`,394,633);sourceText(`Houses cost ${money(t.houseCost)} each.`,394,690);sourceText(`Hotels, ${money(t.houseCost)} plus 4 houses`,394,747);
-  }else if(t.kind==='rail'){
-   ['Rent','If 2 transports are owned','If 3 transports are owned','If 4 transports are owned'].forEach((label,j)=>{sourceText(label,90,345+j*80,34,'KabobLight','left');sourceText(money(t.rents[j]),690,345+j*80,34,'KabobLight','right');});sourceText(`Mortgage Value ${money(t.mortgage)}`,394,750);
-  }else{
-   ['If one utility is owned, rent is','4 times the amount on dice.','If both utilities are owned, rent is','10 times the amount on dice.'].forEach((line,j)=>sourceText(line,394,[350,400,510,560][j],36));sourceText(`Mortgage Value ${money(t.mortgage)}`,394,750);
-  }
-  doc.setFont('GameSans','normal');
+  paintCard(doc,deedArtwork(board,t),x,y,w,h);
  }
  return doc;
 }
@@ -66,8 +65,8 @@ export function eventsPdf(board,backs=false){
    if(i%8===0){if(page)doc.addPage();page++;pageHeader(doc,board,`${deck.name}${backs?' backs (mirrored)':''}`,page);}
    const slot=i%8,col=backs?1-slot%2:slot%2,x=23.4+col*87,y=20+Math.floor(slot/2)*59,w=76.2,h=44.45;
    if(backs)cardBorder(doc,x,y,w,h,deck.color);else{doc.setFillColor('#ffffff');doc.rect(x,y,w,h,'F');}
-   if(backs){doc.setTextColor(readableInk(deck.color));fitted(doc,deck.name.toUpperCase(),x+w/2,y+24,w-14,18,2);fitted(doc,board.title,x+w/2,y+47,w-12,7,1);doc.setTextColor('#203e34');return;}
-   doc.setTextColor('#000000');doc.setFont(getCardFonts()['CataneoBT-Regular']?'CataneoBT-Regular':'GameSans','normal');text(doc,deck.name,x+2,y+5.5,12);doc.setTextColor('#203e34');doc.setFont(getCardFonts()['ArialNarrow-Bold']?'ArialNarrow-Bold':'GameSans','normal');const headingHeight=fitted(doc,card.title,x+w/2,y+16,w-10,11,2);fitted(doc,expandText(card.text,board),x+w/2,y+15+headingHeight,w-10,8,4);
+   if(backs){doc.setTextColor(readableInk(deck.color));fitted(doc,deck.name.toUpperCase(),x+w/2,y+20,w-14,18,2);fitted(doc,board.title,x+w/2,y+35,w-12,7,1);doc.setTextColor('#203e34');return;}
+   paintCard(doc,eventArtwork(board,key,card),x,y,w,h);
   });
  }
  return doc;
@@ -126,12 +125,12 @@ export async function exportFile(kind,board,svgElement,onProgress=()=>{}){
  if(kind==='png'){onProgress('Rendering 6000 px artwork…');download(await svgToPng(svg(),6000),`${name}-board.png`,'image/png');return;}
  if(kind==='project'){download(JSON.stringify(board,null,2),`${name}.monopolyer.json`,'application/json');return;}
  const generators={deeds:()=>propertyPdf(board),deedBacks:()=>propertyPdf(board,true),events:()=>eventsPdf(board),eventBacks:()=>eventsPdf(board,true),money:()=>moneyPdf(board),rules:()=>rulesPdf(board),buildings:()=>buildingsPdf(board),board:()=>boardPdf(svg()),tiled:()=>boardPdf(svg(),true)};
- if(kind!=='kit'){onProgress('Preparing your PDF…');const doc=await generators[kind]();download(pdfBytes(doc),`${name}-${kind}${['deeds','deedBacks','events','eventBacks'].includes(kind)&&missingCardFonts().length?'-DRAFT-fonts-missing':''}.pdf`,'application/pdf');return;}
+ if(kind!=='kit'){onProgress('Preparing your PDF…');const doc=await generators[kind]();download(pdfBytes(doc),`${name}-${kind}${['deeds','events'].includes(kind)&&cardArtworkStatus(board,kind).length?'-DRAFT-fonts-missing':''}.pdf`,'application/pdf');return;}
  const files={};const art=svg();files['board.svg']=strToU8(art);files['project.monopolyer.json']=strToU8(JSON.stringify(board,null,2));
  onProgress('Rendering board artwork…');files['board-6000px.png']=new Uint8Array(await (await svgToPng(art,6000)).arrayBuffer());
  for(const key of Object.keys(generators)){
   onProgress(`Preparing ${key}…`);await new Promise(r=>setTimeout(r,30));files[`${key}.pdf`]=pdfBytes(await generators[key]());
  }
- files['READ-ME.txt']=strToU8(`CARD FONT STATUS: ${missingCardFonts().length?'Draft text; missing exact font files: '+missingCardFonts().join(', '):'All original template fonts loaded and embedded.'}\n\n`+'MONOPOLYER PRINT KIT\n\nStart with rules.pdf for print and assembly instructions. Print at 100% / actual size. tiled.pdf is a nine-page A4 board; board.pdf is one 500 x 500 mm page for a print shop. Deed backs and event backs use mirrored columns to align with their fronts on long-edge duplex printing. Test one sheet first; printers vary. You can also print separately and glue together. buildings.pdf contains 32 houses and 12 hotels. Supply two dice and player tokens. Reopen the .monopolyer.json file in Monopolyer to keep editing.\n');
+ files['READ-ME.txt']=strToU8(`CARD FONT STATUS: ${cardArtworkStatus(board).length?'Some edited characters require exact font files: '+cardArtworkStatus(board).join('; '):'Cards reuse the original PSD artwork and lettering; all edited characters are covered.'}\n\n`+'MONOPOLYER PRINT KIT\n\nStart with rules.pdf for print and assembly instructions. Print at 100% / actual size. tiled.pdf is a nine-page A4 board; board.pdf is one 500 x 500 mm page for a print shop. Deed backs and event backs use mirrored columns to align with their fronts on long-edge duplex printing. Test one sheet first; printers vary. You can also print separately and glue together. buildings.pdf contains 32 houses and 12 hotels. Supply two dice and player tokens. Reopen the .monopolyer.json file in Monopolyer to keep editing.\n');
  onProgress('Packing your game kit…');download(zipSync(files,{level:5}),`${name}-game-kit.zip`,'application/zip');
 }

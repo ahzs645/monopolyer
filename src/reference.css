@@ -18,3 +18,9 @@ body{background:#d4fcda}.app-shell{max-width:none}.topbar{height:82px;background
 .event-card{aspect-ratio:900/525;min-height:0;justify-content:flex-start;position:relative;padding:15px 20px}.event-card small{font-family:'CataneoBT-Regular','Times New Roman',serif;font-style:italic;letter-spacing:0;text-transform:none;font-size:24px;color:#000;margin-bottom:18px}.event-card strong{font-family:'ArialNarrow-Bold','Arial Narrow',Arial,sans-serif;font-size:20px}.event-card p{font-family:'ArialNarrow-Bold','Arial Narrow',Arial,sans-serif;font-size:17px;line-height:1.25}.event-card>svg{display:none}
 /* Keep the export SVG mounted without reserving vertical space in card previews. */
 .board-wrap.offscreen-board{position:absolute;left:-100000px;top:0;width:1000px;height:1000px;visibility:hidden}
+/* The card itself uses the source PSD dimensions and artwork. Editor selection
+   and shadow stay outside its printable area. */
+.event-card:has(.template-event-card){padding:0;border:0;background:white;min-height:0;aspect-ratio:900/525;display:block;overflow:hidden}
+.template-event-card{display:block;width:100%;height:auto}
+.event-card:has(.template-event-card).selected{outline:3px solid red;outline-offset:3px}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
