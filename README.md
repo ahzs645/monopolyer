@@ -15,7 +15,7 @@ A browser-based studio for making a custom property-trading board game, built fr
 - Two editable event decks with 16 starter cards each; add or remove cards, up to 64 per deck.
 - Custom banknote denominations, colors, quantities, and player sets.
 - Editable game guide, paper houses and hotels, PDF fronts and mirrored backs.
-- SVG with embedded source artwork, 6000-pixel PNG, an original-size print-shop PDF, and nine A4 board panels.
+- All-vector SVG/PDF board exports, individual deed/event SVGs, and a complete vector game kit. Separate source-matched SVG/PNG/PDF downloads preserve the exact original pixels.
 - Complete ZIP kit or individual downloads.
 - Undo/redo, browser autosave, project JSON import/export, and `json-url` share links.
 
@@ -39,6 +39,18 @@ Download the complete kit, then read `rules.pdf` or `READ-ME.txt`.
 - Deed/event back PDFs mirror the columns. Test long-edge duplex printing on one sheet, or print separately and glue front to back.
 - Money prints ten notes per A4 sheet, in the quantities selected for each player.
 - Building strips make 32 houses and 12 hotels. Supply two dice and player tokens.
+
+### Vector exports
+
+Choose **Get print files → Download the vector kit** for a path-based board SVG, a print-shop PDF, nine vector A4 panels, deed/event PDFs, 28 individual deed SVGs and 32 individual event SVGs, plus the existing native PDF money, buildings, backs and guide. Individual vector downloads are also available. SVG logos are inlined as vector shapes.
+
+The original archives are mixed media. Five embedded SVG smart objects retain their original paths (the information symbol and four parking signs). Cached PSD lettering, the bitmap book/mail illustrations, and the remaining cached artwork are traced at their original resolution into filled SVG outlines. These are real vector paths, but tracing changes some edges; they are **not pixel-identical redraws or recovered font files**. Known source letter shapes remain available without the missing fonts; new wording still uses the existing source-glyph/fallback-font behavior described below. Outlined text edits as paths in a graphics editor; live text still needs its font.
+
+Vector SVG downloads are checked for bitmap images and external resources. Vector PDFs draw those paths directly, with no canvas snapshot or embedded raster image. Unsupported bitmap artwork or SVG effects cause an explicit error instead of being silently rasterized. PNG downloads are always raster. **Source-matched SVG board**, **Print-shop board** and the original complete kit retain the previous lossless raster source artwork for exact source-pixel reproduction.
+
+The asset builder is `scripts/vectorize-artwork.py` (Python: Pillow, NumPy, psd-tools, vtracer 0.6.15). It preserves the original embedded SVG placements and traces remaining source assets. Its checked-in path catalog and method audit are in `public/vector-assets/`; no Python installation is needed by visitors. The atlas loads only when a vector export is requested.
+
+Browser tests compare each vector board at 6000 pixels against the original PNG/PSD composite, checking all group-color fills separately and allowing tracing differences at edges. They also compare edited source/vector boards, inline logos, and inspect every SVG/PDF in the vector kit for raster image content. The pixel-matched exports retain their strict zero-difference tests.
 
 ### Matching the exact fonts
 

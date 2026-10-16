@@ -1,0 +1,10 @@
+{
+  "assets": 683,
+  "methods": {
+    "traced-source-ink": 2,
+    "traced-outline": 495,
+    "native-svg": 10,
+    "traced-color": 176
+  },
+  "note": "Native SVGs retain source paths. Raster-only source lettering/art is traced into outlines; tracing can differ at edges. New wording still depends on original fonts or available cached characters. No raster image is allowed in vector exports."
+}

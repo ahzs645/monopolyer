@@ -40,7 +40,7 @@ function fitted(doc,s,x,y,width,size=10,maxLines=2,align='center'){
  if(lines.length>maxLines)throw new Error('Some text is too long to fit the print layout. Shorten the title or card text and try again.');
  doc.text(lines,x,y,{align,lineHeightFactor:1.22});return size*0.3528*1.22*lines.length;
 }
-function startPdf(format='a4'){const d=new jsPDF({unit:'mm',format,compress:true,putOnlyUsedFonts:true});d.addFileToVFS('NotoSans-Regular.ttf',regularFont);d.addFont('NotoSans-Regular.ttf','GameSans','normal');d.addFileToVFS('NotoSans-Bold.ttf',boldFont);d.addFont('NotoSans-Bold.ttf','GameSans','bold');for(const [name,data] of Object.entries(getCardFonts())){d.addFileToVFS(name+'.ttf',data);d.addFont(name+'.ttf',name,'normal');}d.setFont('GameSans','normal');d.setProperties({title:'Monopolyer printable game kit',creator:'Monopolyer'});return d;}
+export function startPdf(format='a4'){const d=new jsPDF({unit:'mm',format,compress:true,putOnlyUsedFonts:true});d.addFileToVFS('NotoSans-Regular.ttf',regularFont);d.addFont('NotoSans-Regular.ttf','GameSans','normal');d.addFileToVFS('NotoSans-Bold.ttf',boldFont);d.addFont('NotoSans-Bold.ttf','GameSans','bold');for(const [name,data] of Object.entries(getCardFonts())){d.addFileToVFS(name+'.ttf',data);d.addFont(name+'.ttf',name,'normal');}d.setFont('GameSans','normal');d.setProperties({title:'Monopolyer printable game kit',creator:'Monopolyer'});return d;}
 function pageHeader(d,board,label,page){d.setTextColor('#56665e');text(d,board.title,10,7,7);text(d,`${label} / ${page}`,200,7,7,{align:'right'});text(d,'Print at 100% / Actual size. Cut on solid borders.',105,291,7,{align:'center'});d.setTextColor('#203e34');}
 function cardBorder(d,x,y,w,h,color='#ffffff'){d.setFillColor(color);d.setDrawColor('#526258');d.setLineWidth(.2);d.rect(x,y,w,h,'FD');}
 function paintCard(doc,art,x,y,w,h){
@@ -129,6 +129,7 @@ export async function boardPdf(svg, tiled=false,rendered){
 }
 const pdfBytes=doc=>new Uint8Array(doc.output('arraybuffer'));
 export async function exportFile(kind,board,svgElement,onProgress=()=>{}){
+ if(kind.startsWith('vector')){const {exportVectorFile}=await import('./vectorExports');return exportVectorFile(kind,board,svgElement,onProgress);}
  const name=fileName(board);const svg=()=>serializeBoard(svgElement);let boardPng;const png=()=>boardPng??=svgToPng(svg(),6000);
  if(kind==='originals'){const response=await fetch(`${import.meta.env.BASE_URL}reference-assets/original-card-templates.zip`);if(!response.ok)throw new Error('Original templates could not be downloaded.');download(await response.blob(),'original-photoshop-card-templates.zip','application/zip');return;}
  if(kind==='svg'){download(svg(),`${name}-board.svg`,'image/svg+xml');return;}
