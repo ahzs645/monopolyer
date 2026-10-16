@@ -1,6 +1,8 @@
 import northernHealthLogo from './reference-assets/northern-health-logo.js';
 import { z } from 'zod';
 
+export const OPOLY_TITLE_SETUP = Object.freeze({titleSuffix:'OPOLY',titleSuffixUppercase:true,titleScale:1.36,titleSuffixSize:.58});
+
 export const GROUP_NAMES = ['Brown', 'Sky', 'Rose', 'Orange', 'Red', 'Gold', 'Green', 'Blue'];
 export const PRINTOPOLY_COLORS=['#964b00','#00ffff','#6a0dad','#ffa500','#ff0000','#ffff00','#00ff00','#0000ff'];
 export const DEFAULT_COLORS = ['#87533e', '#9dcbdc', '#c86896', '#e99a47', '#d65b51', '#e6c95d', '#549975', '#4a79b8'];
@@ -79,7 +81,7 @@ export function createBoard(preset = 'studio') {
   board.decks.chest.name='Campus Mail';[2,17,33].forEach(id=>board.tiles[id].name='Campus Mail');
  }
  if(preset==='photoshop'){board.boardStyle='photoshop';board.title='nugssOPOLY';board.ink='#040707';board.accent='#0f7abb';board.groups=['#590a38','#87a5d6','#ee3778','#f57f23','#ef3923','#fae90b','#13a55c','#264da1'];}
- if(preset==='northern-health'){board.title='Northern Healthopoly';board.titleMode='logo-suffix';board.titleSuffix='opoly';board.titleSuffixSize=.56;board.titleColor='#005699';board.logo=northernHealthLogo;board.bandEdges='clean';board.money.headingMode='board';board.money.headingColor='#000000';board.money.monochrome=true;}
+ if(preset==='northern-health'){board.title='Northern Healthopoly';board.titleMode='logo-suffix';Object.assign(board,OPOLY_TITLE_SETUP);board.accent='#005699';board.titleColor='#005699';board.logo=northernHealthLogo;board.bandEdges='clean';board.money.headingMode='board';board.money.headingColor='#000000';board.money.monochrome=true;}
  return board;
 }
 const color=z.string().regex(/^#[0-9a-f]{6}$/i);

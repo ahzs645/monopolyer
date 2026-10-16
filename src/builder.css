@@ -68,3 +68,9 @@
 .title-color-settings>strong{display:block;font-size:13px;margin-bottom:12px}.title-color-settings .button-row{flex-wrap:wrap;margin-bottom:0}
 .brand-blue-setup{display:flex;flex-direction:column;gap:12px}.brand-blue-setup small{font-size:12px;line-height:1.5}
 .bill-heading-color{margin:18px 0;display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+
+.logo-title-setup{min-width:0;margin:18px 0;padding:18px;border:2px solid #000;background:#fafffb}
+.logo-title-setup legend{padding:0 8px;font-size:18px}.logo-title-setup .field{margin-bottom:16px}
+.logo-title-setup>button{margin-bottom:16px}.logo-title-setup>small{display:block;line-height:1.5}
+
+.palette-help{font-size:13px;line-height:1.5;margin:12px 0 18px}
