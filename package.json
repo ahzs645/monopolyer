@@ -24,6 +24,7 @@
     "react-icons": "^3.11.0",
     "styled-components": "^5.3.11",
     "svg2pdf.js": "^2.8.1",
+    "svgpath": "^2.6.0",
     "zod": "^4.0.0"
   },
   "devDependencies": {

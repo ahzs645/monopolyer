@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import {SvgIcon} from './Board';
+import {SvgIcon,SourceIcon} from './Board';
 import {ORIGINAL_ARTWORK} from './reference-assets/artwork';
 
 const asset=(name)=>`${import.meta.env.BASE_URL}reference-assets/${name}`;
@@ -31,7 +31,7 @@ export function SpacePreviews({board,onSelect,groupRefs}){
  groups.push({key:'special',title:'Special spaces',tiles:board.tiles.filter(t=>t.kind!=='property')});
  return <div className="reference-space-previews"><h2 className="reference-board-title">{board.title}</h2>{groups.map(({key,title,tiles})=><section className="reference-preview-group" key={key} ref={el=>{groupRefs.current[key]=el;}}><h3>{title}</h3><div className="exprow">{tiles.map(tile=><button key={tile.id} className={`space ${tile.kind==='property'?'property':'railroad'}`} aria-label={`Edit ${tile.name}`} onClick={()=>onSelect(tile.id)}><div className="container">
   {tile.kind==='property'&&<div className="color-bar" style={{background:board.groups[tile.group]}}/>}<div className="name">{tile.kind==='event'?([7,22,36].includes(tile.id)?board.decks.chance.name:board.decks.chest.name):tile.name}</div>
-  {tile.kind!=='property'&&(ORIGINAL_ARTWORK[tile.artwork]?<img className="drawing original-illustration" src={ORIGINAL_ARTWORK[tile.artwork]} alt="Original PSD illustration"/>:<SvgIcon className="drawing" name={tile.icon} size={64} style={{color:tile.color}}/>)}
+  {tile.kind!=='property'&&(ORIGINAL_ARTWORK[tile.artwork]?<img className="drawing original-illustration" src={ORIGINAL_ARTWORK[tile.artwork]} alt="Original PSD illustration"/>:<SourceIcon className="drawing" tile={tile} size={64} style={{color:tile.kind==='event'?(board.decks[[7,22,36].includes(tile.id)?'chance':'chest'].color):tile.color}}/>)}
   <div className="price">{tile.price?`Price ${board.currency}${tile.price}`:tile.kind==='go'?`Collect ${board.currency}200`:''}</div></div></button>)}</div></section>)}</div>;
 }
 

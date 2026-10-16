@@ -1,6 +1,7 @@
 import source from './reference-assets/cards.json';
 import {getCardFonts} from './cardFonts';
 import {expandText} from './model';
+import {deedIcon} from './spaceIcons';
 const image=(a,extra={})=>({type:'image',...a,...extra});
 const rect=(x,y,w,h,fill)=>({type:'rect',x,y,w,h,fill});
 const black='#040707';
@@ -25,17 +26,17 @@ export function deedArtwork(board,tile){
   const color=board.groups[tile.group];const n=parseInt(color.slice(1),16);const light=(((n>>16)&255)*.299+((n>>8)&255)*.587+(n&255)*.114)>150;const ink=light?black:'#ffffff';
   ops.push(rect(38,36,712,163,color),image(source.art.header));
   line('TITLE DEED','KabobLight',395.7143576162896,78.43131270609696,{size:24,scaleY:1.1915853972263148,color:ink});
-  line(tile.name.toUpperCase(),'Cornerstone',396,159,{size:47,maxWidth:652,color:ink});
+  line(tile.name.replace(/\s+/g,' ').trim().toUpperCase(),'Cornerstone',396,159,{size:47,maxWidth:652,color:ink});
   body(`RENT ${money(tile.rents[0])}`,381,257.83410471507085,{scaleY:.8222736476713913});
   ['With 1 House','With 2 Houses','With 3 Houses','With 4 Houses'].forEach((v,i)=>{body(v,113,320+i*60,{align:'left'});body(`${i===0?board.currency+' ':''}${tile.rents[i+1]}.`,633,320+i*60,{align:'right'});});
   body(`With HOTEL ${money(tile.rents[5])}.`,386,562);body(`Mortgage Value ${money(tile.mortgage)}.`,386,622);body(`Houses cost ${money(tile.houseCost)}. each`,386,682);body(`Hotels, ${money(tile.houseCost)}. plus 4 houses`,386,742);
  }else{
   ops.push(image(source.art.rule),image(source.art.rule,{y:316}));
   if(tile.kind==='rail'){
-   ops.push(image(source.art.train3));line(tile.name.toUpperCase(),'KabobExtrabold',396,301,{size:48,maxWidth:660});
+   ops.push(deedIcon(board,tile,source.art.train3)||image(source.art.train3));line(tile.name.replace(/\s+/g,' ').trim().toUpperCase(),'KabobExtrabold',396,301,{size:48,maxWidth:660});
    ['Rent','If 2 R.R.’s are owned','If 3      “     “     “','If 4      “     “     “'].forEach((v,i)=>{body(v,113,407+i*72,{align:'left'});body(`${i===0?board.currency:''}${tile.rents[i]}.`,691,407+i*72,{align:'right'});});body('Mortgage Value',113,767,{align:'left'});body(`${tile.mortgage}.`,691,767,{align:'right'});
   }else{
-   ops.push(image(source.art[tile.id===12?'lightbulb':'faucet']));line(tile.name.toUpperCase(),'KabobExtrabold',398,302,{size:48,maxWidth:660});
+   const art=source.art[tile.id===12?'lightbulb':'faucet'];ops.push(deedIcon(board,tile,art)||image(art));line(tile.name.replace(/\s+/g,' ').trim().toUpperCase(),'KabobExtrabold',398,302,{size:48,maxWidth:660});
    ['If one “Utility” is owned','rent is 4 times amount shown','on dice.','If both “Utilities” are owned','rent is 10 times amount shown','on dice.'].forEach((v,i)=>body(v,101,407+i*60,{align:'left'}));body(`Mortgage Value                ${money(tile.mortgage)}.`,101,827,{maxWidth:650,align:'left'});
   }
  }

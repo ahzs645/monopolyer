@@ -17,10 +17,10 @@ export function fromOriginalMaster(board,next){
  update('title',v=>copy.title=v.slice(0,48));update('currency',v=>{copy.currencyIcon=v;copy.currency=Object.keys(currencyIcons).find(k=>currencyIcons[k]===v)||'M';});
  slots.forEach((ids,g)=>{update(`${GROUP_KEYS[g]}color`,v=>copy.groups[g]=v);ids.forEach((id,i)=>update(`${GROUP_KEYS[g]}${i+1}`,v=>copy.tiles[id].name=v.slice(0,60)));});
  for(const [key,id] of Object.entries(special)){
-  update(key,v=>{copy.tiles[id].name=(key==='parking'?'Free '+v:v).slice(0,60);if(key==='jail')copy.tiles[30].name=('Go to '+v).slice(0,60);});update(`${key}icon`,v=>{copy.tiles[id].faIcon=v;copy.tiles[id].artwork='none';});update(`${key}color`,v=>copy.tiles[id].color=v);
+  update(key,v=>{copy.tiles[id].name=(key==='parking'?'Free '+v:v).slice(0,60);if(key==='jail')copy.tiles[30].name=('Go to '+v).slice(0,60);});update(`${key}icon`,v=>{copy.tiles[id].faIcon=v;copy.tiles[id].artwork='none';});update(`${key}color`,v=>{copy.tiles[id].color=v;copy.tiles[id].artwork='none';});
  }
- for(const key of ['chance','chest']){const ids=key==='chance'?[7,22,36]:[2,17,33];update(key,v=>{copy.decks[key].name=v.slice(0,32);ids.forEach(id=>copy.tiles[id].name=v.slice(0,32));});update(`${key}icon`,v=>ids.forEach(id=>{copy.tiles[id].faIcon=v;copy.tiles[id].artwork='none';}));update(`${key}color`,v=>{copy.decks[key].color=v;ids.forEach(id=>copy.tiles[id].color=v);});}
- update('railicon',v=>[5,15,25,35].forEach(id=>{copy.tiles[id].faIcon=v;copy.tiles[id].artwork='none';}));update('railcolor',v=>[5,15,25,35].forEach(id=>copy.tiles[id].color=v));update('gojailicon',v=>{copy.tiles[30].faIcon=v;copy.tiles[30].artwork='none';});update('gojailcolor',v=>copy.tiles[30].color=v);
+ for(const key of ['chance','chest']){const ids=key==='chance'?[7,22,36]:[2,17,33];update(key,v=>{copy.decks[key].name=v.slice(0,32);ids.forEach(id=>copy.tiles[id].name=v.slice(0,32));});update(`${key}icon`,v=>ids.forEach(id=>{copy.tiles[id].faIcon=v;copy.tiles[id].artwork='none';}));update(`${key}color`,v=>{copy.decks[key].color=v;ids.forEach(id=>{copy.tiles[id].color=v;copy.tiles[id].artwork='none';});});}
+ update('railicon',v=>[5,15,25,35].forEach(id=>{copy.tiles[id].faIcon=v;copy.tiles[id].artwork='none';}));update('railcolor',v=>[5,15,25,35].forEach(id=>{copy.tiles[id].color=v;copy.tiles[id].artwork='none';}));update('gojailicon',v=>{copy.tiles[30].faIcon=v;copy.tiles[30].artwork='none';});update('gojailcolor',v=>{copy.tiles[30].color=v;copy.tiles[30].artwork='none';});
  return copy;
 }
 export function originalPrices(board){const values={};slots.forEach((ids,g)=>ids.forEach((id,i)=>values[`${GROUP_KEYS[g]}${i+1}`]={price:String(board.tiles[id].price)}));return values;}

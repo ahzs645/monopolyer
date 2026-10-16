@@ -21,6 +21,7 @@ const IconPickerItem: React.SFC<IconPickerItemProps> = ({
   const iconDiv = !!icon ? React.createElement(FontIcon[icon]||FontIcon.FaQuestion) : <div />
   return (
     <div
+      role={onClick?'button':undefined} tabIndex={onClick?0:undefined} aria-label={onClick?`Use ${icon} icon`:undefined} onKeyDown={e=>{if(onClick&&(e.key==='Enter'||e.key===' ')){e.preventDefault();e.stopPropagation();onClick(icon);}}}
       onClick={() => !!onClick && onClick(icon)}
       style={{ fontSize: size, color: color, padding: 2, ...containerStyles }}
     >
@@ -32,7 +33,6 @@ const IconPickerItem: React.SFC<IconPickerItemProps> = ({
 IconPickerItem.defaultProps = {
   color: '#000',
   size: 24,
-  onClick: (_: string) => {},
 }
 
 export { IconPickerItem }

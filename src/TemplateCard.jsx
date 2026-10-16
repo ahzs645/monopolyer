@@ -10,7 +10,7 @@ function NativeCardText({op:o}){
 export function CardArtwork({art,label,className='template-card'}){
  const fonts=getCardFonts();return <svg className={className} viewBox={`0 0 ${art.width} ${art.height}`} role="img" aria-label={label} xmlns="http://www.w3.org/2000/svg">
  <defs><style>{Object.entries(fonts).map(([name,data])=>`@font-face{font-family:'${name}';src:url(data:font/ttf;base64,${data}) format('truetype');}`).join('\n')}</style></defs>
- {art.ops.map((o,i)=>o.type==='image'?<image key={i} href={o.src} x={o.x} y={o.y} width={o.w} height={o.h}/>:o.type==='rect'?<rect key={i} x={o.x} y={o.y} width={o.w} height={o.h} fill={o.fill}/>:<NativeCardText key={i} op={o}/>)}
+ {art.ops.map((o,i)=>o.type==='image'?<image key={i} href={o.src} x={o.x} y={o.y} width={o.w} height={o.h}/>:o.type==='rect'?<rect key={i} x={o.x} y={o.y} width={o.w} height={o.h} fill={o.fill}/>:o.type==='icon'?<svg key={i} data-deed-icon={o.name} x={o.x} y={o.y} width={o.w} height={o.h} viewBox={o.viewBox.join(' ')} fill={o.color}>{o.paths.map((d,j)=><path key={j} d={d}/>)}</svg>:<NativeCardText key={i} op={o}/>)}
  </svg>;
 }
 export function TemplateCard({board,tile}){useCardFonts();return <CardArtwork art={deedArtwork(board,tile)} label={`${tile.name} Photoshop deed layout`}/>;}

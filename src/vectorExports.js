@@ -1,4 +1,5 @@
 import 'svg2pdf.js';
+import {subtractRectangles} from './textLayout';
 import {zipSync,strToU8} from 'fflate';
 import {download,fileName} from './storage';
 import {deedTiles} from './model';
@@ -43,11 +44,7 @@ export async function vectorizeSvg(source){
   const clip=node('clipPath',{id:mask.id,clipPathUnits:'userSpaceOnUse'});const children=[...mask.children];
   if(children.every(c=>c.localName==='rect')){
    const bounds=c=>[Number(c.getAttribute('x')||0),Number(c.getAttribute('y')||0),Number(c.getAttribute('width')),Number(c.getAttribute('height'))];
-   let regions=[bounds(children[0])];
-   for(const cut of children.slice(1).map(bounds))regions=regions.flatMap(([x,y,w,h])=>{
-    const [cx,cy,cw,ch]=cut,l=Math.max(x,cx),t=Math.max(y,cy),r=Math.min(x+w,cx+cw),b=Math.min(y+h,cy+ch);if(l>=r||t>=b)return [[x,y,w,h]];
-    return [[x,y,w,t-y],[x,b,w,y+h-b],[x,t,l-x,b-t],[r,t,x+w-r,b-t]].filter(a=>a[2]>0&&a[3]>0);
-   });
+   const regions=subtractRectangles(bounds(children[0]),children.slice(1).map(bounds));
    for(const [x,y,width,height] of regions)clip.append(node('rect',{x,y,width,height}));
   }else{
    // SVG clipPath children must be geometry, not nested groups. Carry every

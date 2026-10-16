@@ -1,4 +1,5 @@
 import { jsPDF } from 'jspdf';
+import {paintIcon} from './pdfIcons';
 import regularFont from './fonts/regular';
 import boldFont from './fonts/bold';
 import { zipSync, strToU8 } from 'fflate';
@@ -47,6 +48,7 @@ function paintCard(doc,art,x,y,w,h){
  const sx=w/art.width,sy=h/art.height;
  for(const o of art.ops){
   if(o.type==='image')doc.addImage(o.src,'PNG',x+o.x*sx,y+o.y*sy,o.w*sx,o.h*sy,undefined,'FAST');
+  else if(o.type==='icon')paintIcon(doc,o,x,y,sx,sy);
   else if(o.type==='rect'){doc.setFillColor(o.fill);doc.rect(x+o.x*sx,y+o.y*sy,o.w*sx,o.h*sy,'F');}
   else{
    doc.setTextColor(o.color);doc.setFont(getCardFonts()[o.font]?o.font:'GameSans','normal');doc.setFontSize(o.size*sy*72/25.4);

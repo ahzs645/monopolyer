@@ -8,6 +8,7 @@ type IconList = string;
 
 interface IconPickerProps {
   value: IconList
+  ariaLabel?: string
   onChange: (value: IconList) => void
   hideSearch?: boolean
   containerStyles?: CSS.Properties
@@ -19,6 +20,7 @@ interface IconPickerProps {
 
 const IconPicker: React.SFC<IconPickerProps> = ({
   value,
+  ariaLabel = 'Choose icon',
   onChange,
   hideSearch,
   containerStyles,
@@ -47,7 +49,7 @@ const IconPicker: React.SFC<IconPickerProps> = ({
     setSearchString(event.target.value)
   }
   return (
-    <Container style={buttonStyles} ref={ref} onClick={() => buttonClick()}>
+    <Container style={buttonStyles} ref={ref} role="button" tabIndex={0} aria-label={ariaLabel} aria-expanded={display} onKeyDown={e=>{if(e.target===e.currentTarget&&(e.key==='Enter'||e.key===' ')){e.preventDefault();buttonClick();}}} onClick={() => buttonClick()}>
       <IconPickerItem containerStyles={buttonIconStyles} icon={value} />
       {display && (
         <PickerContainer
@@ -59,7 +61,7 @@ const IconPicker: React.SFC<IconPickerProps> = ({
               style={searchInputStyles}
               onChange={onChangeSearch}
               value={searchString}
-              placeholder="Search"
+              placeholder="Search" aria-label="Search icons"
             />
           )}
           {iconList

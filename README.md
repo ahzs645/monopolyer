@@ -40,6 +40,12 @@ Download the complete kit, then read `rules.pdf` or `READ-ME.txt`.
 - Money prints ten notes per A4 sheet, in the quantities selected for each player.
 - Building strips make 32 houses and 12 hotels. Supply two dice and player tokens.
 
+### Changing icons and text without moving the layout
+
+In **Logo, cards & full board → Spaces**, choose a space and use the icon grid or **Search more icons** to reuse the reference site's searchable Font Awesome picker. Its symbol stays centered in the source illustration slot and rotates with its side of the board. The GO arrow has its own replacement slot; the GO title stays separate. Corner captions and the jail frame remain in place. Tax spaces also support vector icons. Icon color switches to the selected vector symbol; choose an original PSD illustration to restore that artwork.
+
+Space names update immediately. Text retains the source center and rotation, measures its actual font/glyph widths, wraps, and shrinks to fit the original label area. Use line breaks in the space-name box for explicit line breaks. Complete wording is retained. Prices stay at their separate source anchors. Transport and utility symbol changes also update the matching deed illustration without moving its title, rent table or mortgage text. Saved projects and share links retain the symbol, color and multiline name. The supplied-font limitations below still apply to exact new lettering.
+
 ### Vector exports
 
 Choose **Get print files → Download the vector kit** for a path-based board SVG, a print-shop PDF, nine vector A4 panels, deed/event PDFs, 28 individual deed SVGs and 32 individual event SVGs, plus the existing native PDF money, buildings, backs and guide. Individual vector downloads are also available. SVG logos are inlined as vector shapes.
