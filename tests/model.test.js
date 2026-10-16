@@ -5,7 +5,7 @@ import {propertyPdf,eventsPdf,moneyPdf,buildingsPdf,rulesPdf} from '../src/expor
 
 describe('game projects',()=>{
  it('builds a complete 40-space board with 28 purchasable deeds and 32 event cards',()=>{
-  for(const preset of ['studio','campus']){
+  for(const preset of ['studio','campus','photoshop']){
    const b=validateBoard(createBoard(preset));expect(b.tiles).toHaveLength(40);expect(deedTiles(b)).toHaveLength(28);expect(b.tiles.filter(t=>t.kind==='property')).toHaveLength(22);expect(b.decks.chance.cards.length+b.decks.chest.cards.length).toBe(32);expect(moneyTotal(b)).toBe(1500);
   }
  });

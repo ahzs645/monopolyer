@@ -1,4 +1,5 @@
 import React from 'react';
+import {TemplateBoard} from './TemplateBoard';
 import {tilePosition} from './model';
 import {ORIGINAL_ARTWORK} from './reference-assets/artwork';
 import * as SourceIcons from 'react-icons/fa';
@@ -13,7 +14,8 @@ export function WrappedText({text,x,y,width,fontSize=12,maxLines=3,...props}){
  const shown=lines.slice(0,maxLines);if(lines.length>maxLines)shown[maxLines-1]=shown[maxLines-1].slice(0,-1)+'…';
  return <text x={x} y={y} fontSize={fontSize} textAnchor="middle" {...props}>{shown.map((l,i)=><tspan key={i} x={x} dy={i?fontSize*1.18:0} textLength={l.length>limit?width:undefined} lengthAdjust="spacingAndGlyphs">{l}</tspan>)}</text>;
 }
-export function Board({board,selected,onSelect,svgRef,interactive=true}){
+export function Board(props){return props.board.boardStyle==='campus'||props.board.boardStyle==='classic'||props.board.boardStyle==='photoshop'?<TemplateBoard {...props}/>:<LegacyBoard {...props}/>;}
+function LegacyBoard({board,selected,onSelect,svgRef,interactive=true}){
  useCardFonts();
  const fonts=getCardFonts();
  const style=board.boardStyle||'studio';

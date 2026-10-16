@@ -24,3 +24,4 @@ body{background:#d4fcda}.app-shell{max-width:none}.topbar{height:82px;background
 .template-event-card{display:block;width:100%;height:auto}
 .event-card:has(.template-event-card).selected{outline:3px solid red;outline-offset:3px}
 .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.game-board[data-board-template] g[role=button]:hover>rect:first-child{fill:transparent;stroke:#ff0000;stroke-width:12}

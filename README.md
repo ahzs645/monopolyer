@@ -9,13 +9,13 @@ A browser-based studio for making a custom property-trading board game, built fr
 - The original supplied Printopoly React components and CSS, including the Kabel font, BUILD page, 60/40 editor split, original form spacing, icon picker, and preview tiles. The added tools are available from **Logo, cards & full board**.
 - Live, clickable 40-space board with editable names, prices, rents, group colors, special-space icons, and currency.
 - Company SVG logo upload, logo sizing, board palette, and custom title/subtitle.
-- Printopoly, company, and UNBC campus presets. The campus preset reuses nine illustrations extracted from the uploaded PSD.
+- Printopoly, company, UNBC campus PNG, and original Photoshop board presets. The campus preset reconstructs the supplied 6000-pixel board PNG, including its complete illustrations, typography, deck frames, and exact palette.
 - Adjustable comparison overlays for the original PNG, PSD composite, and the previous board layout; website screenshot overlays are in the source gallery.
 - Automatically synchronized property, transport, and utility deeds.
 - Two editable event decks with 16 starter cards each; add or remove cards, up to 64 per deck.
 - Custom banknote denominations, colors, quantities, and player sets.
 - Editable game guide, paper houses and hotels, PDF fronts and mirrored backs.
-- Vector SVG, 6000-pixel PNG, a 500 mm print-shop board PDF, and a nine-page tiled A4 board PDF.
+- SVG with embedded source artwork, 6000-pixel PNG, an original-size print-shop PDF, and nine A4 board panels.
 - Complete ZIP kit or individual downloads.
 - Undo/redo, browser autosave, project JSON import/export, and `json-url` share links.
 
@@ -32,7 +32,7 @@ SVGs must be under 200 KB. Scripts, external images/resources, and embedded HTML
 Download the complete kit, then read `rules.pdf` or `READ-ME.txt`.
 
 - Print at **100% / Actual size**, not “Fit to page.”
-- `board.pdf`: one 500 × 500 mm page for a print shop.
+- `board.pdf`: one 508 × 508 mm (20-inch) page for the source-based campus/Photoshop/Printopoly layouts; the older studio layout remains 500 × 500 mm. The original-size PNG records 300 DPI, and the SVG declares its dimensions in millimeters.
 - `tiled.pdf`: nine A4 sheets, numbered by row and column. Trim panel borders and join a 3 × 3 grid.
 - `deeds.pdf`: 28 cards at the source PSD’s 66.72 × 76.2 mm (788 × 900 at 300 dpi), nine per A4 sheet.
 - `events.pdf`: event cards at the source PSD’s 76.2 × 44.45 mm (900 × 525 at 300 dpi), eight per A4 sheet; each deck starts on a new sheet.
@@ -40,7 +40,7 @@ Download the complete kit, then read `rules.pdf` or `READ-ME.txt`.
 - Money prints ten notes per A4 sheet, in the quantities selected for each player.
 - Building strips make 32 houses and 12 hotels. Supply two dice and player tokens.
 
-### Matching the exact card fonts
+### Matching the exact fonts
 
 The site’s Kabel font **is included** in the website archive and reused locally. The card PSDs name the following fonts, but **their font files are not in either archive**:
 
@@ -49,12 +49,15 @@ The site’s Kabel font **is included** in the website archive and reused locall
 - **KabobExtrabold**: transport/utility names.
 - **CataneoBT-Regular**: Chance/Community Chest headings.
 - **ArialNarrow-Bold**: event-template body text.
+- **HelveticaNeue-BoldItalic**: custom center titles on the source board.
 
-Open **Logo, cards & full board → Cards → Exact Photoshop card fonts** to load the matching TTF files. Font names are checked against their internal font metadata. The app stores them on this device and embeds loaded fonts in PDF exports and deed SVG previews. Font files are not inserted in share URLs; the receiving device also needs the fonts for exact editable text. Project data, colors, logos, names and artwork keys still travel in the link.
+Open **Logo, cards & full board → Cards → Exact Photoshop fonts** to load the matching TTF files. Font names are checked against their internal font metadata. The app stores them on this device and embeds loaded fonts in PDF exports and deed SVG previews. Font files are not inserted in share URLs; the receiving device also needs the fonts for exact editable text. Project data, colors, logos, names and artwork keys still travel in the link.
 
-Until those files are loaded, edited text uses draft fonts. Card PDF download names and the kit’s READ-ME indicate the missing fonts. The **Original Photoshop card templates** ZIP preserves the supplied PSD files and their original rendered artwork unchanged, with a font-name report.
+Unchanged source lettering uses the original artwork. New wording and prices reuse available source letters and numbers, with reconstructed spacing; missing characters use a fallback until matching fonts are loaded. Downloads and the kit’s READ-ME identify missing fonts. The **Original Photoshop card templates** ZIP preserves the supplied PSD files and their original rendered artwork unchanged, with a font-name report.
 
-The campus board also references KabobLight for its labels, with HongKong-Regular/HelveticaNeue-BoldItalic in the original mixed title and Times New Roman in deck decorations; see `docs/template-fonts.json`. The provided logo can replace the center lettering. Long custom text may require a smaller size to fit the source layout.
+The campus board also references KabobLight for its labels, with HongKong-Regular/HelveticaNeue-BoldItalic in the original mixed title and Times New Roman in deck decorations; see `docs/template-fonts.json`. The original PNG title is preserved exactly, and an uploaded company logo can be placed in the center. Long custom text may require a smaller size to fit the source layout.
+
+Native-resolution export tests compare every RGBA channel of the downloaded campus board against the supplied PNG and the Photoshop preset against the PSD’s cached composite converted to RGB: zero differences in each case. Choose **Start with a template → Original Photoshop board** for its blue nugssOPOLY title and source palette; **Back to campus** preserves the green UNBCOPOLY PNG version. The PDF embeds that same lossless 6000 × 6000 image. Tests also cover edited SVGs, palette changes, logos, print dimensions, nine-page tiling, and removing the old title. The editable SVG contains original raster artwork alongside editable masks, labels, and vector logos; it is not an all-vector redraw.
 
 ## Run locally
 
