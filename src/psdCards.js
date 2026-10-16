@@ -2,6 +2,7 @@ import source from './reference-assets/cards.json';
 import {getCardFonts} from './cardFonts';
 import {expandText} from './model';
 import {deedIcon} from './spaceIcons';
+import {classicEventArtwork} from './classicEvents';
 const image=(a,extra={})=>({type:'image',...a,...extra});
 const rect=(x,y,w,h,fill)=>({type:'rect',x,y,w,h,fill});
 const black='#040707';
@@ -9,6 +10,7 @@ const black='#040707';
 // Photoshop lines retain their pixels; edited text uses the source glyphs.
 export function sourceLine(value,font,x,baseline,options={}){
  const {size=48,scaleY=1,scaleX=1,tracking,maxWidth=Infinity,align='center',color=black}=options;const fd=source.fonts[font];const cached=fd?.lines[String(value).trim().toLowerCase()];
+ if(options.native)return [{type:'text',value:String(value),font,x,y:baseline,size,scaleY,scaleX,maxWidth,align,color,tracking:tracking??(font==='CataneoBT-Regular'?size*.075:font==='ArialNarrow-Bold'?-size*.03:0),fallback:!getCardFonts()[font],missing:''}];
  if(cached){
   const scale=Math.min(size/cached.size,maxWidth/cached.w);const sy=scale*scaleY/cached.scaleY;const w=cached.w*scale;const h=cached.h*sy;const left=cached.align===align?x+(cached.x-cached.anchorX)*scale:align==='left'?x:align==='right'?x-w:x-w/2;
   return [image(cached,{src:color==='#ffffff'?(cached.white||cached.src):(cached.black||cached.src),x:left,y:baseline+(cached.y-cached.baseline)*sy,w,h})];
@@ -43,6 +45,7 @@ export function deedArtwork(board,tile){
  return {width:788,height:900,ops,fallbacks:ops.filter(o=>o.fallback)};
 }
 export function eventArtwork(board,key,card){
+ if(board.decks[key].appearance==='classic')return classicEventArtwork(board,key,card,sourceLine);
  const deck=board.decks[key];const ops=[rect(0,0,900,525,'#ffffff')];
  // The supplied event PSD contains these headings and a placeholder, no icons
  // or decorative frame. Keep its white card and top-left calligraphic heading.

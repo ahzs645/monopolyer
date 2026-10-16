@@ -9,17 +9,21 @@ A browser-based studio for making a custom property-trading board game, built fr
 - One full builder using the supplied Printopoly Kabel font, BUILD page, mint/red styling, 60/40 desktop split and searchable icon picker. Board design, spaces, cards, money and export are available together; the actual board is the initial preview.
 - Live, clickable 40-space board with editable names, prices, rents, group colors, special-space icons, and currency.
 - Company SVG logo upload, logo sizing, board palette, and custom title/subtitle.
-- Printopoly, company, UNBC campus PNG, and original Photoshop board presets. The campus preset reconstructs the supplied 6000-pixel board PNG, including its complete illustrations, typography, deck frames, and exact palette.
+- Over the EdgeOPOLY, Northern Health, company, UNBC campus PNG, and original Photoshop board presets. The campus preset reconstructs the supplied 6000-pixel board PNG, including its complete illustrations, typography, deck frames, and exact palette. Older Printopoly projects still open; its template-picker entry has been removed.
 - Adjustable comparison overlays for the original PNG, PSD composite, and the previous board layout; website screenshot overlays are in the source gallery.
 - Automatically synchronized property, transport, and utility deeds.
-- Two editable event decks with 16 starter cards each; add or remove cards, up to 64 per deck.
-- The seven supplied PDF bill designs, reused as vectors, with custom denominations, optional colors/branding, quantities, player sets and an opacity overlay. The simple bill design remains available.
+- Two editable event decks with 16 starter cards each; add or remove cards, up to 64 per deck. Each deck offers Photoshop and Classic illustrated designs; the latter uses 31 source illustrations from [donutheist/monopoly-vectors](https://github.com/donutheist/monopoly-vectors), with editable text, paper colors, optional titles and individual illustration choices.
+- The seven supplied PDF bill designs, reused as vectors, with custom denominations, optional colors/branding, editable footer, quantities and player sets. The simple bill design remains available.
 - Editable game guide, paper houses and hotels, PDF fronts and mirrored backs.
 - All-vector SVG/PDF board exports, individual deed/event SVGs, and a complete vector game kit. Separate source-matched SVG/PNG/PDF downloads preserve the exact original pixels.
 - Complete ZIP kit or individual downloads.
 - Undo/redo, browser autosave, project JSON import/export, and `json-url` share links.
 
 ## Saving a design
+
+**Start with a template → Over the EdgeOPOLY** loads the actual supplied newspaper wordmark, green OPOLY suffix and dark tagline, together with the uploaded NUGSSOPOLY project’s properties, prices, groups, decks and bill settings. The saved Over The Edge and Residence Parking Lot names and custom bill heading are retained. Logo title setup offers original logo colors, recoloring, whole-title scale, suffix size and suffix baseline alignment.
+
+In **Cards**, select a deck, then choose **Card design → Classic illustrated**. **Card paper color** changes that deck’s card fronts; **Deck color** remains its board marker/back color. **Show card titles** controls whether the editable title prints above the instruction. **Card illustration** chooses the source art for the selected card or text only. Both designs use the same editable wording and dynamic board-name placeholders. Illustration selections remain attached to cards when another card is removed. Design, paper and artwork choices are included in autosave, JSON projects, share links and SVG/PDF exports. The source repository supplies illustrations only; the classic card composition is recreated with editable text rather than presented as an exact original card scan.
 
 Edits autosave in this browser. **Download an editable project JSON for a durable backup.** Clearing site data removes the local copy.
 

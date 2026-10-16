@@ -1,0 +1,976 @@
+{
+  "version": 1,
+  "boardStyle": "photoshop",
+  "title": "nugssOPOLY",
+  "subtitle": "",
+  "currency": "$",
+  "background": "#cbe8e0",
+  "ink": "#040707",
+  "accent": "#0f7abb",
+  "logo": "",
+  "logoSize": 180,
+  "groups": [
+    "#590a38",
+    "#87a5d6",
+    "#ee3778",
+    "#f57f23",
+    "#ef3923",
+    "#fae90b",
+    "#13a55c",
+    "#264da1"
+  ],
+  "tiles": [
+    {
+      "id": 0,
+      "kind": "go",
+      "name": "GO",
+      "artwork": "go",
+      "icon": "star",
+      "color": "#205847",
+      "price": 0,
+      "group": 0,
+      "rents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "houseCost": 50,
+      "mortgage": 0
+    },
+    {
+      "id": 1,
+      "kind": "property",
+      "name": "Neyoh Residence",
+      "icon": "home",
+      "color": "#205847",
+      "price": 60,
+      "group": 0,
+      "rents": [
+        2,
+        10,
+        30,
+        90,
+        160,
+        250
+      ],
+      "houseCost": 50,
+      "mortgage": 30
+    },
+    {
+      "id": 2,
+      "kind": "event",
+      "name": "Campus Mail",
+      "artwork": "mail",
+      "icon": "gift",
+      "color": "#4b85a1",
+      "price": 0,
+      "group": 0,
+      "rents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "houseCost": 50,
+      "mortgage": 0
+    },
+    {
+      "id": 3,
+      "kind": "property",
+      "name": "Keyoh Residence",
+      "icon": "home",
+      "color": "#205847",
+      "price": 60,
+      "group": 0,
+      "rents": [
+        4,
+        20,
+        60,
+        180,
+        320,
+        450
+      ],
+      "houseCost": 50,
+      "mortgage": 30
+    },
+    {
+      "id": 4,
+      "kind": "tax",
+      "name": "Increased Tuition",
+      "icon": "coin",
+      "color": "#976739",
+      "price": 200,
+      "group": 0,
+      "rents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "houseCost": 50,
+      "mortgage": 0
+    },
+    {
+      "id": 5,
+      "kind": "rail",
+      "name": "Parking Lot A",
+      "artwork": "parkingSign",
+      "icon": "train",
+      "color": "#205847",
+      "price": 200,
+      "group": 0,
+      "rents": [
+        25,
+        50,
+        100,
+        200,
+        0,
+        0
+      ],
+      "houseCost": 50,
+      "mortgage": 100
+    },
+    {
+      "id": 6,
+      "kind": "property",
+      "name": "International Office",
+      "icon": "home",
+      "color": "#205847",
+      "price": 100,
+      "group": 1,
+      "rents": [
+        6,
+        30,
+        90,
+        270,
+        400,
+        550
+      ],
+      "houseCost": 50,
+      "mortgage": 50
+    },
+    {
+      "id": 7,
+      "kind": "event",
+      "name": "Chance",
+      "artwork": "chance",
+      "icon": "question",
+      "color": "#d38b46",
+      "price": 0,
+      "group": 0,
+      "rents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "houseCost": 50,
+      "mortgage": 0
+    },
+    {
+      "id": 8,
+      "kind": "property",
+      "name": "NBCGSS Office",
+      "icon": "home",
+      "color": "#205847",
+      "price": 100,
+      "group": 1,
+      "rents": [
+        6,
+        30,
+        90,
+        270,
+        400,
+        550
+      ],
+      "houseCost": 50,
+      "mortgage": 50
+    },
+    {
+      "id": 9,
+      "kind": "property",
+      "name": "NUGSS Office",
+      "icon": "home",
+      "color": "#205847",
+      "price": 120,
+      "group": 1,
+      "rents": [
+        8,
+        40,
+        100,
+        300,
+        450,
+        600
+      ],
+      "houseCost": 50,
+      "mortgage": 60
+    },
+    {
+      "id": 10,
+      "kind": "jail",
+      "name": "Dean’s Office",
+      "artwork": "jail",
+      "icon": "lock",
+      "color": "#205847",
+      "price": 0,
+      "group": 0,
+      "rents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "houseCost": 50,
+      "mortgage": 0
+    },
+    {
+      "id": 11,
+      "kind": "property",
+      "name": "Bioenergy Plant",
+      "icon": "home",
+      "color": "#205847",
+      "price": 140,
+      "group": 2,
+      "rents": [
+        10,
+        50,
+        150,
+        450,
+        625,
+        750
+      ],
+      "houseCost": 100,
+      "mortgage": 70
+    },
+    {
+      "id": 12,
+      "kind": "utility",
+      "name": "Student Services",
+      "artwork": "information",
+      "icon": "bolt",
+      "color": "#205847",
+      "price": 150,
+      "group": 0,
+      "rents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "houseCost": 50,
+      "mortgage": 75
+    },
+    {
+      "id": 13,
+      "kind": "property",
+      "name": "Access Resource Center",
+      "icon": "home",
+      "color": "#205847",
+      "price": 140,
+      "group": 2,
+      "rents": [
+        10,
+        50,
+        150,
+        450,
+        625,
+        750
+      ],
+      "houseCost": 100,
+      "mortgage": 70
+    },
+    {
+      "id": 14,
+      "kind": "property",
+      "name": "Academic Success Center",
+      "icon": "home",
+      "color": "#205847",
+      "price": 160,
+      "group": 2,
+      "rents": [
+        12,
+        60,
+        180,
+        500,
+        700,
+        900
+      ],
+      "houseCost": 100,
+      "mortgage": 80
+    },
+    {
+      "id": 15,
+      "kind": "rail",
+      "name": "Parking Lot B",
+      "artwork": "parkingSign",
+      "icon": "train",
+      "color": "#205847",
+      "price": 200,
+      "group": 0,
+      "rents": [
+        25,
+        50,
+        100,
+        200,
+        0,
+        0
+      ],
+      "houseCost": 50,
+      "mortgage": 100
+    },
+    {
+      "id": 16,
+      "kind": "property",
+      "name": "Canfor Theatre",
+      "icon": "home",
+      "color": "#205847",
+      "price": 180,
+      "group": 3,
+      "rents": [
+        14,
+        70,
+        200,
+        550,
+        750,
+        950
+      ],
+      "houseCost": 100,
+      "mortgage": 90
+    },
+    {
+      "id": 17,
+      "kind": "event",
+      "name": "Campus Mail",
+      "artwork": "mail",
+      "icon": "gift",
+      "color": "#4b85a1",
+      "price": 0,
+      "group": 0,
+      "rents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "houseCost": 50,
+      "mortgage": 0
+    },
+    {
+      "id": 18,
+      "kind": "property",
+      "name": "Winter Garden",
+      "icon": "home",
+      "color": "#205847",
+      "price": 180,
+      "group": 3,
+      "rents": [
+        14,
+        70,
+        200,
+        550,
+        750,
+        950
+      ],
+      "houseCost": 100,
+      "mortgage": 90
+    },
+    {
+      "id": 19,
+      "kind": "property",
+      "name": "Administrative Building",
+      "icon": "home",
+      "color": "#205847",
+      "price": 200,
+      "group": 3,
+      "rents": [
+        16,
+        80,
+        220,
+        600,
+        800,
+        1000
+      ],
+      "houseCost": 100,
+      "mortgage": 100
+    },
+    {
+      "id": 20,
+      "kind": "parking",
+      "name": "Free Parking",
+      "artwork": "parking",
+      "icon": "car",
+      "color": "#205847",
+      "price": 0,
+      "group": 0,
+      "rents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "houseCost": 50,
+      "mortgage": 0
+    },
+    {
+      "id": 21,
+      "kind": "property",
+      "name": "Bus Loop",
+      "icon": "home",
+      "color": "#205847",
+      "price": 220,
+      "group": 4,
+      "rents": [
+        18,
+        90,
+        250,
+        700,
+        875,
+        1050
+      ],
+      "houseCost": 150,
+      "mortgage": 110
+    },
+    {
+      "id": 22,
+      "kind": "event",
+      "name": "Chance",
+      "artwork": "chance",
+      "icon": "question",
+      "color": "#d38b46",
+      "price": 0,
+      "group": 0,
+      "rents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "houseCost": 50,
+      "mortgage": 0
+    },
+    {
+      "id": 23,
+      "kind": "property",
+      "name": "First Nation Center",
+      "icon": "home",
+      "color": "#205847",
+      "price": 220,
+      "group": 4,
+      "rents": [
+        18,
+        90,
+        250,
+        700,
+        875,
+        1050
+      ],
+      "houseCost": 150,
+      "mortgage": 110
+    },
+    {
+      "id": 24,
+      "kind": "property",
+      "name": "Northern Women’s Center",
+      "icon": "home",
+      "color": "#205847",
+      "price": 240,
+      "group": 4,
+      "rents": [
+        20,
+        100,
+        300,
+        750,
+        925,
+        1100
+      ],
+      "houseCost": 150,
+      "mortgage": 120
+    },
+    {
+      "id": 25,
+      "kind": "rail",
+      "name": "Parking Lot C",
+      "artwork": "parkingSign",
+      "icon": "train",
+      "color": "#205847",
+      "price": 200,
+      "group": 0,
+      "rents": [
+        25,
+        50,
+        100,
+        200,
+        0,
+        0
+      ],
+      "houseCost": 50,
+      "mortgage": 100
+    },
+    {
+      "id": 26,
+      "kind": "property",
+      "name": "Cafeteria",
+      "icon": "home",
+      "color": "#205847",
+      "price": 260,
+      "group": 5,
+      "rents": [
+        22,
+        110,
+        330,
+        800,
+        975,
+        1150
+      ],
+      "houseCost": 150,
+      "mortgage": 130
+    },
+    {
+      "id": 27,
+      "kind": "property",
+      "name": "Northern Sports Center",
+      "icon": "home",
+      "color": "#205847",
+      "price": 260,
+      "group": 5,
+      "rents": [
+        22,
+        110,
+        330,
+        800,
+        975,
+        1150
+      ],
+      "houseCost": 150,
+      "mortgage": 130
+    },
+    {
+      "id": 28,
+      "kind": "utility",
+      "name": "Bookstore",
+      "artwork": "book",
+      "icon": "drop",
+      "color": "#205847",
+      "price": 150,
+      "group": 0,
+      "rents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "houseCost": 50,
+      "mortgage": 75
+    },
+    {
+      "id": 29,
+      "kind": "property",
+      "name": "Over The Edge",
+      "icon": "home",
+      "color": "#205847",
+      "price": 280,
+      "group": 5,
+      "rents": [
+        24,
+        120,
+        360,
+        850,
+        1025,
+        1200
+      ],
+      "houseCost": 150,
+      "mortgage": 140
+    },
+    {
+      "id": 30,
+      "kind": "gotojail",
+      "name": "Go to Dean’s Office",
+      "artwork": "police",
+      "icon": "gavel",
+      "color": "#205847",
+      "price": 0,
+      "group": 0,
+      "rents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "houseCost": 50,
+      "mortgage": 0
+    },
+    {
+      "id": 31,
+      "kind": "property",
+      "name": "Botanical Gardens",
+      "icon": "home",
+      "color": "#205847",
+      "price": 300,
+      "group": 6,
+      "rents": [
+        26,
+        130,
+        390,
+        900,
+        1100,
+        1275
+      ],
+      "houseCost": 200,
+      "mortgage": 150
+    },
+    {
+      "id": 32,
+      "kind": "property",
+      "name": "George R. Weller Library",
+      "icon": "home",
+      "color": "#205847",
+      "price": 300,
+      "group": 6,
+      "rents": [
+        26,
+        130,
+        390,
+        900,
+        1100,
+        1275
+      ],
+      "houseCost": 200,
+      "mortgage": 150
+    },
+    {
+      "id": 33,
+      "kind": "event",
+      "name": "Campus Mail",
+      "artwork": "mail",
+      "icon": "gift",
+      "color": "#4b85a1",
+      "price": 0,
+      "group": 0,
+      "rents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "houseCost": 50,
+      "mortgage": 0
+    },
+    {
+      "id": 34,
+      "kind": "property",
+      "name": "Pride Center",
+      "icon": "home",
+      "color": "#205847",
+      "price": 320,
+      "group": 6,
+      "rents": [
+        28,
+        150,
+        450,
+        1000,
+        1200,
+        1400
+      ],
+      "houseCost": 200,
+      "mortgage": 160
+    },
+    {
+      "id": 35,
+      "kind": "rail",
+      "name": "Residence Parking Lot",
+      "artwork": "parkingSign",
+      "icon": "train",
+      "color": "#205847",
+      "price": 200,
+      "group": 0,
+      "rents": [
+        25,
+        50,
+        100,
+        200,
+        0,
+        0
+      ],
+      "houseCost": 50,
+      "mortgage": 100
+    },
+    {
+      "id": 36,
+      "kind": "event",
+      "name": "Chance",
+      "artwork": "chance",
+      "icon": "question",
+      "color": "#d38b46",
+      "price": 0,
+      "group": 0,
+      "rents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "houseCost": 50,
+      "mortgage": 0
+    },
+    {
+      "id": 37,
+      "kind": "property",
+      "name": "Degrees Coffee Co.",
+      "icon": "home",
+      "color": "#205847",
+      "price": 350,
+      "group": 7,
+      "rents": [
+        35,
+        175,
+        500,
+        1100,
+        1300,
+        1500
+      ],
+      "houseCost": 200,
+      "mortgage": 175
+    },
+    {
+      "id": 38,
+      "kind": "tax",
+      "name": "Student Debt",
+      "icon": "coin",
+      "color": "#976739",
+      "price": 75,
+      "group": 0,
+      "rents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "houseCost": 50,
+      "mortgage": 0
+    },
+    {
+      "id": 39,
+      "kind": "property",
+      "name": "Thirsty Moose Pub",
+      "icon": "home",
+      "color": "#205847",
+      "price": 400,
+      "group": 7,
+      "rents": [
+        50,
+        200,
+        600,
+        1400,
+        1700,
+        2000
+      ],
+      "houseCost": 200,
+      "mortgage": 200
+    }
+  ],
+  "decks": {
+    "chance": {
+      "name": "Chance",
+      "color": "#ed00d5",
+      "cards": [
+        {
+          "title": "A fresh start",
+          "text": "Advance to {{go}}. Collect {{currency}}200."
+        },
+        {
+          "title": "The view from the top",
+          "text": "Advance to {{tile:39}}. If you pass {{go}}, collect {{currency}}200."
+        },
+        {
+          "title": "Next stop",
+          "text": "Advance to the nearest transport. If unowned, you may buy it. Otherwise pay the owner twice the usual rent."
+        },
+        {
+          "title": "Power up",
+          "text": "Advance to the nearest utility. If owned, pay ten times a new dice roll."
+        },
+        {
+          "title": "Good investment",
+          "text": "Collect a dividend of {{currency}}50 from the bank."
+        },
+        {
+          "title": "A little detour",
+          "text": "Go back three spaces."
+        },
+        {
+          "title": "Time out",
+          "text": "Go directly to {{jail}}. Do not pass {{go}} or collect {{currency}}200."
+        },
+        {
+          "title": "Get out of jail free",
+          "text": "Keep this card until needed or trade it. Return it to the deck when used."
+        },
+        {
+          "title": "Looking after the neighbourhood",
+          "text": "Pay {{currency}}25 per house and {{currency}}100 per hotel you own."
+        },
+        {
+          "title": "Travel plans",
+          "text": "Advance to {{tile:5}}. If you pass {{go}}, collect {{currency}}200."
+        },
+        {
+          "title": "A small fine",
+          "text": "Pay the bank {{currency}}15."
+        },
+        {
+          "title": "Team celebration",
+          "text": "Pay each other player {{currency}}50."
+        },
+        {
+          "title": "Building fund",
+          "text": "Collect {{currency}}150 from the bank."
+        },
+        {
+          "title": "A winning idea",
+          "text": "Collect {{currency}}100 from the bank."
+        },
+        {
+          "title": "Your next project",
+          "text": "Advance to {{tile:24}}. If you pass {{go}}, collect {{currency}}200."
+        },
+        {
+          "title": "Community visit",
+          "text": "Advance to {{tile:11}}. If you pass {{go}}, collect {{currency}}200."
+        }
+      ]
+    },
+    "chest": {
+      "name": "Campus Mail",
+      "color": "#3262c5",
+      "cards": [
+        {
+          "title": "New beginnings",
+          "text": "Advance to {{go}}. Collect {{currency}}200."
+        },
+        {
+          "title": "A happy surprise",
+          "text": "Collect {{currency}}200 from the bank."
+        },
+        {
+          "title": "Annual check-up",
+          "text": "Pay the bank {{currency}}50."
+        },
+        {
+          "title": "Sold your old equipment",
+          "text": "Collect {{currency}}50 from the bank."
+        },
+        {
+          "title": "Get out of jail free",
+          "text": "Keep this card until needed or trade it. Return it to the deck when used."
+        },
+        {
+          "title": "Time out",
+          "text": "Go directly to {{jail}}. Do not pass {{go}} or collect {{currency}}200."
+        },
+        {
+          "title": "Holiday fund",
+          "text": "Collect {{currency}}100 from the bank."
+        },
+        {
+          "title": "Tax refund",
+          "text": "Collect {{currency}}20 from the bank."
+        },
+        {
+          "title": "Happy birthday",
+          "text": "Collect {{currency}}10 from each other player."
+        },
+        {
+          "title": "Insurance payment",
+          "text": "Collect {{currency}}100 from the bank."
+        },
+        {
+          "title": "Unexpected expense",
+          "text": "Pay the bank {{currency}}100."
+        },
+        {
+          "title": "Learning something new",
+          "text": "Pay the bank {{currency}}50."
+        },
+        {
+          "title": "Consulting fee",
+          "text": "Collect {{currency}}25 from the bank."
+        },
+        {
+          "title": "Street repairs",
+          "text": "Pay {{currency}}40 per house and {{currency}}115 per hotel you own."
+        },
+        {
+          "title": "Local award",
+          "text": "Collect {{currency}}10 from the bank."
+        },
+        {
+          "title": "A gift for you",
+          "text": "Collect {{currency}}100 from the bank."
+        }
+      ]
+    }
+  },
+  "money": {
+    "headingMode": "custom",
+    "headingText": "Over the Edgeopoly",
+    "bankName": "THE CAMPUS BANK",
+    "players": 4,
+    "denominations": [
+      1,
+      5,
+      10,
+      20,
+      50,
+      100,
+      500
+    ],
+    "quantities": [
+      5,
+      1,
+      2,
+      1,
+      1,
+      4,
+      2
+    ],
+    "colors": [
+      "#e8e3d4",
+      "#ecd4db",
+      "#dce6d2",
+      "#d8e3ef",
+      "#e8d9bb",
+      "#e7cbba",
+      "#d9d1e4"
+    ]
+  },
+  "rules": "BEFORE YOU BEGIN\nChoose a banker. Each player starts with {{currency}}1,500: five 1s, one 5, two 10s, one 20, one 50, four 100s, and two 500s. Shuffle both event decks separately. Put all tokens on {{go}}.\n\nTAKE A TURN\nRoll two dice and move clockwise. Collect {{currency}}200 when you pass or land on {{go}}. Doubles let you roll again; three doubles in a row send you to {{jail}}.\n\nBUY, TRADE & BUILD\nBuy an unowned property at its printed price, or auction it among all players. Pay rent to the owner of an unmortgaged property. Owning an entire color group doubles the unimproved rent. Build evenly across a complete group: up to four houses, then replace four houses with a hotel, paying the building cost again. The bank holds 32 houses and 12 hotels.\n\nSPECIAL SPACES\nFollow event-card instructions and return used cards to the bottom of the deck, except retained cards. Pay taxes to the bank. Free parking gives no payment. On Just Visiting, take no action. In {{jail}}, pay {{currency}}50, use a release card, or try for doubles for up to three turns; after the third failed roll pay {{currency}}50 and move by that roll. A release by doubles does not give another roll.\n\nMORTGAGES & BANKRUPTCY\nSell buildings back at half cost, evenly across their group. Mortgage unimproved properties for the amount on the deed; pay that amount plus 10% to redeem. Trade mortgaged properties by agreement; the buyer pays 10% interest immediately and another 10% later if not redeemed at transfer. If you cannot pay a debt after selling and mortgaging, give remaining assets to the creditor and leave the game. If the bank is the creditor, auction the properties. The last player remaining wins.\n\nMAKE IT YOURS\nAgree on any house rules before playing. Use small objects as player tokens. Printable houses and hotels are included; fold on the dashed lines and glue the tabs."
+}

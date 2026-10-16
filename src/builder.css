@@ -86,3 +86,5 @@
 .bill-paper-setup .money-table>div{grid-template-columns:48px minmax(0,1fr) minmax(0,1fr);gap:12px}
 
 .deck-selector button{min-width:0;white-space:normal;overflow-wrap:anywhere}
+.card-title-option{display:flex;align-items:center;gap:9px;margin:16px 0;font-size:15px}
+.card-title-option input{width:18px;height:18px;flex:none}
