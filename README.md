@@ -2,7 +2,7 @@
 
 A browser-based studio for making a custom property-trading board game, built from the supplied Printopoly website and Photoshop references.
 
-**Website after Pages is enabled:** https://ahzs645.github.io/monopolyer/
+**Website:** https://projects.ahmadjalil.com/monopolyer/
 
 ## Included
 
@@ -13,7 +13,7 @@ A browser-based studio for making a custom property-trading board game, built fr
 - Adjustable comparison overlays for the original PNG, PSD composite, and the previous board layout; website screenshot overlays are in the source gallery.
 - Automatically synchronized property, transport, and utility deeds.
 - Two editable event decks with 16 starter cards each; add or remove cards, up to 64 per deck.
-- Custom banknote denominations, colors, quantities, and player sets.
+- The seven supplied PDF bill designs, reused as vectors, with custom denominations, optional colors/branding, quantities, player sets and an opacity overlay. The simple bill design remains available.
 - Editable game guide, paper houses and hotels, PDF fronts and mirrored backs.
 - All-vector SVG/PDF board exports, individual deed/event SVGs, and a complete vector game kit. Separate source-matched SVG/PNG/PDF downloads preserve the exact original pixels.
 - Complete ZIP kit or individual downloads.
@@ -23,9 +23,9 @@ A browser-based studio for making a custom property-trading board game, built fr
 
 Edits autosave in this browser. **Download an editable project JSON for a durable backup.** Clearing site data removes the local copy.
 
-**Share design** compresses the complete project with [`@firstform/json-url` 4.2.0](https://github.com/ahzs645/json-url), using its `lzstring` codec. Names, colors, cards, rules, money, and the sanitized SVG logo are embedded in the `#board=` URL fragment. The fragment is not sent in the HTTP request. The app uses the package's required browser `Buffer` shim. This is an editable snapshot, not a cloud database or a collaborative session. Generate a fresh link after editing. Large logos can make long links; the UI recommends project files when appropriate.
+**Share design** compresses the complete project with [`@firstform/json-url` 4.2.0](https://github.com/ahzs645/json-url), using its `lzstring` codec. Names, colors, cards, rules, money, the sanitized SVG logo, and uploaded space artwork are embedded in the `#board=` URL fragment. The fragment is not sent in the HTTP request. The app uses the package's required browser `Buffer` shim. This is an editable snapshot, not a cloud database or a collaborative session. Generate a fresh link after editing. Large logos or images can make long links; the UI recommends project files when appropriate.
 
-SVGs must be under 200 KB. Scripts, external images/resources, and embedded HTML are removed; supported presentation CSS is converted into SVG attributes. Logos with outlined text and self-contained vector paths work best. Imported files and links pass through the same schema and logo validation.
+SVGs must be under 200 KB. Scripts, external images/resources, and embedded HTML are removed; supported presentation CSS is converted into SVG attributes. Logos with outlined text and self-contained vector paths work best. Imported files and links pass through the same schema and SVG validation. Space images are embedded PNG/JPEG data, never external URLs. Project imports allow up to 15 MB; oversized share links use a project-file backup instead.
 
 ## Print
 
@@ -37,12 +37,14 @@ Download the complete kit, then read `rules.pdf` or `READ-ME.txt`.
 - `deeds.pdf`: 28 cards at the source PSD’s 66.72 × 76.2 mm (788 × 900 at 300 dpi), nine per A4 sheet.
 - `events.pdf`: event cards at the source PSD’s 76.2 × 44.45 mm (900 × 525 at 300 dpi), eight per A4 sheet; each deck starts on a new sheet.
 - Deed/event back PDFs mirror the columns. Test long-edge duplex printing on one sheet, or print separately and glue front to back.
-- Money prints ten notes per A4 sheet, in the quantities selected for each player.
+- Reference money prints ten notes per A4 sheet at the original 90.84 × 43.22 mm bill size, in the quantities selected for each player. The simple design retains its 99 × 50 mm size.
 - Building strips make 32 houses and 12 hotels. Supply two dice and player tokens.
 
 ### Changing icons and text without moving the layout
 
 In **Spaces**, choose a space and use the icon grid or **Search more icons** to reuse the reference site's searchable Font Awesome picker. Its symbol stays centered in the source illustration slot and rotates with its side of the board. The GO arrow has its own replacement slot; the GO title stays separate. Corner captions and the jail frame remain in place. Tax spaces also support vector icons. Icon color switches to the selected vector symbol; choose an original PSD illustration to restore that artwork.
+
+**Upload or paste artwork** replaces any of the 18 existing board icons with an SVG, PNG, JPEG, WebP or GIF (first frame). Upload a file, focus the artwork box and press Ctrl+V / ⌘V, use **Paste from clipboard**, or paste SVG markup and choose **Apply SVG**. **Copy artwork** copies the current upload for pasting into another space. Clipboard access depends on the browser; file upload and the SVG markup field remain available. Images fit inside the existing slot without stretching or moving text. Removing an upload restores the previous illustration/icon. Uploads are limited to 5 MB and raster inputs are resized to at most 768 pixels to keep projects manageable; SVGs use the existing 200 KB sanitization. SVG uploads retain vector shapes. Raster uploads remain raster in source-matched files and are rejected by vector exports; the main kit button chooses the source-matched kit when raster icons are present.
 
 Space names update immediately. Text retains the source center and rotation, measures its actual font/glyph widths, wraps, and shrinks to fit the original label area. Use line breaks in the space-name box for explicit line breaks. Complete wording is retained. Prices stay at their separate source anchors. Transport and utility symbol changes also update the matching deed illustration without moving its title, rent table or mortgage text. Saved projects and share links retain the symbol, color and multiline name. The supplied-font limitations below still apply to exact new lettering.
 
@@ -57,6 +59,14 @@ Vector SVG downloads are checked for bitmap images and external resources. Vecto
 The asset builder is `scripts/vectorize-artwork.py` (Python: Pillow, NumPy, psd-tools, vtracer 0.6.15). It preserves the original embedded SVG placements and traces remaining source assets. Its checked-in path catalog and method audit are in `public/vector-assets/`; no Python installation is needed by visitors. The atlas loads only when a vector export is requested.
 
 Browser tests compare each vector board at 6000 pixels against the original PNG/PSD composite, checking all group-color fills separately and allowing tracing differences at edges. They also compare edited source/vector boards, inline logos, and inspect every SVG/PDF in the vector kit for raster image content. The pixel-matched exports retain their strict zero-difference tests.
+
+### Reference bills and overlays
+
+**Money → Bill design** defaults to the seven newly supplied bills. Each vector SVG is extracted directly from its PDF, retaining the border, guilloche, denomination outlines, illustrations and source colors. Each PDF has its own measured crop offset; `public/money-reference/manifest.json` records the source bounds and SHA-256. Original PDFs are also available through the overlay panel. The preview and PDF share the same artwork builder. Repeated notes reuse a PDF Form XObject instead of rasterizing or duplicating the design.
+
+**Overlay reference bill** lets you choose a denomination and opacity. The overlay is comparison-only. Custom values replace the three number areas; changing a note color enables **Apply my note colors**, and changing the bank name enables **Add my bank and board name**. Turn those options off to compare unbranded source artwork. Newly typed values/branding use live serif text; unchanged denominations keep the exact original outlines. **Simple custom bills** retains the previous design.
+
+`scripts/extract-money-artwork.py` requires PyMuPDF to regenerate the source SVGs from the PDFs. Browser tests compare every bill against a PNG rendered independently from the uploaded PDF. `scripts/compare-money-overlays.py` (PyMuPDF, Pillow, NumPy) compares a one-of-each exported PDF with the seven originals at 288 DPI, outputs source/export/50% overlay/difference images, and checks for raster content. See [the overlay report](docs/MONEY_REVIEW.md). Neither Python nor the original PDF parser is needed in the deployed app.
 
 ### Matching the exact fonts
 

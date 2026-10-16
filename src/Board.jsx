@@ -1,3 +1,4 @@
+import {artworkHref} from './customArtwork';
 import React from 'react';
 import {TemplateBoard} from './TemplateBoard';
 import {tilePosition} from './model';
@@ -40,7 +41,7 @@ function LegacyBoard({board,selected,onSelect,svgRef,interactive=true,previewSiz
   </g>)}
  </g>
  {board.tiles.map(tile=>{
-  const p=tilePosition(tile.id);const corner=tile.id%10===0;const w=corner?135:81.111111;const h=135;const color=tile.kind==='property'?board.groups[tile.group]:tile.color;const label=deckLabel(tile.id)||tile.name;const original=ORIGINAL_ARTWORK[tile.artwork];
+  const p=tilePosition(tile.id);const corner=tile.id%10===0;const w=corner?135:81.111111;const h=135;const color=tile.kind==='property'?board.groups[tile.group]:tile.color;const label=deckLabel(tile.id)||tile.name;const original=artworkHref(tile.customArtwork)||ORIGINAL_ARTWORK[tile.artwork];
   return <g key={tile.id} transform={`translate(${p.x+p.w/2} ${p.y+p.h/2}) rotate(${p.rotation}) translate(${-w/2} ${-h/2})`} onClick={interactive?()=>onSelect?.(tile.id):undefined} onKeyDown={interactive?(e)=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onSelect?.(tile.id);}}:undefined} tabIndex={interactive?0:undefined} role={interactive?'button':undefined} aria-label={interactive?`Edit ${label}`:undefined} style={interactive?{cursor:'pointer'}:undefined}>
    <rect width={w} height={h} fill={board.background} stroke={board.ink} strokeWidth="1.6"/>
    {tile.kind==='property'?<><rect width={w} height="27" fill={color} stroke={board.ink} strokeWidth="1.5"/><WrappedText text={label.toUpperCase()} x={w/2} y={48} width={w-12} fontSize={10} maxLines={4} fill={board.ink} fontWeight="600"/><text x={w/2} y="121" textAnchor="middle" fontSize="11" fill={board.ink}>{board.currency}{tile.price}</text></>:corner?<g fill={board.ink}>

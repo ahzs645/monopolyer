@@ -1,0 +1,13 @@
+import React,{useEffect,useState} from 'react';
+import {loadMoneyTemplate,moneyArtwork,moneyReferenceUrl,MONEY_VALUES} from './moneyArtwork';
+import {moneyTotal} from './model';
+export function MoneyPreview({board}){
+ const [templates,setTemplates]=useState([]),[error,setError]=useState(''),[compare,setCompare]=useState(false),[index,setIndex]=useState(0),[opacity,setOpacity]=useState(50);
+ useEffect(()=>{let active=true;Promise.all(MONEY_VALUES.map((_,i)=>loadMoneyTemplate(i))).then(values=>{if(active)setTemplates(values);}).catch(e=>{if(active)setError(e.message);});return()=>{active=false;};},[]);
+ const reference=board.money.style!=='studio';
+ return <div className="money-preview"><div className="preview-description"><h3>{reference?'Your reference bills':'Your custom bills'}</h3><p>{board.money.players} player sets · {board.currency}{moneyTotal(board).toLocaleString()} each</p></div>
+ {reference&&<div className="money-comparison-controls"><button className="button outline" aria-pressed={compare} onClick={()=>setCompare(!compare)}>Overlay reference bill</button>{compare&&<><label>Reference denomination<select aria-label="Reference denomination" value={index} onChange={e=>setIndex(Number(e.target.value))}>{MONEY_VALUES.map((v,i)=><option key={v} value={i}>{v}</option>)}</select></label><label>Reference opacity<input aria-label="Bill reference opacity" type="range" min="0" max="100" value={opacity} onChange={e=>setOpacity(Number(e.target.value))}/>{opacity}%</label><a href={moneyReferenceUrl(index,true)} download>Original {MONEY_VALUES[index]} PDF</a><p>Original artwork overlays the current bill at the same size. Changed values, colors and branding remain visible underneath.</p></>}</div>}
+ {error&&<p role="alert">{error}</p>}
+ {reference&&compare&&templates[index]&&<div className="money-overlay-stage"><img alt="Current bill for comparison" src={'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(moneyArtwork(templates[index],board,index))}/><img alt="Original bill overlay" src={moneyReferenceUrl(index)} style={{opacity:opacity/100}}/></div>}
+ <div className="banknote-grid">{board.money.denominations.map((value,i)=><article className={reference?'reference-banknote':'banknote'} style={reference?undefined:{background:board.money.colors[i],color:board.ink}} key={i}>{reference?(templates[i]?<img data-money-note={i} alt={`${value} reference-style bill`} src={'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(moneyArtwork(templates[i],board,i))}/>:<p>Loading bill…</p>):<><small>{board.money.bankName}</small><strong>{board.currency}{value.toLocaleString()}</strong><span>{board.title}</span></>}<footer>{board.money.quantities[i]} PER PLAYER · PLAY MONEY</footer></article>)}</div></div>;
+}

@@ -1,0 +1,93 @@
+{
+  "1": {
+    "file": "monopoly-money-one-dollar.pdf",
+    "sha256": "3cfc8d42f6f0cfaeaa9d23f16389bee4c2dbb839baa7d100884fa64994b56759",
+    "width": 257.50000381469727,
+    "height": 122.50048828125,
+    "sourceClip": [
+      34.208980560302734,
+      30.08154296875,
+      291.708984375,
+      152.58203125
+    ],
+    "vector": true
+  },
+  "5": {
+    "file": "monopoly-money-five-dollar.pdf",
+    "sha256": "ee160b5a4fa5cb4d72ae06448894b1ef39cf7d66987ae6275822a538b794add5",
+    "width": 257.50000381469727,
+    "height": 122.50048828125,
+    "sourceClip": [
+      33.188961029052734,
+      29.06103515625,
+      290.68896484375,
+      151.5615234375
+    ],
+    "vector": true
+  },
+  "10": {
+    "file": "monopoly-money-ten-dollar.pdf",
+    "sha256": "3591acad2fa1b7f7f978954e283f82f42bb67331415769c455794e620e0ef67a",
+    "width": 257.50000381469727,
+    "height": 122.50048828125,
+    "sourceClip": [
+      33.188961029052734,
+      28.04052734375,
+      290.68896484375,
+      150.541015625
+    ],
+    "vector": true
+  },
+  "20": {
+    "file": "monopoly-money-twenty-dollar.pdf",
+    "sha256": "52cd8476de688b4dad143d0e4e8be278e01ff3816a31a0c61a746c0049e0d246",
+    "width": 257.50000381469727,
+    "height": 122.50048828125,
+    "sourceClip": [
+      34.208980560302734,
+      28.04052734375,
+      291.708984375,
+      150.541015625
+    ],
+    "vector": true
+  },
+  "50": {
+    "file": "monopoly-money-fifty-dollar.pdf",
+    "sha256": "77f2657bcd2e66d6c501847fc9e808181584ad5118324b039aafb30883a042b6",
+    "width": 257.5,
+    "height": 122.50048828125,
+    "sourceClip": [
+      31.0,
+      31.1025390625,
+      288.5,
+      153.60302734375
+    ],
+    "vector": true
+  },
+  "100": {
+    "file": "monopoly-money-one-hundred-dollar.pdf",
+    "sha256": "9ca3622d18990d73483968edbd41cb9ccf862482a4a225aafe2651ad928c9f7b",
+    "width": 257.50000381469727,
+    "height": 122.50048828125,
+    "sourceClip": [
+      35.317378997802734,
+      32.12255859375,
+      292.8173828125,
+      154.623046875
+    ],
+    "vector": true
+  },
+  "500": {
+    "file": "monopoly-money-five-hundred-dollar.pdf",
+    "sha256": "bcea650fad70782d43b5ade8a3ee3657e418a10775da550909f41950f57817b0",
+    "width": 257.5,
+    "height": 122.5,
+    "sourceClip": [
+      31.1474609375,
+      45.505859375,
+      288.6474609375,
+      168.005859375
+    ],
+    "vector": true
+  }
+}

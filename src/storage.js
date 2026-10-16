@@ -34,6 +34,7 @@ export function sanitizeLogo(svg){
 export function prepareBoard(data){
  const board=validateBoard(data);
  if(board.logo)board.logo=sanitizeLogo(board.logo);
+ for(const tile of board.tiles){const art=tile.customArtwork;if(!art)continue;if(art.kind==='svg')art.data=sanitizeLogo(art.data);else if(!/^data:image\/(png|jpeg);base64,[A-Za-z0-9+/=]+$/.test(art.data))throw new Error('Invalid uploaded space artwork. Use PNG, JPEG or SVG.');}
  return board;
 }
 export async function encodeBoard(board){return codec.compress(validateBoard(board));}

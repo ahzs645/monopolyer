@@ -1,0 +1,46 @@
+{
+  "export": "all-seven-reference-bills.pdf",
+  "reference": "Seven user-uploaded PDFs; original source bounds recorded in manifest.json",
+  "billSizePoints": [
+    257.5,
+    122.50049
+  ],
+  "pdfRasterImageCount": 0,
+  "comparisons": [
+    {
+      "denomination": 1,
+      "meanAbsoluteError": 0.13464038042401427,
+      "pixelsDifferingByMoreThan32": 0.0015692490588468397
+    },
+    {
+      "denomination": 5,
+      "meanAbsoluteError": 0.8074354401954956,
+      "pixelsDifferingByMoreThan32": 0.0015375470576580146
+    },
+    {
+      "denomination": 10,
+      "meanAbsoluteError": 0.347444026154151,
+      "pixelsDifferingByMoreThan32": 0.0015514166831781255
+    },
+    {
+      "denomination": 20,
+      "meanAbsoluteError": 0.5666944059177069,
+      "pixelsDifferingByMoreThan32": 0.0013413909253021598
+    },
+    {
+      "denomination": 50,
+      "meanAbsoluteError": 0.3615329238491513,
+      "pixelsDifferingByMoreThan32": 0.001398850802456905
+    },
+    {
+      "denomination": 100,
+      "meanAbsoluteError": 0.9513592233009709,
+      "pixelsDifferingByMoreThan32": 0.0014642361799088567
+    },
+    {
+      "denomination": 500,
+      "meanAbsoluteError": 0.972674195891949,
+      "pixelsDifferingByMoreThan32": 0.001563304933623935
+    }
+  ]
+}

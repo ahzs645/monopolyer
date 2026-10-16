@@ -23,3 +23,14 @@
 .reference-space-previews>p{font-size:14px}
 @media(max-width:900px){.builder-mode .workspace{display:flex;flex-direction:column;height:auto;min-height:0;margin:0 12px;border:2px solid #000}.builder-mode .preview{order:0;min-height:0}.builder-mode .editor{order:1;border-right:0}.builder-mode .editor-tabs button{font-size:12px}.builder-mode .preview-stage:not(.cards-stage){aspect-ratio:1;height:auto}.builder-mode .board-wrap:not(.offscreen-board){height:auto;width:100%}.builder-mode .workspace.expanded{display:flex;min-height:0}.builder-mode .intro h1{max-width:56vw;font-size:29px}.current-spaces-grid{gap:14px}.builder-mode .preview-hint{display:none}}
 @media(max-width:480px){.builder-mode .editor-tabs button{font-size:10px}.builder-mode .preview-tabs button{font-size:10px}.builder-mode .editor-content{padding:23px 20px}.builder-mode .preview-stage.cards-stage{padding:15px 12px}.current-spaces-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.custom-artwork-input{margin:22px 0;border-top:2px solid #000;padding-top:18px}
+.custom-artwork-input p{font-size:14px;line-height:1.5}
+.artwork-paste-target{border:2px dashed #41614b;background:#fff;padding:18px;display:flex;flex-direction:column;align-items:center;gap:9px;cursor:text;margin:12px 0}
+.artwork-paste-target:focus{outline:3px solid #ff0000;outline-offset:3px}
+.artwork-paste-target img{width:100px;height:100px;object-fit:contain}
+.custom-artwork-input details{margin-top:18px}.custom-artwork-input summary{cursor:pointer}.custom-artwork-input textarea{width:100%;margin:12px 0;font-family:monospace}
+.money-options{display:flex;flex-direction:column;gap:12px;margin:18px 0}.money-options input{width:auto;margin-right:10px}
+.reference-banknote{min-width:0}.reference-banknote img{display:block;width:100%;height:auto;aspect-ratio:257.5/122.50049}.reference-banknote footer{text-align:center;font-size:10px;padding:8px}
+.money-comparison-controls{display:flex;flex-direction:column;gap:15px;margin-bottom:18px}.money-comparison-controls label{display:flex;flex-direction:column;gap:8px}.money-comparison-controls p{font-size:12px;line-height:1.5}
+.money-overlay-stage{position:relative;width:100%;aspect-ratio:257.5/122.50049;margin-bottom:22px}.money-overlay-stage img{position:absolute;inset:0;width:100%;height:100%}
+.builder-mode .banknote-grid{grid-template-columns:1fr}

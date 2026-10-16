@@ -27,9 +27,9 @@ describe('game projects',()=>{
  });
 });
 describe('printable game kit',()=>{
- it('paginates all fronts, mirrored backs, money, and buildings on A4',()=>{
-  const b=createBoard('campus');expect(propertyPdf(b).getNumberOfPages()).toBe(4);expect(propertyPdf(b,true).getNumberOfPages()).toBe(4);expect(eventsPdf(b).getNumberOfPages()).toBe(4);expect(eventsPdf(b,true).getNumberOfPages()).toBe(4);expect(moneyPdf(b).getNumberOfPages()).toBe(7);expect(buildingsPdf(b).getNumberOfPages()).toBe(2);expect(rulesPdf(b).getNumberOfPages()).toBeGreaterThanOrEqual(1);
+ it('paginates all fronts, mirrored backs, money, and buildings on A4',async()=>{
+  const b=createBoard('campus');b.money.style='studio';expect((await propertyPdf(b)).getNumberOfPages()).toBe(4);expect((await propertyPdf(b,true)).getNumberOfPages()).toBe(4);expect((await eventsPdf(b)).getNumberOfPages()).toBe(4);expect((await eventsPdf(b,true)).getNumberOfPages()).toBe(4);expect(moneyPdf(b).getNumberOfPages()).toBe(7);expect(buildingsPdf(b).getNumberOfPages()).toBe(2);expect(rulesPdf(b).getNumberOfPages()).toBeGreaterThanOrEqual(1);
  });
- it('handles edited decks with partial pages independently',()=>{const b=createBoard();b.decks.chance.cards=b.decks.chance.cards.slice(0,1);expect(eventsPdf(b).getNumberOfPages()).toBe(3);});
- it('rejects empty money print jobs with a helpful message',()=>{const b=createBoard();b.money.quantities.fill(0);expect(()=>moneyPdf(b)).toThrow('at least one');});
+ it('handles edited decks with partial pages independently',async()=>{const b=createBoard();b.decks.chance.cards=b.decks.chance.cards.slice(0,1);expect((await eventsPdf(b)).getNumberOfPages()).toBe(3);});
+ it('rejects empty money print jobs with a helpful message',()=>{const b=createBoard();b.money.style='studio';b.money.quantities.fill(0);expect(()=>moneyPdf(b)).toThrow('at least one');});
 });

@@ -1,3 +1,4 @@
+import {artworkHref} from './customArtwork';
 import React,{useId} from 'react';
 import {template,norm,getBoardSource} from './boardSource';
 import {getCardFonts,useCardFonts} from './cardFonts';
@@ -45,8 +46,8 @@ export function iconSlot(id,art){
  const available=Math.min(a.w,a.h)*((id===20||id===30)?0.7:1);return {x:a.x+(a.w-available)/2,y:a.y+(a.h-available)/2,w:available,h:available,rotation};
 }
 function ChangedIcon({tile,slot,color}){
- const {x,y,w,h,rotation}=slot,size=Math.min(w,h),geometry=iconGeometry(tile);const original=ORIGINAL_ARTWORK[tile.artwork];
- return <g data-space-icon={tile.id} data-icon-name={original?tile.artwork:geometry.name} data-icon-rotation={rotation} data-icon-center-x={x+w/2} data-icon-center-y={y+h/2} transform={`translate(${x+w/2} ${y+h/2}) rotate(${rotation})`} color={color}>
+ const {x,y,w,h,rotation}=slot,size=Math.min(w,h),geometry=iconGeometry(tile);const original=artworkHref(tile.customArtwork)||ORIGINAL_ARTWORK[tile.artwork];
+ return <g data-space-icon={tile.id} data-icon-name={tile.customArtwork?'uploaded-artwork':original?tile.artwork:geometry.name} data-custom-artwork={tile.customArtwork?.kind} data-icon-rotation={rotation} data-icon-center-x={x+w/2} data-icon-center-y={y+h/2} transform={`translate(${x+w/2} ${y+h/2}) rotate(${rotation})`} color={color}>
  {original?<image href={original} x={-size/2} y={-size/2} width={size} height={size} preserveAspectRatio="xMidYMid meet"/>:<svg x={-size/2} y={-size/2} width={size} height={size} viewBox={geometry.viewBox.join(' ')} fill="currentColor">{geometry.paths.map((d,i)=><path key={i} d={d}/>)}</svg>}</g>;
 }
 export function TemplateBoard({board,selected,onSelect,svgRef,interactive=true,previewSize}){
@@ -55,7 +56,7 @@ export function TemplateBoard({board,selected,onSelect,svgRef,interactive=true,p
  const price=(value,field)=>{clear(field.box);overlays.push(<PriceLabel key={overlays.length} value={value} field={field} color={board.ink}/>);};
  const label=(value,field,options={})=>{clear(field.box,options.background||board.background);const sideways=Math.abs(field.rotation||0)%180===90;const originalHeight=sideways?field.box[2]-field.box[0]:field.box[3]-field.box[1];overlays.push(<Label contain={Math.abs(field.rotation||0)%90!==0} maxHeight={Math.max(66,Math.min(230,originalHeight+12))} key={overlays.length} value={value} box={field.box} rotation={field.rotation} color={board.ink} {...options}/>);};
  const deckName=id=>[7,22,36].includes(id)?board.decks.chance.name:[2,17,33].includes(id)?board.decks.chest.name:board.tiles[id].name;
- for(const tile of board.tiles){const original=source.tiles[tile.id],f=template.fields[tile.id]||{},name=deckName(tile.id);const art=template.art[tile.id];const slot=iconSlot(tile.id,art);const iconChanged=!!slot&&(art?tile.artwork!==original.artwork:!!tile.artwork||tile.icon!==original.icon||tile.faIcon!==original.faIcon);
+ for(const tile of board.tiles){const original=source.tiles[tile.id],f=template.fields[tile.id]||{},name=deckName(tile.id);const art=template.art[tile.id];const slot=iconSlot(tile.id,art);const iconChanged=!!slot&&(tile.customArtwork|| (art?tile.artwork!==original.artwork:!!tile.artwork||tile.icon!==original.icon||tile.faIcon!==original.faIcon));
   if(iconChanged){
    const areas=tile.id===0?[art[1]]:tile.id===10?[{x:240,y:5208,w:571,h:558}]:(art||[]);
    const pad=tile.id===20||tile.id===30?12:0;for(const a of areas)clear([a.x-pad,a.y-pad,a.x+a.w+pad,a.y+a.h+pad],tile.id===10?'#f57f23':board.background);

@@ -1,3 +1,4 @@
+import {referenceMoneyPdf} from './moneyArtwork';
 import { jsPDF } from 'jspdf';
 import {paintIcon} from './pdfIcons';
 import regularFont from './fonts/regular';
@@ -44,10 +45,15 @@ function fitted(doc,s,x,y,width,size=10,maxLines=2,align='center'){
 export function startPdf(format='a4'){const d=new jsPDF({unit:'mm',format,compress:true,putOnlyUsedFonts:true});d.addFileToVFS('NotoSans-Regular.ttf',regularFont);d.addFont('NotoSans-Regular.ttf','GameSans','normal');d.addFileToVFS('NotoSans-Bold.ttf',boldFont);d.addFont('NotoSans-Bold.ttf','GameSans','bold');for(const [name,data] of Object.entries(getCardFonts())){d.addFileToVFS(name+'.ttf',data);d.addFont(name+'.ttf',name,'normal');}d.setFont('GameSans','normal');d.setProperties({title:'Monopolyer printable game kit',creator:'Monopolyer'});return d;}
 function pageHeader(d,board,label,page){d.setTextColor('#56665e');text(d,board.title,10,7,7);text(d,`${label} / ${page}`,200,7,7,{align:'right'});text(d,'Print at 100% / Actual size. Cut on solid borders.',105,291,7,{align:'center'});d.setTextColor('#203e34');}
 function cardBorder(d,x,y,w,h,color='#ffffff'){d.setFillColor(color);d.setDrawColor('#526258');d.setLineWidth(.2);d.rect(x,y,w,h,'FD');}
-function paintCard(doc,art,x,y,w,h){
+async function paintCard(doc,art,x,y,w,h){
  const sx=w/art.width,sy=h/art.height;
  for(const o of art.ops){
-  if(o.type==='image')doc.addImage(o.src,'PNG',x+o.x*sx,y+o.y*sy,o.w*sx,o.h*sy,undefined,'FAST');
+  if(o.type==='image'){
+   const bx=x+o.x*sx,by=y+o.y*sy,bw=o.w*sx,bh=o.h*sy;
+   if(o.customArtwork==='svg'){await import('svg2pdf.js');const svg=new DOMParser().parseFromString(decodeURIComponent(o.src.slice(o.src.indexOf(',')+1)),'image/svg+xml').documentElement;await doc.svg(svg,{x:bx,y:by,width:bw,height:bh});}
+   else if(o.customArtwork){const props=doc.getImageProperties(o.src),scale=Math.min(bw/props.width,bh/props.height),iw=props.width*scale,ih=props.height*scale;doc.addImage(o.src,props.fileType,bx+(bw-iw)/2,by+(bh-ih)/2,iw,ih,undefined,'FAST');}
+   else doc.addImage(o.src,'PNG',bx,by,bw,bh,undefined,'FAST');
+  }
   else if(o.type==='icon')paintIcon(doc,o,x,y,sx,sy);
   else if(o.type==='rect'){doc.setFillColor(o.fill);doc.rect(x+o.x*sx,y+o.y*sy,o.w*sx,o.h*sy,'F');}
   else{
@@ -58,7 +64,7 @@ function paintCard(doc,art,x,y,w,h){
  }
  doc.setFont('GameSans','normal');doc.setTextColor('#203e34');
 }
-export function propertyPdf(board,backs=false){
+export async function propertyPdf(board,backs=false){
  const doc=startPdf();const cards=deedTiles(board);const cols=3,rows=3,w=788/300*25.4,h=900/300*25.4,gap=1,startX=(210-cols*w-(cols-1)*gap)/2,startY=14;
  for(let i=0;i<cards.length;i++){
   if(i>0&&i%9===0)doc.addPage();const t=cards[i];const slot=i%9;const col=backs?2-slot%3:slot%3;const x=startX+col*(w+gap),y=startY+Math.floor(slot/3)*(h+gap);
@@ -66,24 +72,25 @@ export function propertyPdf(board,backs=false){
   const color=t.kind==='property'?board.groups[t.group]:t.color;
   if(backs)cardBorder(doc,x,y,w,h);else{doc.setFillColor('#ffffff');doc.rect(x,y,w,h,'F');}
   if(backs){doc.setFillColor(color);doc.rect(x+2,y+2,w-4,h-4,'F');doc.setTextColor(readableInk(color));fitted(doc,board.title,x+w/2,y+27,w-12,14,3);text(doc,'TITLE DEED',x+w/2,y+58,9,{align:'center'});doc.setTextColor('#203e34');continue;}
-  paintCard(doc,deedArtwork(board,t),x,y,w,h);
+  await paintCard(doc,deedArtwork(board,t),x,y,w,h);
  }
  return doc;
 }
-export function eventsPdf(board,backs=false){
+export async function eventsPdf(board,backs=false){
  const doc=startPdf();let page=0;
  for(const key of ['chance','chest']){
-  const deck=board.decks[key];deck.cards.forEach((card,i)=>{
+  const deck=board.decks[key];for(const [i,card] of deck.cards.entries()){
    if(i%8===0){if(page)doc.addPage();page++;pageHeader(doc,board,`${deck.name}${backs?' backs (mirrored)':''}`,page);}
    const slot=i%8,col=backs?1-slot%2:slot%2,x=23.4+col*87,y=20+Math.floor(slot/2)*59,w=76.2,h=44.45;
    if(backs)cardBorder(doc,x,y,w,h,deck.color);else{doc.setFillColor('#ffffff');doc.rect(x,y,w,h,'F');}
-   if(backs){doc.setTextColor(readableInk(deck.color));fitted(doc,deck.name.toUpperCase(),x+w/2,y+20,w-14,18,2);fitted(doc,board.title,x+w/2,y+35,w-12,7,1);doc.setTextColor('#203e34');return;}
-   paintCard(doc,eventArtwork(board,key,card),x,y,w,h);
-  });
+   if(backs){doc.setTextColor(readableInk(deck.color));fitted(doc,deck.name.toUpperCase(),x+w/2,y+20,w-14,18,2);fitted(doc,board.title,x+w/2,y+35,w-12,7,1);doc.setTextColor('#203e34');continue;}
+   await paintCard(doc,eventArtwork(board,key,card),x,y,w,h);
+  }
  }
  return doc;
 }
-export function moneyPdf(board){
+export function moneyPdf(board){if(board.money.style!=='studio')return referenceMoneyPdf(board,startPdf);return studioMoneyPdf(board);}
+function studioMoneyPdf(board){
  const doc=startPdf();let i=0;
  board.money.denominations.forEach((value,index)=>{
   const count=board.money.quantities[index]*board.money.players;
