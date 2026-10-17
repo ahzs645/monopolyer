@@ -11,10 +11,12 @@ concurrency:
   cancel-in-progress: true
 jobs:
   build:
-    runs-on: ubuntu-latest
+    # Pinned: the e2e suite compares rendered pixels, and a new Ubuntu image can
+    # change system fonts. Move to a newer image deliberately, with a green run.
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
@@ -23,19 +25,19 @@ jobs:
       - run: npm run build
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: failure()
         with:
           name: test-results
           path: test-results
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         if: github.event_name != 'pull_request'
         with:
           path: dist
   deploy:
     if: github.event_name != 'pull_request'
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       pages: write
       id-token: write
@@ -45,4 +47,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
