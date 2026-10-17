@@ -4,6 +4,7 @@ import {createBoard} from './model';
 import {ORIGINAL_ARTWORK} from './reference-assets/artwork';
 export const ICON_COMPONENTS={train:'FaTrain',bolt:'FaBolt',drop:'FaTint',gift:'FaGift',question:'FaQuestion',car:'FaCar',lock:'FaLock',gavel:'FaGavel',coin:'FaCoins',book:'FaBook',star:'FaStar',home:'FaHome',heart:'FaHeart',building:'FaBuilding',tree:'FaTree',coffee:'FaCoffee'};
 const sources={classic:createBoard('printopoly'),campus:createBoard('campus'),photoshop:createBoard('photoshop'),studio:createBoard('studio')};
+export const originalArtwork=(board,id)=>sources[board.boardStyle||'studio']?.tiles[id]?.artwork;
 export function usesCustomDeedIcon(board,tile){
  if(tile.customArtwork)return true;
  const original=sources[board.boardStyle||'studio'].tiles[tile.id];if(tile.artwork&&tile.artwork!=='none')return tile.artwork!==original.artwork;return tile.artwork==='none'||tile.icon!==original.icon||tile.faIcon!==original.faIcon;

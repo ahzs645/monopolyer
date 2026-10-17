@@ -33,6 +33,6 @@ test('complete vector kit contains every card SVG and no PDF raster images',asyn
 test('individual vector cards retain the supplied PSD typography and layout',async({page})=>{
  test.setTimeout(120000);await ready(page,'printopoly');const {bytes}=await download(page,/^Individual vector cards/);const files=unzipSync(bytes);
  for(const [key,baseline,w,h] of [['deed-01.svg','property',788,900],['chance-01.svg','event',900,525]]){
-  const entry=Object.keys(files).find(k=>k.endsWith(key));const svg=strFromU8(files[entry]);isVector(svg);const png=PNG.sync.read(await render(page,svg,w,h));const ref=PNG.sync.read(await readFile(`tests/e2e/psd-cards.spec.js-snapshots/${baseline}-psd-linux.png`));let total=0,changed=0;for(let i=0;i<png.data.length;i+=4){let max=0;for(let c=0;c<3;c++){const d=Math.abs(png.data[i+c]-ref.data[i+c]);total+=d;max=Math.max(max,d);}if(max>64)changed++;}expect(total/(w*h*3)).toBeLessThan(7);expect(changed/(w*h)).toBeLessThan(.04);
+  const entry=Object.keys(files).find(k=>k.endsWith(key));const svg=strFromU8(files[entry]);isVector(svg);const png=PNG.sync.read(await render(page,svg,w,h));const ref=PNG.sync.read(await readFile(`tests/e2e/psd-cards.spec.js-snapshots/${baseline}-psd.png`));let total=0,changed=0;for(let i=0;i<png.data.length;i+=4){let max=0;for(let c=0;c<3;c++){const d=Math.abs(png.data[i+c]-ref.data[i+c]);total+=d;max=Math.max(max,d);}if(max>64)changed++;}expect(total/(w*h*3)).toBeLessThan(7);expect(changed/(w*h)).toBeLessThan(.04);
  }
 });

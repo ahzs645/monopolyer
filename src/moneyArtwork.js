@@ -1,3 +1,6 @@
+import opentype from 'opentype.js';
+import bodoni from './fonts/bodoni-bold';
+import notoBold from './fonts/bold';
 import {curvedBillHeading,missingBillGlyphs,straightBillFooter} from './billHeadingFont';
 export const MONEY_VALUES=[1,5,10,20,50,100,500];
 export const MONEY_COLORS=['#ffffff','#fbd5e3','#fcf373','#c9decf','#c6e0e8','#f1cf9d','#ffcb20'];
@@ -6,7 +9,17 @@ export const moneyReferenceUrl=(index,original=false)=>`${import.meta.env.BASE_U
 const templates=new Map();
 export function loadMoneyTemplate(index){if(!templates.has(index))templates.set(index,fetch(moneyReferenceUrl(index)).then(r=>{if(!r.ok)throw new Error('The reference bill could not be loaded.');return r.text();}).catch(e=>{templates.delete(index);throw e;}));return templates.get(index);}
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
-function label(value,x,y,width,size){const fontSize=Math.min(size,width/Math.max(1,String(value).length*.62));return `<text x="${x}" y="${y}" text-anchor="middle" font-family="Georgia, Times New Roman, serif" font-weight="bold" font-size="${fontSize}">${escape(value)}</text>`;}
+let valueFonts;
+const parseFont=base64=>opentype.parse(Uint8Array.from(atob(base64),c=>c.charCodeAt(0)).buffer);
+// Edited values are outlines from a bundled serif with lining figures, so bills
+// look the same on every system and digits never cross the original frames.
+function label(value,x,y,width,size){
+ valueFonts??=[parseFont(bodoni),parseFont(notoBold)];
+ const text=String(value),glyphs=[...text].map(c=>{const font=valueFonts.find(f=>f.charToGlyphIndex(c))||valueFonts[0];return {font,glyph:font.charToGlyph(c)};});
+ const units=glyphs.reduce((n,{font,glyph})=>n+glyph.advanceWidth/font.unitsPerEm,0),fontSize=Math.min(size,width/Math.max(.001,units));let cursor=x-units*fontSize/2;
+ const d=glyphs.map(({font,glyph})=>{const path=glyph.getPath(cursor,y,fontSize).toPathData(3);cursor+=glyph.advanceWidth/font.unitsPerEm*fontSize;return path;}).join('');
+ return `<g data-bill-value="${escape(text)}"><title>${escape(text)}</title><path d="${d}"/></g>`;
+}
 export function billHeading(board){
  const mode=board.money.headingMode||(board.money.personalize?'bank':'original');
  return {mode,value:mode==='board'?board.title:mode==='custom'?(board.money.headingText||''):mode==='bank'?board.money.bankName:'MONOPOLY',color:board.money.headingColor||'#000000'};

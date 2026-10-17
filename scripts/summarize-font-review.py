@@ -31,7 +31,7 @@ for style in ['campus','photoshop']:
  add(style+'-clean',style.title()+' board: clean grid',original,root/(style+'-clean.png'),'Intentional geometric grid and color-band replacement. Text, title and illustrations still use source artwork.')
 add('board-text','Board labels and edited prices: forced rebuild',root/'campus-source.png',root/'campus-native-labels.png','Diagnostic: original words are forced through the edited-text path. Original labels normally retain their cached pixels. The price adapter retains mixed-size source glyphs.',(4750,5480,5140,5985))
 for kind,label in [('deed','Property deed'),('event','Event card')]:
- original=repo/'tests/e2e/psd-cards.spec.js-snapshots'/('property-psd-linux.png' if kind=='deed' else 'event-psd-linux.png')
+ original=repo/'tests/e2e/psd-cards.spec.js-snapshots'/('property-psd.png' if kind=='deed' else 'event-psd.png')
  add(kind+'-exact',label+': original source lettering',original,root/(kind+'-source.png'),'Independent Photoshop composite baseline; original source lettering is retained.')
  add(kind+'-native',label+': forced font recreation',root/(kind+'-source.png'),root/(kind+'-native.png'),'Diagnostic: text caches are bypassed. Differences include native font rasterization and text layout; this is not the default unchanged-card renderer.')
 add('event-native-reference','Event card: native font with original whitespace',root/'event-source.png',root/'event-native-reference.png','Diagnostic using the original text, source anchors and original trailing spaces, rather than the builder\'s rewrapped text.')
